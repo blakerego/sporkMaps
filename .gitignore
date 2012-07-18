@@ -2,3 +2,4 @@ packages/*
 spork/*
 *.sln
 *.suo
+sporkWeb/log/*
