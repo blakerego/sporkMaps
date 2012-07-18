@@ -3,3 +3,4 @@ spork/*
 *.sln
 *.suo
 sporkWeb/log/*
+*~
