@@ -1,0 +1,10 @@
+#headerBox
+{
+	z-index: 2;
+	position: relative;
+	width: 100%;
+	height:100%;
+	/*border: solid 1px blue;*/
+	left:400px;
+	right:200px;
+}
