@@ -171,6 +171,8 @@
         font-style: italic;
       }
     </style>
+    <link rel="stylesheet" type="text/css" href="mystyle.css" media="screen" />
+
     <script type="text/javascript">
       function about() {
         info = document.getElementById('about-content');
@@ -187,33 +189,28 @@
   </head>
   <body>
     <div id="page">
+
       <div id="sidebar">
         <ul id="sidebar-items">
           <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://www.ruby-doc.org/core/">Ruby core</a></li>
-              <li><a href="http://www.ruby-doc.org/stdlib/">Ruby standard library</a></li>
-            </ul>
           </li>
         </ul>
       </div>
       <div id="content">
+	<div align="center" id="headerBox"><img src="crayonHeader.png"></div>
         <div id="header">
+	  
           <h1>Spork!</h1>
           <h2>Find a Foodtruck</h2>
         </div>
 	
 	<div>
-	  <iframe width="425" height="350" frameborder="0" 
+	  <iframe width="500" height="550" frameborder="0" 
 		  scrolling="no" marginheight="0" 
 		  marginwidth="0" 
 		  src="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=New+York,+Chelsea+Park@40.757888,-73.984337&ie=UTF8&z=12&output=embed&t=m&iwloc=near">
 	</iframe>
 	</div>
-
       </div>
       <div id="footer">&nbsp;</div>
     </div>
