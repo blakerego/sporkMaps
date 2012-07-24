@@ -8,7 +8,38 @@
 	left:300px;
 	right:200px;
 }
-#body
-{
-	background-color: gray;
+
+#nav-example {
+    background:url("nav.jpg") no-repeat;
+    width: 987px;
+    height: 69px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left:100px;
+
 }
+
+#nav-example li, #nav-example a {
+    height: 69px;
+    display: block;
+}
+
+#nav-example li {
+    float: left;
+    list-style: none;
+    display: inline;
+    text-indent: -9999em;
+}
+
+#nav-example-01 { width: 180px;  }
+#nav-example-02 { width: 200px; }
+#nav-example-03 { width: 220px; }
+#nav-example-04 { width: 130px; }
+#nav-example-05 { width: 257px; }
+
+#nav-example-01 a:hover { background:url("nav.jpg") 0px -69px no-repeat; }
+#nav-example-02 a:hover { background:url("nav.jpg") -180px -69px no-repeat; }
+#nav-example-03 a:hover { background:url("nav.jpg") -380px -69px no-repeat; }
+#nav-example-04 a:hover { background:url("nav.jpg") -600px -69px no-repeat; }
+#nav-example-05 a:hover { background:url("nav.jpg") -730px -69px no-repeat; }
