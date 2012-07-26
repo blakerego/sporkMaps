@@ -1,23 +1,45 @@
-#headerBox
-{
-	z-index: 2;
-	position: relative;
-	width: 100%;
+#outerBox{
+	z-index:0;
+	position:relative;
+	width:100%;
 	height:100%;
-	/*border: solid 1px blue;*/
+	border:solid 1px red;
+	top:0px;
+	left:0px;
+}
+
+#headerBox {
+	z-index: 2;
+	position: absolute;
+	width: 600px;
+	height:250px;
+	border: solid 1px black;
 	left:300px;
 	right:200px;
+	top:10px;
+}
+
+#map {
+	position: absolute;
+	width:600px;
+	height:550px;
+	border: solid 1px blue;
+	left:140px;
+	top:300px;
+	padding:30px;
+	z-index:3;
+
 }
 
 #nav-example {
     background:url("nav.jpg") no-repeat;
     width: 987px;
     height: 69px;
-    margin: 0;
-    padding: 0;
-    position: relative;
+    position: absolute;
     left:100px;
-
+    top:210px;
+    z-index: 100;
+    border: solid 1px green;
 }
 
 #nav-example li, #nav-example a {

@@ -1,24 +1,107 @@
+<style type="text/css">
+
+#outerBox{
+	z-index:0;
+	position:relative;
+	width:110%;
+	height:200%;
+	top:-10px;
+	left:-10px;
+	background-image: -webkit-linear-gradient(bottom, #FFFFFF 82%, #61BBD0 100%);
+	/*border:solid 1px red;*/
+}
+
+#headerBox {
+	z-index: 2;
+	position: absolute;
+	width: 600px;
+	height:250px;
+	/*border: solid 1px black;*/
+	left:300px;
+	right:200px;
+	top:10px;
+}
+
+#map {
+	position: absolute;
+	width:600px;
+	height:550px;
+	/*border: solid 1px blue;*/
+	left:140px;
+	top:300px;
+	padding:30px;
+	z-index:3;
+
+}
+
+#searchBox{
+	position:absolute;
+	width:150px;
+	height:40px;
+	left:800px;
+	top:330px;
+	font-family: helvetica;
+}
+
+#nav-example {
+    background:url("nav.jpg") no-repeat;
+    width: 987px;
+    height: 69px;
+    position: absolute;
+    left:100px;
+    top:210px;
+    z-index: 2;
+    /*border: solid 1px green;*/
+}
+
+#nav-example li, #nav-example a {
+    height: 69px;
+    display: block;
+}
+
+#nav-example li {
+    float: left;
+    list-style: none;
+    display: inline;
+    text-indent: -9999em;
+}
+
+#nav-example-01 { width: 140px; }
+#nav-example-02 { width: 200px; }
+#nav-example-03 { width: 220px; }
+#nav-example-04 { width: 130px; }
+#nav-example-05 { width: 257px; }
+
+#nav-example-01 a:hover { background:url("nav.jpg") -40px -69px no-repeat; }
+#nav-example-02 a:hover { background:url("nav.jpg") -180px -69px no-repeat; }
+#nav-example-03 a:hover { background:url("nav.jpg") -380px -69px no-repeat; }
+#nav-example-04 a:hover { background:url("nav.jpg") -600px -69px no-repeat; }
+#nav-example-05 a:hover { background:url("nav.jpg") -730px -69px no-repeat; }
+</style>
+
 <!DOCTYPE html>
-<head>
-		<link rel="stylesheet" type="text/css" href="mystyle.css" media="screen" />
-	<title>
-		Spork | Food Truck Mapper
-	</title>
-</head>	
-
 <body>
-	<div id="headerBox">
-		<img src="crayonHeader.png">
-	</div>	
+	<div id="outerBox">
+		<div id="headerBox">
+			<img src="crayonHeader.png">
+		</div>	
+			<ul id="nav-example">
+	    		<li id="nav-example-01"><a href="#">Home</a></li>
+	    		<li id="nav-example-02"><a href="#">Download</a></li>
+	    		<li id="nav-example-03"><a href="#">OurStory</a></li>
+	    		<li id="nav-example-04"><a href="#">Help</a></li>
+	    		<li id="nav-example-05"><a href="#">Contact</a></li>
+			</ul>
+		<div id="map">
+  			<iframe width="600" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+        		src="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=New+York,+Chelsea+Park@40.757888,-73.984337&ie=UTF8&z=12&output=embed&t=m&iwloc=near">
+   			</iframe>
+		</div>
 
-	<ul id="nav-example">
-	    <li id="nav-example-01"><a href="#">Home</a></li>
-	    <li id="nav-example-02"><a href="#">Download</a></li>
-	    <li id="nav-example-03"><a href="#">OurStory</a></li>
-	    <li id="nav-example-04"><a href="#">Help</a></li>
-	    <li id="nav-example-05"><a href="#">Contact</a></li>
-	</ul>
-
+		<div id="searchBox">
+			Enter your zipcode
+			<input type="text"/>
+		</div>
+	</div>
 </body>
-
 </html>		
