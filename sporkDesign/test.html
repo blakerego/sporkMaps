@@ -1,0 +1,97 @@
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css"/>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+
+</style>
+<!DOCTYPE html>
+<head>
+	<title>
+		Spork | Food Truck Tracker
+	</title>
+</head>	
+<body>
+
+<style type="text/css">
+
+.body
+{
+	/*background-color: #22a8e0;
+	background-image: url("horiz-bars.png");
+	background-repeat: repeat-x;*/
+	z-index:1;
+	position:absolute;
+	width:100%;
+	height:30%;
+	min-height: 220px;
+	max-height: 350px;
+	/*border:solid 1px green;*/
+	background-color: #d74b20;
+}
+
+.outerBox{
+	z-index:0;
+	background-color: #22a8e0;
+	position:relative;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	/*border:solid 1px red;*/
+}
+
+.headerBox{
+	z-index: 2;
+	position:absolute;
+	height:500px;
+	width:800px;
+	left:400px;
+	right:300px;
+	top:50px;
+	/*border:solid 1px blue;*/
+}
+
+.truck{
+	z-index: 2;
+	position:absolute;
+	height:300px;
+	width:500px;
+	left:930px;
+	top:93px;
+} 
+
+</style>
+
+
+<div class="outerBox">
+	<div class ="body">	
+	</div>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>		
+				<div class="nav-collapse">
+					<ul class="nav pull-left"> <li class="active"><a href="/">Home</a></li>
+						<li><a href="/plans/">Download</a></li>
+						<li><a href="/features/">Our Story</a></li>
+						<li><a href="/managed-services/">Help</a></li>
+						<li><a href="/about-us/">Contact</a></li>
+					</li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div class="headerBox">
+		<img src="header.png" width="55%" height="50%">
+	</div>	
+	<div class="truck">
+		<img src="falafelTruck.png">
+	</div>	
+</div>		
+</body>
+</html>
