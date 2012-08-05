@@ -1,4 +1,7 @@
 SporkWeb::Application.routes.draw do
+
+  resources :authenticate
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

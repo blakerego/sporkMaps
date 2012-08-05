@@ -4,3 +4,4 @@ spork/*
 *.suo
 sporkWeb/log/*
 *~
+c#/*
