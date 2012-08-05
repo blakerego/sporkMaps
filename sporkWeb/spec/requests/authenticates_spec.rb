@@ -13,5 +13,6 @@ describe "Authenticates" do
   		parsed_body = JSON.parse(response.body)
   		parsed_body["code"].should == "test code"
   	end
+
   end
 end
