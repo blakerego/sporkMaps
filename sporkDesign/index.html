@@ -1,3 +1,8 @@
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css"/>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+
+
+
 <style type="text/css">
 
 #outerBox{
@@ -20,6 +25,17 @@
 	left:300px;
 	right:200px;
 	top:10px;
+}
+
+#falafel
+{
+	z-index: 2;
+	position: absolute;
+	width: 600px;
+	height:250px;
+	/*border: solid 1px black;*/
+	left:110px;
+	top:100px;
 }
 
 #map {
@@ -49,7 +65,7 @@
     height: 69px;
     position: absolute;
     left:100px;
-    top:210px;
+    top:230px;
     z-index: 2;
     /*border: solid 1px green;*/
 }
@@ -66,31 +82,44 @@
     text-indent: -9999em;
 }
 
-#nav-example-01 { width: 140px; }
+#zipSearch{
+	font-size: 22px;
+	width: 200px;
+	height: 40px;
+}
+
+#nav-example-01 { width: 140px; padding-left: 30px;}
 #nav-example-02 { width: 200px; }
 #nav-example-03 { width: 220px; }
 #nav-example-04 { width: 130px; }
 #nav-example-05 { width: 257px; }
 
-#nav-example-01 a:hover { background:url("nav.jpg") -40px -69px no-repeat; }
-#nav-example-02 a:hover { background:url("nav.jpg") -180px -69px no-repeat; }
-#nav-example-03 a:hover { background:url("nav.jpg") -380px -69px no-repeat; }
-#nav-example-04 a:hover { background:url("nav.jpg") -600px -69px no-repeat; }
-#nav-example-05 a:hover { background:url("nav.jpg") -730px -69px no-repeat; }
+#nav-example-01 a:hover { background:url("nav.jpg") -30px -69px no-repeat; }
+#nav-example-02 a:hover { background:url("nav.jpg") -170px -69px no-repeat; }
+#nav-example-03 a:hover { background:url("nav.jpg") -370px -69px no-repeat; }
+#nav-example-04 a:hover { background:url("nav.jpg") -590px -69px no-repeat; }
+#nav-example-05 a:hover { background:url("nav.jpg") -720px -69px no-repeat; }
 </style>
-
 <!DOCTYPE html>
+<head>
+	<title>
+		Spork | Food Truck Tracker
+	</title>
+</head>	
 <body>
 	<div id="outerBox">
 		<div id="headerBox">
 			<img src="crayonHeader.png">
 		</div>	
+		<div id="falafel">
+			<img src="falafelTruck.png">
+		</div>	
 			<ul id="nav-example">
-	    		<li id="nav-example-01"><a href="#">Home</a></li>
-	    		<li id="nav-example-02"><a href="#">Download</a></li>
-	    		<li id="nav-example-03"><a href="#">OurStory</a></li>
-	    		<li id="nav-example-04"><a href="#">Help</a></li>
-	    		<li id="nav-example-05"><a href="#">Contact</a></li>
+	    		<li id="nav-example-01"><a href="index.html">Home</a></li>
+	    		<li id="nav-example-02"><a href="download.html">Download</a></li>
+	    		<li id="nav-example-03"><a href="about.html">OurStory</a></li>
+	    		<li id="nav-example-04"><a href="help.html">Help</a></li>
+	    		<li id="nav-example-05"><a href="contact.html">Contact</a></li>
 			</ul>
 		<div id="map">
   			<iframe width="600" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
@@ -99,9 +128,11 @@
 		</div>
 
 		<div id="searchBox">
-			Enter your zipcode
-			<input type="text"/>
+			<h4>Enter Zipcode</h4>
+			<input id="zipSearch" type="text" placeholder="e.g. 10002" />
 		</div>
+
+		<!--input type="submit" class="btn btn-primary btn-large" /-->
 	</div>
 </body>
 </html>		
