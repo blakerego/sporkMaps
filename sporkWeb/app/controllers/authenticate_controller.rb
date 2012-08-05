@@ -1,7 +1,6 @@
 class AuthenticateController < ApplicationController
 	def index
-	  puts 'hello'
-	  output = {'foo' => 'bar'}.to_json
+	  output = {'foo' => 'bar', 'code' => params[:code]}.to_json
 	  render :json => output
 	end
 end
