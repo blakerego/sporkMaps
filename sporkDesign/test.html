@@ -36,7 +36,10 @@
 	/*border:solid 1px green;*/
 }
 
-
+@font-face {
+    font-family: "ElliotSix";
+    src: url("fonts/ElliotSix.ttf") format("truetype");
+}
 
 .headerBox{
 	z-index: 2;
@@ -67,6 +70,30 @@
 	left:200px;
 	top:280px;
 	padding:30px;
+}
+
+.intro
+{
+	z-index:2;
+	position:absolute;
+	color:white;
+    font-size:30px;
+    font-family:ElliotSix;
+    top:95px;
+    left: 40px;
+    padding:10px;
+    -webkit-transform: rotate(-15deg);
+}
+
+.well
+{
+	z-index:3;
+	position:absolute;
+	left:850px;
+	top:310px;
+	font-family:ElliotSix;
+	font-size: 30px;
+	padding:20px;
 }
 
 </style>
@@ -107,7 +134,15 @@
         		src="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=New+York,+Chelsea+Park@40.757888,-73.984337&ie=UTF8&z=12&output=embed&t=m&iwloc=near">
    		</iframe>
 	</div>
-	
+	<div class="intro">
+		<p>Hungry? <br><br>Find a food truck</p>
+	</div>	
+
+	<form class="well">
+  	<label><h3>Enter zipcode</h3></label>
+  	<input type="text" class="span3" placeholder="e.g. 10002">
+  	<button type="submit" class="btn btn-inverse">Submit</button>
+	</form>
 </div>		
 </body>
 </html>
