@@ -21,7 +21,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'foursquare-api'
+gem 'foursquare-api', :path => "gems/foursquare-api"
 gem 'oauth'
 
 

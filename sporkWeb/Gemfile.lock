@@ -1,3 +1,8 @@
+PATH
+  remote: gems/foursquare-api
+  specs:
+    foursquare-api (0.0.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -52,7 +57,6 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.1.1)
-    foursquare-api (0.0.5)
     guard (1.2.3)
       listen (>= 0.4.2)
       thor (>= 0.14.6)
@@ -157,7 +161,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   coffee-rails (~> 3.2.1)
-  foursquare-api
+  foursquare-api!
   guard-rspec
   jquery-rails
   oauth
