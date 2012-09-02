@@ -1,0 +1,3 @@
+[submodule "sporkWeb/gems/foursquare-api"]
+	path = sporkWeb/gems/foursquare-api
+	url = git@github.com:blakerego/foursquare-api.git
