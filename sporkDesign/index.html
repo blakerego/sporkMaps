@@ -1,104 +1,6 @@
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css"/>
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
 
-
-
-<style type="text/css">
-
-#outerBox{
-	z-index:0;
-	position:relative;
-	width:110%;
-	height:200%;
-	top:-10px;
-	left:-10px;
-	background-image: -webkit-linear-gradient(bottom, #FFFFFF 82%, #61BBD0 100%);
-	/*border:solid 1px red;*/
-}
-
-#headerBox {
-	z-index: 2;
-	position: absolute;
-	width: 600px;
-	height:250px;
-	/*border: solid 1px black;*/
-	left:300px;
-	right:200px;
-	top:10px;
-}
-
-#falafel
-{
-	z-index: 2;
-	position: absolute;
-	width: 600px;
-	height:250px;
-	/*border: solid 1px black;*/
-	left:110px;
-	top:100px;
-}
-
-#map {
-	position: absolute;
-	width:600px;
-	height:550px;
-	/*border: solid 1px blue;*/
-	left:140px;
-	top:300px;
-	padding:30px;
-	z-index:3;
-
-}
-
-#searchBox{
-	position:absolute;
-	width:150px;
-	height:40px;
-	left:800px;
-	top:330px;
-	font-family: helvetica;
-}
-
-#nav-example {
-    background:url("nav.jpg") no-repeat;
-    width: 987px;
-    height: 69px;
-    position: absolute;
-    left:100px;
-    top:230px;
-    z-index: 2;
-    /*border: solid 1px green;*/
-}
-
-#nav-example li, #nav-example a {
-    height: 69px;
-    display: block;
-}
-
-#nav-example li {
-    float: left;
-    list-style: none;
-    display: inline;
-    text-indent: -9999em;
-}
-
-#zipSearch{
-	font-size: 22px;
-	width: 200px;
-	height: 40px;
-}
-
-#nav-example-01 { width: 140px; padding-left: 30px;}
-#nav-example-02 { width: 200px; }
-#nav-example-03 { width: 220px; }
-#nav-example-04 { width: 130px; }
-#nav-example-05 { width: 257px; }
-
-#nav-example-01 a:hover { background:url("nav.jpg") -30px -69px no-repeat; }
-#nav-example-02 a:hover { background:url("nav.jpg") -170px -69px no-repeat; }
-#nav-example-03 a:hover { background:url("nav.jpg") -370px -69px no-repeat; }
-#nav-example-04 a:hover { background:url("nav.jpg") -590px -69px no-repeat; }
-#nav-example-05 a:hover { background:url("nav.jpg") -720px -69px no-repeat; }
 </style>
 <!DOCTYPE html>
 <head>
@@ -107,32 +9,140 @@
 	</title>
 </head>	
 <body>
-	<div id="outerBox">
-		<div id="headerBox">
-			<img src="crayonHeader.png">
-		</div>	
-		<div id="falafel">
-			<img src="falafelTruck.png">
-		</div>	
-			<ul id="nav-example">
-	    		<li id="nav-example-01"><a href="index.html">Home</a></li>
-	    		<li id="nav-example-02"><a href="download.html">Download</a></li>
-	    		<li id="nav-example-03"><a href="about.html">OurStory</a></li>
-	    		<li id="nav-example-04"><a href="help.html">Help</a></li>
-	    		<li id="nav-example-05"><a href="contact.html">Contact</a></li>
-			</ul>
-		<div id="map">
-  			<iframe width="600" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-        		src="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=New+York,+Chelsea+Park@40.757888,-73.984337&ie=UTF8&z=12&output=embed&t=m&iwloc=near">
-   			</iframe>
-		</div>
 
-		<div id="searchBox">
-			<h4>Enter Zipcode</h4>
-			<input id="zipSearch" type="text" placeholder="e.g. 10002" />
-		</div>
+<style type="text/css">
 
-		<!--input type="submit" class="btn btn-primary btn-large" /-->
+.outerBox{
+	z-index:0;
+	background-color: #22a8e0; overflow-x: hidden;
+	position:relative;
+	width:100%;
+	height:100%;
+	/*border:solid 1px red;*/
+}
+
+.body
+{
+	/*background-color: #22a8e0;
+	background-image: url("horiz-bars.png");
+	background-repeat: repeat-x;*/
+	z-index:1;
+	background-color: #d74b20;
+	position:absolute;
+	width:100%;
+	height:30%;
+	min-height: 220px;
+	max-height: 350px;
+	/*border:solid 1px green;*/
+}
+
+@font-face {
+    font-family: "ElliotSix";
+    src: url("fonts/ElliotSix.ttf") format("truetype");
+}
+
+.headerBox{
+	z-index: 2;
+	position:absolute;
+	height:500px;
+	width:800px;
+	left:400px;
+	right:300px;
+	top:50px;
+	/*border:solid 1px blue;*/
+}
+
+.truck{
+	z-index: 2;
+	position:absolute;
+	height:300px;
+	width:500px;
+	left:930px;
+	top:93px;
+} 
+
+.map
+{
+	z-index:2;
+	position: absolute;
+	width:700px;
+	height:600px;
+	left:200px;
+	top:280px;
+	padding:30px;
+}
+
+.intro
+{
+	z-index:2;
+	position:absolute;
+	color:white;
+    font-size:30px;
+    font-family:ElliotSix;
+    top:95px;
+    left: 40px;
+    padding:10px;
+    -webkit-transform: rotate(-15deg);
+}
+
+.well
+{
+	z-index:3;
+	position:absolute;
+	left:850px;
+	top:310px;
+	font-family:ElliotSix;
+	font-size: 30px;
+	padding:20px;
+}
+
+</style>
+
+
+<div class="outerBox">
+	<div class ="body">	
 	</div>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>		
+				<div class="nav-collapse">
+					<ul class="nav pull-left"> <li class="active"><a href="index.html">Home</a></li>
+						<li><a href="download.html">Download</a></li>
+						<li><a href="about.html">Our Story</a></li>
+						<li><a href="help.html">Help</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+	</div>
+	
+	<div class="headerBox">
+		<img src="header.png" width="55%" height="50%">
+	</div>	
+	<div class="truck">
+		<img src="falafelTruck.png">
+	</div>	
+	<div class="map">
+  		<iframe width="600" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+        		src="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=New+York,+Chelsea+Park@40.757888,-73.984337&ie=UTF8&z=12&output=embed&t=m&iwloc=near">
+   		</iframe>
+	</div>
+	<div class="intro">
+		<p>Hungry? <br><br>Find a food truck</p>
+	</div>	
+
+	<form class="well">
+  	<label><h3>Enter zipcode</h3></label>
+  	<input type="text" class="span3" placeholder="e.g. 10002">
+  	<button type="submit" class="btn btn-inverse">Submit</button>
+	</form>
+</div>		
 </body>
-</html>		
+</html>
