@@ -1,64 +1,7 @@
-<style type="text/css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css"/>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
 
-#outerBox{
-	z-index:0;
-	position:relative;
-	width:110%;
-	height:200%;
-	top:-10px;
-	left:-10px;
-	background-image: -webkit-linear-gradient(bottom, #FFFFFF 82%, #61BBD0 100%);
-	/*border:solid 1px red;*/
-}
-
-#headerBox {
-	z-index: 2;
-	position: absolute;
-	width: 600px;
-	height:250px;
-	/*border: solid 1px black;*/
-	left:300px;
-	right:200px;
-	top:10px;
-}
-
-
-#nav-example {
-    background:url("nav.jpg") no-repeat;
-    width: 987px;
-    height: 69px;
-    position: absolute;
-    left:100px;
-    top:210px;
-    z-index: 2;
-    /*border: solid 1px green;*/
-}
-
-#nav-example li, #nav-example a {
-    height: 69px;
-    display: block;
-}
-
-#nav-example li {
-    float: left;
-    list-style: none;
-    display: inline;
-    text-indent: -9999em;
-}
-
-#nav-example-01 { width: 140px; }
-#nav-example-02 { width: 200px; }
-#nav-example-03 { width: 220px; }
-#nav-example-04 { width: 130px; }
-#nav-example-05 { width: 257px; }
-
-#nav-example-01 a:hover { background:url("nav.jpg") -40px -69px no-repeat; }
-#nav-example-02 a:hover { background:url("nav.jpg") -180px -69px no-repeat; }
-#nav-example-03 a:hover { background:url("nav.jpg") -380px -69px no-repeat; }
-#nav-example-04 a:hover { background:url("nav.jpg") -600px -69px no-repeat; }
-#nav-example-05 a:hover { background:url("nav.jpg") -730px -69px no-repeat; }
 </style>
-
 <!DOCTYPE html>
 <head>
 	<title>
@@ -66,18 +9,181 @@
 	</title>
 </head>	
 <body>
-	<div id="outerBox">
-		<div id="headerBox">
-			<img src="crayonHeader.png">
-		</div>	
-			<ul id="nav-example">
-	    		<li id="nav-example-01"><a href="index.html">Home</a></li>
-	    		<li id="nav-example-02"><a href="download.html">Download</a></li>
-	    		<li id="nav-example-03"><a href="about.html">OurStory</a></li>
-	    		<li id="nav-example-04"><a href="help.html">Help</a></li>
-	    		<li id="nav-example-05"><a href="contact.html">Contact</a></li>
-			</ul>
-		
+
+<style type="text/css">
+
+.outerBox{
+	z-index:0;
+	background-color: #22a8e0; overflow-x: hidden;
+	position:relative;
+	width:100%;
+	height:100%;
+	/*border:solid 1px red;*/
+}
+
+.body
+{
+	/*background-color: #22a8e0;
+	background-image: url("horiz-bars.png");
+	background-repeat: repeat-x;*/
+	z-index:1;
+	background-color: #d74b20;
+	position:absolute;
+	width:100%;
+	height:30%;
+	min-height: 220px;
+	max-height: 350px;
+	/*border:solid 1px green;*/
+}
+
+@font-face {
+    font-family: "ElliotSix";
+    src: url("fonts/ElliotSix.ttf") format("truetype");
+}
+
+.headerBox{
+	z-index: 2;
+	position:absolute;
+	height:500px;
+	width:800px;
+	left:400px;
+	right:300px;
+	top:50px;
+	/*border:solid 1px blue;*/
+}
+
+.truck{
+	z-index: 2;
+	position:absolute;
+	height:300px;
+	width:500px;
+	left:930px;
+	top:93px;
+} 
+
+.map
+{
+	z-index:2;
+	position: absolute;
+	width:700px;
+	height:600px;
+	left:200px;
+	top:280px;
+	padding:30px;
+}
+
+.intro
+{
+	z-index:2;
+	position:absolute;
+	color:white;
+    font-size:30px;
+    font-family:ElliotSix;
+    top:95px;
+    left: 40px;
+    padding:10px;
+    -webkit-transform: rotate(-15deg);
+}
+
+.apple {
+	z-index:3;
+	position:absolute;
+	top:310;
+	left:300;
+	max-height:60;
+	max-width:172;
+	background-color: white;
+	}
+
+img.button {
+	z-index:2;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	}	
+ 
+img.button:hover {
+	background-color: gray;
+	}
+
+
+.android
+{
+	z-index:3;
+	position:absolute;
+	top:310;
+	left:800;
+	background-color:white;
+}
+
+.iphone
+{
+	z-index:3;
+	position:absolute;
+	top:400;
+	left:250;
+}
+
+.galaxy
+{
+	z-index:3;
+	position:absolute;
+	top:400;
+	left:730;
+}
+</style>
+
+
+<div class="outerBox">
+	<div class ="body">	
 	</div>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>		
+				<div class="nav-collapse">
+					<ul class="nav pull-left"> <li><a href="index.html">Home</a></li>
+						<li class="active"><a href="download.html">Download</a></li>
+						<li><a href="about.html">Our Story</a></li>
+						<li><a href="help.html">Help</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+	</div>
+	
+	<div class="headerBox">
+		<img src="header.png" width="55%" height="50%">
+	</div>	
+	<div class="truck">
+		<img src="falafelTruck.png">
+	</div>	
+	
+	<div class="intro">
+		<p>Hungry? <br><br>Find a food truck</p>
+	</div>	
+
+	<div class="apple">
+		<a href="http://www.apple.com/iphone/from-the-app-store/"><img class="button" src="appicon2.png"></a>  
+	</div>	
+
+	<div class="android">
+		<a href="http://www.apple.com/iphone/from-the-app-store/"><img class="button" src="googicon2.png"></a>
+	</div>	
+
+	<div class="iphone">
+		<img src="iphone.png">
+	</div>	
+
+	<div class="galaxy">
+		<img src="android.png">
+	</div>	
+	
+</div>		
 </body>
-</html>		
+</html>
