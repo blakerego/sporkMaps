@@ -1,0 +1,315 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"access",
+				"accessToken"
+			],
+			[
+				"client",
+				"client_id"
+			],
+			[
+				"acces",
+				"access_token_uri"
+			],
+			[
+				"redire",
+				"redirectUri"
+			],
+			[
+				"se",
+				"session"
+			],
+			[
+				"pa",
+				"params"
+			],
+			[
+				"encryt",
+				"encrypt_password"
+			],
+			[
+				"encr",
+				"encrypt"
+			],
+			[
+				"conta",
+				"contact"
+			],
+			[
+				"sub",
+				"submitted_password"
+			],
+			[
+				"encryp",
+				"encrypted_password"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"passwor",
+				"password_confirmation"
+			],
+			[
+				"passwo",
+				"password_confirmation"
+			],
+			[
+				"passw",
+				"password_field"
+			],
+			[
+				"click",
+				"click_link"
+			],
+			[
+				"contac",
+				"contacts_path"
+			],
+			[
+				"up",
+				"update"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/gems/foursquare-api/lib/foursquare_venue.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/Gemfile",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/gems/foursquare-api/lib/foursquare_node.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/foursquare-api/Gemfile",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/spec/requests/authenticates_spec.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/app/controllers/authenticate_controller.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/config/routes.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/lib/access_token_helper.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/public/index.html",
+		"/Users/blakerego/Coding/littlepharma/littlepharma_rails/config/routes.rb",
+		"/Users/blakerego/Coding/littlepharma/littlepharma_rails/app/models/order.rb",
+		"/Users/blakerego/Coding/littlepharma/littlepharma_rails/app/models/customer.rb",
+		"/Users/blakerego/Coding/littlepharma/littlepharma_rails/app/controllers/orders_controller.rb",
+		"/Users/blakerego/Coding/consonet/consonet_rails/config/routes.rb",
+		"/Users/blakerego/Coding/consonet/consonet_rails/app/models/contact.rb",
+		"/Users/blakerego/Coding/consonet/consonet_rails/spec/controllers/sessions_controller_spec.rb",
+		"/Users/blakerego/Coding/consonet/consonet_rails/app/views/contacts/index.html.erb",
+		"/Users/blakerego/Coding/consonet/consonet_rails/app/controllers/contacts_controller.rb",
+		"/Users/blakerego/Coding/consonet/consonet_rails/app/views/contacts/new.html.erb",
+		"/Users/blakerego/Coding/consonet/consonet_rails/spec/requests/contacts_spec.rb",
+		"/Users/blakerego/Coding/consonet/consonet_rails/app/views/contacts/edit.html.erb",
+		"/Users/blakerego/Coding/consonet/consonet_rails/app/views/contacts/_form.html.erb",
+		"/Users/blakerego/Coding/consonet/consonet_rails/app/views/contacts/_edit_form.html.erb",
+		"/Users/blakerego/Coding/consonet/consonet_rails/app/views/home/index.html.erb",
+		"/Users/blakerego/Coding/consonet/consonet_rails/db/migrate/20120226051527_create_contacts.rb",
+		"/Users/blakerego/Coding/consonet/consonet_rails/app/views/layouts/application.html.erb",
+		"/Users/blakerego/Coding/consonet/consonet_rails/app/assets/stylesheets/contacts.css.scss",
+		"/Users/blakerego/Coding/consonet/consonet_rails/Gemfile",
+		"/Users/blakerego/Coding/consonet/consonet_rails/app/controllers/home_controller.rb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"create",
+			"user",
+			"li",
+			":require",
+			"require",
+			"mini"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"orders_c",
+				"littlepharma_rails/app/controllers/orders_controller.rb"
+			],
+			[
+				"customer",
+				"littlepharma_rails/app/models/customer.rb"
+			],
+			[
+				"order",
+				"littlepharma_rails/app/models/order.rb"
+			],
+			[
+				"routes",
+				"littlepharma_rails/config/routes.rb"
+			],
+			[
+				"",
+				"spec/controllers/sessions_controller_spec.rb"
+			],
+			[
+				"contact",
+				"app/models/contact.rb"
+			],
+			[
+				"contact.rb",
+				"app/models/contact.rb"
+			],
+			[
+				"contacts_control",
+				"app/controllers/contacts_controller.rb"
+			],
+			[
+				"sessions",
+				"app/controllers/sessions_controller.rb"
+			],
+			[
+				"sessions_",
+				"spec/controllers/sessions_controller_spec.rb"
+			],
+			[
+				"routes.rb",
+				"config/routes.rb"
+			],
+			[
+				"index.h",
+				"app/views/contacts/index.html.erb"
+			],
+			[
+				"contacts",
+				"app/controllers/contacts_controller.rb"
+			],
+			[
+				"rspec",
+				"spec/requests/contacts_spec.rb"
+			],
+			[
+				"contacts_contr",
+				"app/controllers/contacts_controller.rb"
+			],
+			[
+				"conta",
+				"app/models/contact.rb"
+			],
+			[
+				"contact.",
+				"app/models/contact.rb"
+			],
+			[
+				"mode",
+				"app/models/contact.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 226.0,
+	"status_bar_visible": true
+}
