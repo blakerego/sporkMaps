@@ -23,8 +23,8 @@ class AuthenticateController < ApplicationController
 
 			categories.each do |category|
 				categoryName = category['name'].to_s
-				puts 'category name: ' + categoryName
-				if categoryName.include? 'food'
+				puts 'category name**: ' + categoryName
+				if (categoryName.include? "food" or categoryName.include? "Food")
 					puts '**********************************************************'
 					filtered.append(venue)
 				end
