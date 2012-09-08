@@ -12,9 +12,13 @@ class AuthenticateController < ApplicationController
 		#rawMovingTargets = venue.search({:ll => "40.7619,-73.9763",:categoryId => "4f2a23984b9023bd5841ed2c"})
 		rawMovingTargets = venue.search({:near => "Manhattan", :categoryId => "4f2a23984b9023bd5841ed2c"})
 
-		filtered = filterResults(rawMovingTargets["response"]["venues"])
-		render :json => filtered
-		#render :json => rawMovingTargets
+		@filtered = filterResults(rawMovingTargets["response"]["venues"])
+		render :html => @filtered
+		#respond_to do |format|
+		   #format.json { render json: @filtered }
+		#end
+
+		#format.json { render :partial => "authenticate/index" }
 	end
 
 	def filterResults(results)

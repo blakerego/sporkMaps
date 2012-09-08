@@ -5,7 +5,7 @@
 		[
 			[
 				"access",
-				"accessToken"
+				"access_token_uri"
 			],
 			[
 				"client",
@@ -79,6 +79,38 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/controllers/authenticate_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1966,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/index.html",
+			"settings":
+			{
+				"buffer_size": 5061,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gems/foursquare-api/lib/foursquare_node.rb",
+			"settings":
+			{
+				"buffer_size": 1734,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "gems/foursquare-api/lib/foursquare_venue.rb",
+			"settings":
+			{
+				"buffer_size": 2136,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -104,6 +136,7 @@
 	},
 	"file_history":
 	[
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/app/controllers/application_controller.rb",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/gems/foursquare-api/lib/foursquare_venue.rb",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/Gemfile",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/gems/foursquare-api/lib/foursquare_node.rb",
@@ -173,8 +206,120 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/controllers/authenticate_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1966,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								193,
+								193
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/index.html",
+					"settings":
+					{
+						"buffer_size": 5061,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4333,
+								4333
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2620.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "gems/foursquare-api/lib/foursquare_node.rb",
+					"settings":
+					{
+						"buffer_size": 1734,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								728,
+								728
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "gems/foursquare-api/lib/foursquare_venue.rb",
+					"settings":
+					{
+						"buffer_size": 2136,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								542,
+								563
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 23.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
