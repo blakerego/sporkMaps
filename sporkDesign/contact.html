@@ -1,0 +1,197 @@
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css"/>
+<link rel="stylesheet" href="jquery.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+
+</style>
+<!DOCTYPE html>
+<head>
+	<title>
+		Spork | Food Truck Tracker
+	</title>
+</head>	
+<body>
+
+<style type="text/css">
+
+.outerBox{
+	z-index:0;
+	background-color: #22a8e0; overflow-x: hidden;
+	position:relative;
+	width:100%;
+	height:100%;
+	/*border:solid 1px red;*/
+}
+
+.body
+{
+	/*background-color: #22a8e0;
+	background-image: url("horiz-bars.png");
+	background-repeat: repeat-x;*/
+	z-index:1;
+	background-color: #d74b20;
+	position:absolute;
+	width:100%;
+	height:30%;
+	min-height: 220px;
+	max-height: 350px;
+	/*border:solid 1px green;*/
+}
+
+@font-face {
+    font-family: "ElliotSix";
+    src: url("fonts/ElliotSix.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Print Clearly";
+    src: url("fonts/PrintClearly.ttf") format("truetype");
+}
+
+.headerBox{
+	z-index: 2;
+	position:absolute;
+	height:500px;
+	width:800px;
+	left:400px;
+	right:300px;
+	top:50px;
+	/*border:solid 1px blue;*/
+}
+
+.truck{
+	z-index: 2;
+	position:absolute;
+	height:300px;
+	width:500px;
+	left:930px;
+	top:93px;
+} 
+
+.map
+{
+	z-index:2;
+	position: absolute;
+	width:700px;
+	height:600px;
+	left:200px;
+	top:280px;
+	padding:30px;
+}
+
+.intro
+{
+	z-index:2;
+	position:absolute;
+	color:white;
+    font-size:30px;
+    font-family:ElliotSix;
+    top:95px;
+    left:40px;
+    padding:10px;
+    -webkit-transform: rotate(-15deg);
+}
+
+.text
+{
+	z-index:3;
+	position:absolute;
+	left:500;
+	top:300px;
+	color:black;
+    font-size:28px;
+    font-family:"Print Clearly";
+    padding:60px;
+    line-height:30px;
+   	letter-spacing: -1.5px;
+}
+
+.btn-custom {
+	z-index:3;
+	position:absolute;
+	width:100;
+	height:50;
+	right:10;
+	font-size:20px;
+	background-color: hsl(0, 0%, 18%) !important;
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#707070", endColorstr="#2d2d2d");
+	background-image: -khtml-gradient(linear, left top, left bottom, from(#707070), to(#2d2d2d));
+	background-image: -moz-linear-gradient(top, #707070, #2d2d2d);
+	background-image: -ms-linear-gradient(top, #707070, #2d2d2d);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #707070), color-stop(100%, #2d2d2d));
+	background-image: -webkit-linear-gradient(top, #707070, #2d2d2d);
+	background-image: -o-linear-gradient(top, #707070, #2d2d2d);
+	background-image: linear-gradient(#707070, #2d2d2d);
+	border-color: #2d2d2d #2d2d2d hsl(0, 0%, 11.5%);
+	color: #fff !important;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.42);
+	-webkit-font-smoothing: antialiased;
+}
+
+.well
+{
+	z-index:3;
+	position:absolute;
+	left:280px;
+	top:320px;
+	font-family:ElliotSix;
+	font-size:40px;
+	text-align:center;
+	height:250px;
+	width:700px;
+	padding:20;
+}
+
+.textarea_custom
+{
+height:200px;
+width:500px;
+}
+
+</style>
+
+
+<div class="outerBox">
+	<div class ="body">	
+	</div>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>		
+				<div class="nav-collapse">
+					<ul class="nav pull-left"> <li><a href="index.html">Home</a></li>
+						<li><a href="download.html">Download</a></li>
+						<li><a href="about.html">Our Story</a></li>
+						<li><a href="help.html">Help</a></li>
+						<li class="active"><a href="contact.html">Contact</a></li>
+					</li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+	</div>
+	
+	<div class="headerBox">
+		<img src="header.png" width="55%" height="50%">
+	</div>	
+	<div class="truck">
+		<img src="falafelTruck.png">
+	</div>	
+	
+	<div class="intro">
+		<p>Hungry? <br><br>Find a food truck</p>
+	</div>
+	
+<form class="well">
+  	<label><h2>Email Us</h2></label>	
+  	<textarea class="textarea_custom"></textarea>
+  	<button type="submit" class="btn btn-custom">Submit</button>
+	</form> 	
+
+</div>		
+</body>
+</html>
