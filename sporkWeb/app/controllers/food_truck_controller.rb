@@ -1,10 +1,9 @@
 class FoodTruckController < ApplicationController
 	
-	def index(accessToken)
+	def index
 		puts 'in index method of the FoodTruckController'
 
-
-		venue = Foursquare::Venue.new(accessToken)
+		venue = Foursquare::Venue.new(params[:accessToken])
 		
 		#rawMovingTargets = venue.search({:ll => "40.7619,-73.9763",:categoryId => "4f2a23984b9023bd5841ed2c",:intent => "browse", :radius => "100000"})
 		#rawMovingTargets = venue.search({:ll => "40.7619,-73.9763",:categoryId => "4f2a23984b9023bd5841ed2c"})
@@ -12,6 +11,7 @@ class FoodTruckController < ApplicationController
 
 		@filtered = filterResults(rawMovingTargets["response"]["venues"])
 		render :json => @filtered
+
 	end
 
 	def filterResults(results)
