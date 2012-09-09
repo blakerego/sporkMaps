@@ -1,13 +1,12 @@
 
 <script>
-	bindMap( <% @filtered %> );
+	bindMap( '<%= @accessToken.to_s %>' );
 </script>
 
 <h1>hello</h1>
 
-<%= @filtered[0] %>
+<br /> 
+<p>Access Token: </p> 
+<%= @accessToken.to_s %>
 
-<br /> <br />
-
-<% @filtered[1] %>
 

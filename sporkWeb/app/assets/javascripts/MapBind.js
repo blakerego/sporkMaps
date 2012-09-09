@@ -2,7 +2,7 @@
 
 
 
-function bindMap(dataPoints){
+function bindMap(accessToken){
 	alert('data has been passed');
-	alert(dataPoints) ;
+	alert(accessToken) ;
 }

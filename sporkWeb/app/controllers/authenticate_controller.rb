@@ -5,39 +5,8 @@ class AuthenticateController < ApplicationController
 
 	def index
 		puts 'in the index method of the authenticate controller.'
-		accessToken = getAccessToken(params)
-		venue = Foursquare::Venue.new(accessToken)
-		
-		#rawMovingTargets = venue.search({:ll => "40.7619,-73.9763",:categoryId => "4f2a23984b9023bd5841ed2c",:intent => "browse", :radius => "100000"})
-		#rawMovingTargets = venue.search({:ll => "40.7619,-73.9763",:categoryId => "4f2a23984b9023bd5841ed2c"})
-		rawMovingTargets = venue.search({:near => "Manhattan", :categoryId => "4f2a23984b9023bd5841ed2c"})
-
-		@filtered = filterResults(rawMovingTargets["response"]["venues"])
-		render :html => @filtered
-		#respond_to do |format|
-		   #format.json { render json: @filtered }
-		#end
-
-		#format.json { render :partial => "authenticate/index" }
-	end
-
-	def filterResults(results)
-		puts 'filtering results...'
-		filtered = []
-		results.each do |venue|
-
-			categories = venue["categories"]
-			categories.each do |category|
-				categoryName = category['name'].to_s
-				if (categoryName.include? "food" or categoryName.include? "Food")
-					puts 'name: ' + venue["name"]
-					puts 'category name**: ' + categoryName
-					puts ''
-					filtered.append(venue)
-				end
-			end
-		end
-		return filtered
+		@accessToken = getAccessToken(params)
+		render :html => @accessToken
 	end
 
 	def getAccessToken(params)
