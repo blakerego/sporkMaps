@@ -1,5 +1,7 @@
 
 
+mMap = null; 
+
 function bindMap(accessToken){
 	loadScript(); 
 	$.ajax({
@@ -8,27 +10,29 @@ function bindMap(accessToken){
 	}).done(function(data) { 
 		mMarkerData = data;
 		for(var x=0; x<data.length; x++) 
-		{			
-			var myLatlng = new google.maps.LatLng(
-				data[x]["location"]["lat"],
-				data[x]["location"]["lng"]);
-
-			
-			var mapOptions = {
-				zoom: 4,
-				center: myLatlng,
-				mapTypeId: google.maps.MapTypeId.ROADMAP
-			}
-			var marker = new google.maps.Marker({
-				position: myLatlng,
-				map: mMap,
-				title: data[x]["name"]
-			});
+		{
+			createMarker(data[x]);
 		}    
 	});
 }
 
-mMap = null; 
+function createMarker(venue)
+{
+	var myLatlng = new google.maps.LatLng(
+		venue["location"]["lat"],
+		venue["location"]["lng"]);
+
+	var mapOptions = {
+		zoom: 4,
+		center: myLatlng,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	}
+	var marker = new google.maps.Marker({
+		position: myLatlng,
+		map: mMap,
+		title: venue["name"]
+	});
+}
 
 function initialize() {
   var mapOptions = {
