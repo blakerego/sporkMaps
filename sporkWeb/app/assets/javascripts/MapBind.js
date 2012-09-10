@@ -1,14 +1,34 @@
 
 
 function bindMap(accessToken){
-
+	loadScript(); 
 	$.ajax({
 	  url: "http://localhost:3000/food_truck?accessToken=" + accessToken,
 	  context: document.body
-	}).done(function() { 
-		alert('ajax response returned.'); 
+	}).done(function(data) { 
+		mMarkerData = data;
+		for(var x=0; x<data.length; x++) 
+		{			
+			var myLatlng = new google.maps.LatLng(
+				data[x]["location"]["lat"],
+				data[x]["location"]["lng"]);
+
+			
+			var mapOptions = {
+				zoom: 4,
+				center: myLatlng,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+			var marker = new google.maps.Marker({
+				position: myLatlng,
+				map: mMap,
+				title: data[x]["name"]
+			});
+		}    
 	});
 }
+
+mMap = null; 
 
 function initialize() {
   var mapOptions = {
@@ -16,7 +36,7 @@ function initialize() {
     center: new google.maps.LatLng(40.7619,-73.9763),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   }
-  var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+  mMap = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 }
 
 function loadScript() {
@@ -26,4 +46,3 @@ function loadScript() {
   document.body.appendChild(script);
 }
 
-window.onload = loadScript;
