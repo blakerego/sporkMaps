@@ -1,0 +1,67 @@
+#outerBox{
+	z-index:0;
+	position:relative;
+	width:100%;
+	height:100%;
+	border:solid 1px red;
+	top:0px;
+	left:0px;
+}
+
+#headerBox {
+	z-index: 2;
+	position: absolute;
+	width: 600px;
+	height:250px;
+	border: solid 1px black;
+	left:300px;
+	right:200px;
+	top:10px;
+}
+
+#map {
+	position: absolute;
+	width:600px;
+	height:550px;
+	border: solid 1px blue;
+	left:140px;
+	top:300px;
+	padding:30px;
+	z-index:3;
+
+}
+
+#nav-example {
+    background:url("nav.jpg") no-repeat;
+    width: 987px;
+    height: 69px;
+    position: absolute;
+    left:100px;
+    top:210px;
+    z-index: 100;
+    border: solid 1px green;
+}
+
+#nav-example li, #nav-example a {
+    height: 69px;
+    display: block;
+}
+
+#nav-example li {
+    float: left;
+    list-style: none;
+    display: inline;
+    text-indent: -9999em;
+}
+
+#nav-example-01 { width: 180px;  }
+#nav-example-02 { width: 200px; }
+#nav-example-03 { width: 220px; }
+#nav-example-04 { width: 130px; }
+#nav-example-05 { width: 257px; }
+
+#nav-example-01 a:hover { background:url("nav.jpg") 0px -69px no-repeat; }
+#nav-example-02 a:hover { background:url("nav.jpg") -180px -69px no-repeat; }
+#nav-example-03 a:hover { background:url("nav.jpg") -380px -69px no-repeat; }
+#nav-example-04 a:hover { background:url("nav.jpg") -600px -69px no-repeat; }
+#nav-example-05 a:hover { background:url("nav.jpg") -730px -69px no-repeat; }
