@@ -80,10 +80,18 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/authenticate_controller.rb",
+			"file": "app/views/authenticate/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 1966,
+				"buffer_size": 166,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/MapBind.js",
+			"settings":
+			{
+				"buffer_size": 1160,
 				"line_ending": "Unix"
 			}
 		},
@@ -91,23 +99,23 @@
 			"file": "public/index.html",
 			"settings":
 			{
-				"buffer_size": 5061,
+				"buffer_size": 340,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "gems/foursquare-api/lib/foursquare_node.rb",
+			"file": "config/routes.rb",
 			"settings":
 			{
-				"buffer_size": 1734,
+				"buffer_size": 1845,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "gems/foursquare-api/lib/foursquare_venue.rb",
+			"file": "app/controllers/food_truck_controller.rb",
 			"settings":
 			{
-				"buffer_size": 2136,
+				"buffer_size": 1084,
 				"line_ending": "Unix"
 			}
 		}
@@ -136,16 +144,19 @@
 	},
 	"file_history":
 	[
-		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/app/controllers/application_controller.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/config/routes.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/app/controllers/authenticate_controller.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/app/controllers/food_truck_controller.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/script/MapBind.js",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/app/assets/javascripts/application.js",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/gems/foursquare-api/lib/foursquare_venue.rb",
-		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/Gemfile",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/gems/foursquare-api/lib/foursquare_node.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/public/index.html",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/app/controllers/application_controller.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/Gemfile",
 		"/Users/blakerego/myDropBox/Dropbox/git/foursquare-api/Gemfile",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/spec/requests/authenticates_spec.rb",
-		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/app/controllers/authenticate_controller.rb",
-		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/config/routes.rb",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/lib/access_token_helper.rb",
-		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/public/index.html",
 		"/Users/blakerego/Coding/littlepharma/littlepharma_rails/config/routes.rb",
 		"/Users/blakerego/Coding/littlepharma/littlepharma_rails/app/models/order.rb",
 		"/Users/blakerego/Coding/littlepharma/littlepharma_rails/app/models/customer.rb",
@@ -211,24 +222,23 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/authenticate_controller.rb",
+					"file": "app/views/authenticate/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 1966,
+						"buffer_size": 166,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								193,
-								193
+								166,
+								166
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -238,51 +248,49 @@
 				},
 				{
 					"buffer": 1,
-					"file": "public/index.html",
+					"file": "app/assets/javascripts/MapBind.js",
 					"settings":
 					{
-						"buffer_size": 5061,
+						"buffer_size": 1160,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4333,
-								4333
+								260,
+								260
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2620.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "gems/foursquare-api/lib/foursquare_node.rb",
+					"file": "public/index.html",
 					"settings":
 					{
-						"buffer_size": 1734,
+						"buffer_size": 340,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								728,
-								728
+								322,
+								322
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -294,18 +302,18 @@
 				},
 				{
 					"buffer": 3,
-					"file": "gems/foursquare-api/lib/foursquare_venue.rb",
+					"file": "config/routes.rb",
 					"settings":
 					{
-						"buffer_size": 2136,
+						"buffer_size": 1845,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								542,
-								563
+								0,
+								0
 							]
 						],
 						"settings":
@@ -315,7 +323,34 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 23.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/food_truck_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1084,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -365,6 +400,14 @@
 		"selected_items":
 		[
 			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
 				"orders_c",
 				"littlepharma_rails/app/controllers/orders_controller.rb"
 			],
@@ -375,10 +418,6 @@
 			[
 				"order",
 				"littlepharma_rails/app/models/order.rb"
-			],
-			[
-				"routes",
-				"littlepharma_rails/config/routes.rb"
 			],
 			[
 				"",
