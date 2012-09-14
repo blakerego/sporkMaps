@@ -3,57 +3,48 @@
 
 	
 <html>
-<head>
-	<title>
-		Spork | Food Truck Tracker
-	</title>
-	<!--link rel="stylesheet" type="text/css" href="bootstrap-responsive.css"/>
-	<link rel="stylesheet" type="text/css" href="bootstrap.css"/-->	
-	<%= stylesheet_link_tag    "application", :media => "all" %>
-	<%= javascript_include_tag "application" %>
-	<%= csrf_meta_tags %>
-</head>
+	<head>
+		<title>
+			Spork | Food Truck Tracker
+		</title>
+		<!--link rel="stylesheet" type="text/css" href="bootstrap-responsive.css"/>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css"/-->	
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+	</head>
 
-<div class="outerBox">
-	<div class ="body">	
-	</div>
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</a>		
-				<div class="nav-collapse">
-					<ul class="nav pull-left"> <li class="active"><a href="index.html">Home</a></li>
-						<li><a href="download.html">Download</a></li>
-						<li><a href="about.html">Our Story</a></li>
-						<li><a href="help.html">Help</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</li>
-					</ul>
-				</div>	
+	<div class="outerBox">
+		<div class ="body">	</div>
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>		
+					<div class="nav-collapse">
+						<ul class="nav pull-left"> <li class="active"><a href="index.html">Home</a></li>
+							<li><a href="download.html">Download</a></li>
+							<li><a href="about.html">Our Story</a></li>
+							<li><a href="help.html">Help</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</li>
+						</ul>
+					</div>	
+				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div class="headerBox">
-		<img src="/assets/header.png" width="55%" height="50%">
-	</div>	
-	<div class="truck">
-		<img src="/assets/falafelTruck.png">
-	</div>	
-	<!--div class="map">
-  		<iframe width="600" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-        		src="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=New+York,+Chelsea+Park@40.757888,-73.984337&ie=UTF8&z=12&output=embed&t=m&iwloc=near">
-   		</iframe>
-	</div-->
+		
+		<div class="headerBox">
+			<img src="/assets/header.png" width="55%" height="50%">
+		</div>	
+		<div class="truck">
+			<img src="/assets/falafelTruck.png">
+		</div>	
 
-	<%= yield %>
-
-
-
-</div>		
+		<%= yield %>
+	</div>		
 </body>
 </html>
