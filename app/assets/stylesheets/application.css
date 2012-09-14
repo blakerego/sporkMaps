@@ -96,3 +96,53 @@
 	font-size: 30px;
 	padding:20px;
 }
+
+
+img.button {
+	z-index:2;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	}	
+ 
+img.button:hover {
+	background-color: gray;
+	}
+ 
+
+.apple {
+	z-index:3;
+	position:absolute;
+	top:310;
+	left:310;
+	max-height:60;
+	max-width:172;
+	background-color: white;
+	}
+
+.android
+{
+	z-index:3;
+	position:absolute;
+	top:310;
+	left:780;
+	background-color:white;
+}
+
+
+.iphone
+{
+	z-index:3;
+	position:absolute;
+	top:400;
+	left:250;
+}
+
+
+.galaxy
+{
+	z-index:3;
+	position:absolute;
+	top:400;
+	left:730;
+}
+

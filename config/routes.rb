@@ -2,7 +2,10 @@ SporkWeb::Application.routes.draw do
 
   resources :authenticate
   resources :food_truck
-  
+  resources :download
+  #match '/Download', :to => 'download#index'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
