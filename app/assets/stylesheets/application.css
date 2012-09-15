@@ -66,11 +66,11 @@
 {
 	z-index:2;
 	position: absolute;
-	width:700px;
-	height:600px;
+	width:600px;
+	height:550px;
 	left:200px;
-	top:280px;
-	padding:30px;
+	top:310px;
+	padding:19px;
 }
 
 .intro
@@ -93,7 +93,7 @@
 	left:850px;
 	top:310px;
 	font-family:ElliotSix;
-	font-size: 30px;
+	font-size:30px;
 	padding:20px;
 }
 
