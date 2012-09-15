@@ -3,6 +3,7 @@ SporkWeb::Application.routes.draw do
   resources :authenticate
   resources :food_truck
   resources :download
+  match ':action' => 'static#:action'
   #match '/Download', :to => 'download#index'
 
 
