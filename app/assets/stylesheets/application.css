@@ -146,3 +146,26 @@ img.button:hover {
 	left:730;
 }
 
+
+.photo
+{
+	z-index:3;
+	position:absolute;
+	left:100px;
+	top:300px;
+}
+
+.text
+{
+	z-index:3;
+	position:absolute;
+	left:500;
+	top:250px;
+	color:black;
+    font-size:18px;
+    font-family:arial;
+    padding:60px;
+    line-height:30px;
+   	letter-spacing: -1px;
+}
+
