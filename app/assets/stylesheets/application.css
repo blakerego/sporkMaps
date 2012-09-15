@@ -183,3 +183,39 @@ img.button:hover {
    	letter-spacing: -1.5px;
 }
 
+.touch
+{
+	z-index:3;
+	position:absolute;
+	left:280px;
+	top:310px;
+	color:black;
+    font-size:28px;
+    font-family:"ElliotSix";
+	text-align:center;
+	height:400px;
+	width:700px;
+	padding:20;
+}
+
+
+.email
+{
+	z-index:3;
+	position:absolute;
+	font-family:arial;
+	font-size:16;
+	left:530;
+	top:370;
+	color:black;
+	line-height:.5;
+}
+a:link
+{
+	color: #484646;
+	text-decoration: underline;
+}
+a:visited:
+{
+	color:gray;
+}
