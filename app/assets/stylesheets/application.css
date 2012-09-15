@@ -97,6 +97,25 @@
 	padding:20px;
 }
 
+.apple 
+{
+	z-index:3;
+	position:absolute;
+	top:310;
+	left:310;
+	max-height:60;
+	max-width:172;
+	background-color: white;	
+}
+
+.android
+{
+	z-index:3;
+	position:absolute;
+	top:310;
+	left:780;
+	background-color:white;
+}
 
 img.button {
 	z-index:2;
@@ -107,26 +126,6 @@ img.button {
 img.button:hover {
 	background-color: gray;
 	}
- 
-
-.apple {
-	z-index:3;
-	position:absolute;
-	top:310;
-	left:310;
-	max-height:60;
-	max-width:172;
-	background-color: white;
-	}
-
-.android
-{
-	z-index:3;
-	position:absolute;
-	top:310;
-	left:780;
-	background-color:white;
-}
 
 
 .iphone
