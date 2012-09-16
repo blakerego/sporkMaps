@@ -1,3 +1,0 @@
-[submodule "gems/foursquare-api"]
-	path = gems/foursquare-api
-	url = git@github.com:blakerego/foursquare-api.git
