@@ -1,0 +1,7 @@
+require 'foursquare_node'
+require 'foursquare_checkins'
+require 'foursquare_photo'
+require 'foursquare_settings'
+require 'foursquare_tips'
+require 'foursquare_user'
+require 'foursquare_venue'
