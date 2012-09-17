@@ -17,20 +17,41 @@
 	background-color: #22a8e0; overflow-x: hidden;
 	position:relative;
 	width:100%;
-	height:100%;
+	min-height:100%;
 	/*border:solid 1px red;*/
+}
+
+html,body
+{
+	margin: 0;
+	padding: 0; 
+	height:100%;
 }
 
 .body
 {
-	/*background-color: #22a8e0;
+	padding: 10px;
+	padding-bottom:30px;
+}
+
+.footer
+{
+	position: absolute; 
+	bottom: 0;
+	width: 100%;
+	height:30px;
+}
+
+.orangeArea
+{
+		/*background-color: #22a8e0;
 	background-image: url("horiz-bars.png");
 	background-repeat: repeat-x;*/
 	z-index:1;
 	background-color: #d74b20;
 	position:absolute;
 	width:100%;
-	height:30%;
+	height:200px;
 	min-height: 220px;
 	max-height: 350px;
 	/*border:solid 1px green;*/
@@ -100,8 +121,6 @@
 
 
 <div class="outerBox">
-	<div class ="body">	
-	</div>
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
@@ -122,27 +141,57 @@
 			</div>
 		</div>
 	</div>
-	
-	<div class="headerBox">
-		<img src="header.png" width="55%" height="50%">
-	</div>	
-	<div class="truck">
-		<img src="falafelTruck.png">
-	</div>	
-	<div class="map">
-  		<iframe width="600" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-        		src="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=New+York,+Chelsea+Park@40.757888,-73.984337&ie=UTF8&z=12&output=embed&t=m&iwloc=near">
-   		</iframe>
-	</div>
-	<div class="intro">
-		<p>Hungry? <br><br>Find a food truck</p>
-	</div>	
 
-	<form class="well">
-  	<label><h3>Enter zipcode</h3></label>
-  	<input type="text" class="span3" placeholder="e.g. 10002">
-  	<button type="submit" class="btn btn-inverse">Submit</button>
-	</form>
+	<div class="body">	
+		<div class="orangeArea"></div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+		<div class="headerBox">
+			<img src="header.png" width="55%" height="50%">
+		</div>	
+		<div class="truck">
+			<img src="falafelTruck.png">
+		</div>	
+		<div class="map">
+	  		<iframe width="600" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+	        		src="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=New+York,+Chelsea+Park@40.757888,-73.984337&ie=UTF8&z=12&output=embed&t=m&iwloc=near">
+	   		</iframe>
+		</div>
+		<div class="intro">
+			<p>Hungry? <br><br>Find a food truck</p>
+		</div>	
+
+		<form class="well">
+	  	<label><h3>Enter zipcode</h3></label>
+	  	<input type="text" class="span3" placeholder="e.g. 10002">
+	  	<button type="submit" class="btn btn-inverse">Submit</button>
+		</form>
+	</div>
+
+
+	<div class="navbar footer">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>		
+				<div class="nav-collapse">
+					<ul class="nav pull-left"> <li class="active"><a href="index.html">Home</a></li>
+						<li><a href="download.html">Download</a></li>
+						<li><a href="about.html">Our Story</a></li>
+						<li><a href="help.html">Help</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+	</div>
+
 </div>		
 </body>
 </html>
