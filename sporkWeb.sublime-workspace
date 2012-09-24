@@ -79,6 +79,46 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 1367,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/application.css",
+			"settings":
+			{
+				"buffer_size": 3074,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/authenticate/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 402,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/index.html",
+			"settings":
+			{
+				"buffer_size": 340,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/authenticate_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1018,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -104,9 +144,21 @@
 	},
 	"file_history":
 	[
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/static/download.html.erb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkDesign/download.html",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/static/contact.html.erb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkDesign/contact.html",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkDesign/help.html",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/static/help.html.erb",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/authenticate/index.html.erb",
-		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/controllers/food_truck_controller.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkDesign/index.html",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkDesign/about.html",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/static/about.html.erb",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/config/routes.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/download/index.html.erb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/stylesheets/bootstrap-responsive.css",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/controllers/download_controller.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/controllers/food_truck_controller.rb",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/public/index.html",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/javascripts/MapBind.js",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkWeb/config/routes.rb",
@@ -159,6 +211,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"text",
+			";\n",
+			"img",
+			"button",
+			"apple",
 			"create",
 			"user",
 			"li",
@@ -182,8 +239,140 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 1367,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								408,
+								408
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/assets/stylesheets/application.css",
+					"settings":
+					{
+						"buffer_size": 3074,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1393,
+								1393
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 394.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/authenticate/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 402,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								402,
+								402
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/index.html",
+					"settings":
+					{
+						"buffer_size": 340,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								270,
+								270
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/authenticate_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1018,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1018,
+								1018
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -229,11 +418,11 @@
 		"selected_items":
 		[
 			[
-				"rou",
+				"routes",
 				"config/routes.rb"
 			],
 			[
-				"routes",
+				"rou",
 				"config/routes.rb"
 			],
 			[
