@@ -23,10 +23,10 @@
 					</a>		
 					<div class="nav-collapse">
 						<ul class="nav pull-left"> <li class="active"><a href="index.html">Home</a></li>
-							<li><a href="download">Download</a></li>
-							<li><a href="about">Our Story</a></li>
-							<li><a href="help">Help</a></li>
-							<li><a href="contact">Contact</a></li>
+							<li><%= link_to "Download", :controller => "static", :action => "download" %></li>
+							<li><%= link_to "Our Story", :controller => "static", :action => "about" %></li>
+							<li><%= link_to "Help", :controller => "static", :action => "help" %></li>
+							<li><%= link_to "Contact", :controller => "static", :action => "contact" %></li>
 						</li>
 						</ul>
 					</div>	
@@ -43,7 +43,6 @@
 		<div class="intro">
 			<p>Hungry? <br><br>Find a food truck</p>
 		</div>	
-
 
 		<%= yield %>
 	</div>		
