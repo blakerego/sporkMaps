@@ -1,5 +1,7 @@
 SporkWeb::Application.routes.draw do
 
+  resources :menus
+
   resources :items
 
   resources :authenticate
