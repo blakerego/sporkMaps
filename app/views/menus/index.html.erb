@@ -1,23 +1,28 @@
-<h1>Listing menus</h1>
+<div class="main_menu">
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <div class="Welcome">
+    <h1>Select a Menu</h1>
+  </div>
 
-<% @menus.each do |menu| %>
-  <tr>
-    <td><%= menu.name %></td>
-    <td><%= link_to 'Show', menu %></td>
-    <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
-    <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
 
-<br />
+  <% @menus.each do |menu| %>
+    <tr>
+      <td><%= menu.name %></td>
+      <td><%= link_to 'Show', menu %></td>
+      <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
+      <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </table>
 
-<%= link_to 'New Menu', new_menu_path %>
+  <br />
+
+  <%= link_to 'New Menu', new_menu_path %>
+</div>

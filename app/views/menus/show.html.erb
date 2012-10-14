@@ -1,10 +1,20 @@
-<p id="notice"><%= notice %></p>
+<ul class="breadcrumb breadcrumb_placement">
+  <li>1. Name Menu</span><span class="divider">|</li>
+  <li><span class="active">2. Add / Remove Items</span><span class="divider">|</span></li>
+  <li >3. Finalize Menu</li>
+</ul>
 
-<p>
-  <b>Name:</b>
-  <%= @menu.name %>
-</p>
 
+<div class="main_menu">
 
-<%= link_to 'Edit', edit_menu_path(@menu) %> |
-<%= link_to 'Back', menus_path %>
+	<div class="hero-unit">
+		<p id="notice"><%= notice %></p>
+
+		<div class="page-header">
+			<h1><%= @menu.name %> </h1><%= link_to 'Edit', edit_menu_path(@menu) %>
+		</div>
+		  <button class="btn btn-inverse">+Add Menu Item</button>
+		<br>
+		<%= link_to 'See all menus', menus_path %>
+	</div>
+</div>
