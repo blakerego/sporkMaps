@@ -45,6 +45,20 @@
 		</div>	
 
 		<%= yield %>
+	</div>
+
+	<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	    <h3 id="myModalLabel">Create Food Item</h3>
+	  </div>
+	  <div class="modal-body">
+	    <p>The quick brown fox jumps over the lazy dog. </p>
+	  </div>
+	  <div class="modal-footer">
+	    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+	    <button class="btn btn-primary" id="save_btn">Save changes</button>
+	  </div>
 	</div>		
 </body>
 </html>

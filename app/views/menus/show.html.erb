@@ -13,8 +13,11 @@
 		<div class="page-header">
 			<h1><%= @menu.name %> </h1><%= link_to 'Edit', edit_menu_path(@menu) %>
 		</div>
-		  <button class="btn btn-inverse">+Add Menu Item</button>
+		  <!--button class="btn btn-inverse">+Add Menu Item</button-->
+		  <a href="#myModal" role="button" class="btn btn-inverse" data-toggle="modal" data-keyboard="true">+Add Menu Item</a>
+
 		<br>
 		<%= link_to 'See all menus', menus_path %>
 	</div>
 </div>
+
