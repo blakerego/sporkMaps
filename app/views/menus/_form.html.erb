@@ -1,0 +1,22 @@
+<%= form_for(@menu, :html => { :class => "well"} ) do |f| %>
+  <% if @menu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
+
+      <ul>
+      <% @menu.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    Name Your Menu:<br />
+    <%= f.text_field :name, :placeholder => 'e.g. Weekend Menu' %>
+  </div>
+
+  <button type="submit" class="btn btn-inverse">Create Menu</button>
+
+<% end %>
+

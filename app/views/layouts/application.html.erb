@@ -4,8 +4,6 @@
 		<title>
 			Spork | Food Truck Tracker
 		</title>
-		<!--link rel="stylesheet" type="text/css" href="bootstrap-responsive.css"/>
-		<link rel="stylesheet" type="text/css" href="bootstrap.css"/-->	
 		<%= stylesheet_link_tag    "application", :media => "all" %>
 		<%= javascript_include_tag "application" %>
 		<%= csrf_meta_tags %>
@@ -23,10 +21,10 @@
 					</a>		
 					<div class="nav-collapse">
 						<ul class="nav pull-left"> <li class="active"><a href="index.html">Home</a></li>
-							<li><a href="download">Download</a></li>
-							<li><a href="about">Our Story</a></li>
-							<li><a href="help">Help</a></li>
-							<li><a href="contact">Contact</a></li>
+							<li><%= link_to "Download", :controller => "static", :action => "download" %></li>
+							<li><%= link_to "Our Story", :controller => "static", :action => "about" %></li>
+							<li><%= link_to "Help", :controller => "static", :action => "help" %></li>
+							<li><%= link_to "Contact", :controller => "static", :action => "contact" %></li>
 						</li>
 						</ul>
 					</div>	
@@ -44,8 +42,21 @@
 			<p>Hungry? <br><br>Find a food truck</p>
 		</div>	
 
-
 		<%= yield %>
+	</div>
+
+	<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	    <h3 id="myModalLabel">Create Food Item</h3>
+	  </div>
+	  <div class="modal-body">
+	    <p>The quick brown fox jumps over the lazy dog. </p>
+	  </div>
+	  <div class="modal-footer">
+	    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+	    <button class="btn btn-primary" id="save_btn">Save changes</button>
+	  </div>
 	</div>		
 </body>
 </html>

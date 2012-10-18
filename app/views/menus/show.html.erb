@@ -1,0 +1,23 @@
+<ul class="breadcrumb breadcrumb_placement">
+  <li>1. Name Menu</span><span class="divider">|</li>
+  <li><span class="active">2. Add / Remove Items</span><span class="divider">|</span></li>
+  <li >3. Finalize Menu</li>
+</ul>
+
+
+<div class="main_menu">
+
+	<div class="hero-unit">
+		<p id="notice"><%= notice %></p>
+
+		<div class="page-header">
+			<h1><%= @menu.name %> </h1><%= link_to 'Edit', edit_menu_path(@menu) %>
+		</div>
+		  <!--button class="btn btn-inverse">+Add Menu Item</button-->
+		  <a href="#myModal" role="button" class="btn btn-inverse" data-toggle="modal" data-keyboard="true">+Add Menu Item</a>
+
+		<br>
+		<%= link_to 'See all menus', menus_path %>
+	</div>
+</div>
+

@@ -16,3 +16,6 @@
 .DS_Store
 *~
 *#
+
+gems/foursquare-api/.document
+vendor/assets/
