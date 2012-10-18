@@ -14,7 +14,7 @@
 			<h1><%= @menu.name %> </h1><%= link_to 'Edit', edit_menu_path(@menu) %>
 		</div>
 		  <!--button class="btn btn-inverse">+Add Menu Item</button-->
-		  <a href="#myModal" role="button" class="btn btn-inverse" data-toggle="modal" data-keyboard="true">+Add Menu Item</a>
+		  <a role="button" href="<%= new_item_path %>" data-target="#item_modal" class="btn btn-inverse" data-toggle="modal" data-keyboard="true">+Add Menu Item</a>
 
 		<br>
 		<%= link_to 'See all menus', menus_path %>
