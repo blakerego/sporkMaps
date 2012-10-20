@@ -1,0 +1,334 @@
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css"/>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+
+</style>
+<!DOCTYPE html>
+<head>
+	<title>
+		Spork | Food Truck Tracker
+	</title>
+<script type="text/javascript" src="jquery-1.4.1.js"></script>
+<script type="text/javascript" src="jquery-ui-1.7.2.min.js"></script>
+<script type="text/javascript" src="jquery.color.js"></script>
+<!-- <script type="text/javascript" src="demo.js"></script> -->
+<script type="text/javascript" src="index.js"></script>	
+</head>	
+<body>
+
+<style type="text/css">
+
+
+
+
+.outerBox{
+	z-index:0;
+	background-color: #22a8e0; overflow-x: hidden;
+	position:relative;
+	width:100%;
+	height:100%;
+	/*border:solid 1px red;*/
+}
+
+/*.body
+{
+	z-index:1;
+	background-color: #d74b20;
+	position:absolute;
+	width:100%;
+	height:30%;
+	min-height: 220px;
+	max-height: 350px;
+}*/
+
+@font-face {
+    font-family: "ElliotSix";
+    src: url("fonts/ElliotSix.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Print Clearly";
+    src: url("fonts/PrintClearly.ttf") format("truetype");
+}
+
+.headerBox{
+	z-index: 2;
+	position:absolute;
+	height:500px;
+	width:800px;
+	left:400px;
+	right:300px;
+	top:50px;
+	/*border:solid 1px blue;*/
+}
+
+.truck{
+	z-index: 2;
+	position:absolute;
+	height:300px;
+	width:500px;
+	left:930px;
+	top:93px;
+} 
+
+.map
+{
+	z-index:2;
+	position: absolute;
+	width:700px;
+	height:600px;
+	left:200px;
+	top:280px;
+	padding:30px;
+}
+
+.intro
+{
+	z-index:2;
+	position:absolute;
+	color:white;
+    font-size:30px;
+    font-family:ElliotSix;
+    top:95px;
+    left: 40px;
+    padding:10px;
+    -webkit-transform: rotate(-15deg);
+}
+
+.photo
+{
+	z-index:3;
+	position:absolute;
+	left:100px;
+	top:300px;
+}
+
+.text
+{
+	z-index:3;
+	position:absolute;
+	left:500;
+	top:70px;
+	color:white;
+    font-size:40px;
+    font-family:arial;
+    padding:40px;
+    line-height:30px;
+   	letter-spacing: -1px;
+   	font-style: bold;
+}
+
+table
+{
+	border: 2px solid black;
+	border-collapse:collapse;
+	z-index:10;
+	position:absolute;
+	left:200;
+	top:180;
+	font-size:16px;
+	font-family:arial;
+	width:80%;
+}
+
+th
+{
+	text-align:center;
+	border: 2px solid black;
+	border-collapse:collapse;
+	background-color:gray;
+	color:white;
+}
+
+td
+{
+	text-align:center;
+	background-color:EDCDC2;
+	border: 2px solid black;
+	border-collapse:collapse;
+}
+
+#tab-container
+{
+	position:absolute;
+	left:74;
+	top:200;
+	float: left;
+	margin: 50px 0 0 0;
+	width: 126px;
+}
+#tab-container ul
+{
+	list-style: none;
+	text-align: center;
+}
+#tab-container ul li
+{
+	border-top: 1px solid #666;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+	border-left: 8px solid #666;
+	background-color: #ddd;
+	margin: 8px 0;
+}
+#tab-container ul li a,
+#tab-container ul li a:visited
+{
+	text-decoration: none;
+	color: black;
+	font-family: Arial;
+	font-size:14px;
+	display: block;
+	padding: 15px 5px;
+}
+#tab-container ul li:hover
+{
+	border-left: 8px solid #333;
+}
+#tab-container ul li a:hover
+{
+	color: #000;
+}
+#tab-container ul li.selected
+{
+	border-right: none;
+	background-color:EDCDC2;
+	border-left: 8px solid black;
+	font-weight:bold;
+}
+
+.crayon
+{
+	z-index: 2;
+	position:absolute;
+	height:200px;
+	width:300px;
+	left:10px;
+	top:15px;
+	transform:rotate(-15deg);
+	-ms-transform:rotate(-15deg); /* IE 9 */
+	-moz-transform:rotate(-15deg); /* Firefox */
+	-webkit-transform:rotate(-15deg); /* Safari and Chrome */
+}
+
+</style>
+
+
+<div class="outerBox">
+	<div class ="body">	
+	</div>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>		
+				<div class="nav-collapse">
+					<ul class="nav pull-left"> <li><a href="index.html">Home</a></li>
+						<li><a href="download.html">Download</a></li>
+						<li><a href="about.html">Our Story</a></li>
+						<li><a href="help.html">Help</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+	</div>
+	
+	<!-- <div class="headerBox">
+		<img src="header.png" width="55%" height="50%">
+	</div>	
+	<div class="truck">
+		<img src="falafelTruck.png">
+	</div>	
+	
+	<div class="intro">
+		<p>Hungry? <br><br>Find a food truck</p>
+	</div>	 -->
+
+<div class="crayon">
+	<img src="crayonHeader.svg">
+</div>	
+
+<div class="text">
+	<p>Pending Orders</p>
+</div>
+
+
+<div id="tab-container">
+    		<ul>
+    			<li><a href="truck_order1.html">Pending</a></li>
+    			<li><a href="Ready.html">Ready for Pick Up</a></li>
+    			<li><a href="History.html">History</a></li>
+    		</ul>
+</div>
+    <div class="table">		
+	<table>	
+		<tr>
+			<th>Order Description</th>
+			<th>Order Number</th>
+			<th> Price</th>
+			<th>Time Ordered</hd>
+			<th>Customer Name</th>
+			<th>Status</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><button type="submit" class="btn btn-inverse">Ready</button></td>
+		</tr>
+			<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><button type="submit" class="btn btn-inverse">Ready</button></td>
+		</tr>
+			<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><button type="submit" class="btn btn-inverse">Ready</button></td>
+		</tr>
+			</tr>
+			<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><button type="submit" class="btn btn-inverse">Ready</button></td>
+		</tr>
+			</tr>
+			<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><button type="submit" class="btn btn-inverse">Ready</button></td>
+		</tr>
+			</tr>
+			<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><button type="submit" class="btn btn-inverse">Ready</button></td>
+		</tr>
+	</table>
+</div>
+
+
+</div>		
+</body>
+</html>
