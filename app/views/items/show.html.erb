@@ -1,20 +1,23 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @item.name %>
-</p>
+<div class="main_menu">
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Price:</b>
-  <%= @item.price %>
-</p>
+	<p>
+	  <b>Name:</b>
+	  <%= @item.name %>
+	</p>
 
-<p>
-  <b>Details:</b>
-  <%= @item.details %>
-</p>
+	<p>
+	  <b>Price:</b>
+	  <%= @item.price %>
+	</p>
+
+	<p>
+	  <b>Details:</b>
+	  <%= @item.details %>
+	</p>
 
 
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+	<%= link_to 'Edit', edit_item_path(@item) %> |
+	<%= link_to 'Back', items_path %>
+</div>

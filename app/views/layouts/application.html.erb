@@ -46,17 +46,44 @@
 	</div>
 
 	<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
-	  <div class="modal-header">
-	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-	    <h3 id="myModalLabel">Create Food Item</h3>
-	  </div>
-	  <div class="modal-body">
-	  	Loading data...
-	  </div>
-	  <div class="modal-footer">
-	    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-	    <button class="btn btn-primary" id="save_btn">Save changes</button>
-	  </div>
-	</div>		
+		<script>
+			function onSubmit()
+			{
+				alert('submitting');
+				data = {
+						item : 
+						{
+							name : $('#item_name').val(), 
+							price : $('#item_price').val(), 
+							details : $('#item_details').val()
+						},
+						commit : "Create Item"
+					};
+				alert(data["item"]["Name"]);
+				$.post(
+					'<%= items_path %>', 
+					data, 
+					submitCallback, 
+					"json");
+			}
+
+			function submitCallback(data) 
+			{
+				alert('success')!
+				$('#myModal').toggle();
+			}
+		</script>
+		<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel">Create Food Item</h3>
+		</div>
+		<div class="modal-body">
+			Loading data...
+		</div>	
+		<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		<button class="btn btn-primary" id="save_btn" onclick="onSubmit()">Save changes</button>
+		</div>
+	</div>
 </body>
 </html>
