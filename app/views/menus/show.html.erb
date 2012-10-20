@@ -10,6 +10,32 @@
 	{	
 		$('.modal-body').load("<%= new_item_path %> #item_modal");
 	}
+
+	function onSubmit()
+	{
+		data = {
+				item : 
+				{
+					name : $('#item_name').val(), 
+					price : $('#item_price').val(), 
+					details : $('#item_details').val(),
+					menu_id  : <%= @menu.id %>
+				},
+				commit : "Create Item"
+			};
+		$.post(
+			'<%= items_path %>', 
+			data, 
+			submitCallback, 
+			"json");
+	}
+
+	function submitCallback(data) 
+	{
+		alert('success'); 
+		$('#myModal').modal('toggle');
+	}
+
 </script>
 
 <div class="main_menu">
@@ -49,7 +75,24 @@
 		<a href="<%= new_item_path %>" id="item_button" data-target="#myModal" class="btn btn-inverse" 
 		   data-toggle="modal" data-keyboard="true" data-backdrop="static" onclick="onClick()">+Add Menu Item</a>
 		<a href="<%= menus_path %>" class="btn btn-inverse" >See All Menus</a>
+	</div>	
+</div>
+
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+	<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	<h3 id="myModalLabel">Create Food Item</h3>
+	</div>
+	<div class="modal-body">
+		Loading data...
+	</div>	
+	<div class="modal-footer">
+	<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+	<button class="btn btn-primary" id="save_btn" onclick="onSubmit()">Save changes</button>
 	</div>
 </div>
 
 
+<script>
+	$('body').append($('#myModal'));
+</script>
