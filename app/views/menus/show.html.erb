@@ -14,6 +14,7 @@
 
 <div class="main_menu">
 
+
 	<div class="hero-unit">
 		<p id="notice"><%= notice %></p>
 
@@ -21,6 +22,29 @@
 			<h1><%= @menu.name %> </h1><%= link_to 'Edit', edit_menu_path(@menu) %>
 		</div>
 		<!--button class="btn btn-inverse">+Add Menu Item</button-->
+
+		<table>
+		<tr>
+		  <th>Name</th>
+		  <th>Price</th>
+		  <th>Details</th>
+		  <th></th>
+		  <th></th>
+		  <th></th>
+		</tr>
+
+		<% @menuItems.each do |item| %>
+		<tr>
+		  <td><%= item.name %></td>
+		  <td><%= item.price %></td>
+		  <td><%= item.details %></td>
+		  <td><%= link_to 'Show', item %></td>
+		  <td><%= link_to 'Edit', edit_item_path(item) %></td>
+		  <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		</tr>
+		<% end %>
+		</table>
+
 
 		<a href="<%= new_item_path %>" id="item_button" data-target="#myModal" class="btn btn-inverse" 
 		   data-toggle="modal" data-keyboard="true" data-backdrop="static" onclick="onClick()">+Add Menu Item</a>
