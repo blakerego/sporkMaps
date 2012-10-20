@@ -6,35 +6,40 @@
 
 
 <script>
-	function onClick()
-	{	
-		$('.modal-body').load("<%= new_item_path %> #item_modal");
-	}
-
-	function onSubmit()
-	{
-		data = {
-				item : 
-				{
-					name : $('#item_name').val(), 
-					price : $('#item_price').val(), 
-					details : $('#item_details').val(),
-					menu_id  : <%= @menu.id %>
-				},
-				commit : "Create Item"
-			};
-		$.post(
-			'<%= items_path %>', 
-			data, 
-			submitCallback, 
-			"json");
-	}
-
 	function submitCallback(data) 
 	{
 		alert('success'); 
-		$('#myModal').modal('toggle');
+		$('#modal_item_create').modal('toggle');
 	}
+
+	function initialize()
+	{
+		$('body').append($('#modal_item_create'));
+	}
+
+
+	function onsubmit() 
+	{
+		/*
+		$.ajax({  
+			type: "POST",  
+		  url: <%= items_path %>,  
+		  data: dataString,  
+		  success: function() {  
+		    $('#contact_form').html("<div id='message'></div>");  
+		    $('#message').html("<h2>Contact Form Submitted!</h2>")  
+		    .append("<p>We will be in touch soon.</p>")  
+		    .hide()  
+		    .fadeIn(1500, function() {  
+		      $('#message').append("<img id='checkmark' src='images/check.png' />");  
+		    });  
+		  }  
+		  */	
+	}
+
+
+
+	window.onload = initialize;
 
 </script>
 
@@ -72,27 +77,60 @@
 		</table>
 
 
-		<a href="<%= new_item_path %>" id="item_button" data-target="#myModal" class="btn btn-inverse" 
-		   data-toggle="modal" data-keyboard="true" data-backdrop="static" onclick="onClick()">+Add Menu Item</a>
+		<a href="<%= new_item_path %>" id="item_button" data-target="#modal_item_create" class="btn btn-inverse" 
+		   data-toggle="modal" data-keyboard="true" data-backdrop="static">+Add Menu Item</a>
 		<a href="<%= menus_path %>" class="btn btn-inverse" >See All Menus</a>
 	</div>	
 </div>
 
-<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+<div class="modal" id="modal_item_create" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
 	<div class="modal-header">
 	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 	<h3 id="myModalLabel">Create Food Item</h3>
 	</div>
-	<div class="modal-body">
-		Loading data...
-	</div>	
-	<div class="modal-footer">
-	<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-	<button class="btn btn-primary" id="save_btn" onclick="onSubmit()">Save changes</button>
-	</div>
+
+	<%= form_for(@item, :remote => true, :html => {:'data-type' => 'json', :remote => true, :multipart => true}) do |f| %>
+		<div class="modal-body">
+		    <% if @item.errors.any? %>
+				<div id="error_explanation">
+				<h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+				<ul>
+				<% @item.errors.full_messages.each do |msg| %>
+				  <li><%= msg %></li>
+				<% end %>
+				</ul>
+				</div>
+		    <% end %>
+
+		    <div class="field">
+		      <%= f.label :name %><br />
+		      <%= f.text_field :name %>
+		    </div>
+		    <div class="field">
+		      <%= f.label :price %><br />
+		      <%= f.text_field :price %>
+		    </div>
+		    <div class="field">
+		      <%= f.label :details %><br />
+		      <%= f.text_area :details %>
+		    </div> 
+		    <div class="field" style="display: none">
+		    	<%= f.text_field :menu_id, :value => @menu.id %>
+		    </div>
+		</div>	
+		<div class="modal-footer">
+			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			<button class="btn btn-primary" id="save_btn">Save changes</button>
+		</div>
+	<% end %>
+
 </div>
 
-
 <script>
-	$('body').append($('#myModal'));
+	$(".new_item").bind("ajax:success", 
+		function(xhr, data, status) 
+		{
+			$('#modal_item_create').modal('toggle');
+		});
 </script>

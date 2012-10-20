@@ -14,7 +14,7 @@ class MenusController < ApplicationController
   # GET /menus/1.json
   def show
     @menu = Menu.find(params[:id])
-    @menuItems = Item.all
+    @menuItems = Item.find(:all, :conditions => { :menu_id => @menu.id });
     @item = Item.new
     respond_to do |format|
       format.html # show.html.erb
