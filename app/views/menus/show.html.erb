@@ -5,6 +5,14 @@
 </ul>
 
 
+<script>
+	function onClick()
+	{
+		$('.modal-body').html(
+			"<iframe width='100%' height='100%'' frameborder='0' scrolling='no' src='<%= new_item_path %>'></iframe>");
+	}
+</script>
+
 <div class="main_menu">
 
 	<div class="hero-unit">
@@ -13,11 +21,12 @@
 		<div class="page-header">
 			<h1><%= @menu.name %> </h1><%= link_to 'Edit', edit_menu_path(@menu) %>
 		</div>
-		  <!--button class="btn btn-inverse">+Add Menu Item</button-->
-		  <a role="button" href="<%= new_item_path %>" data-target="#item_modal" class="btn btn-inverse" data-toggle="modal" data-keyboard="true">+Add Menu Item</a>
+		<!--button class="btn btn-inverse">+Add Menu Item</button-->
 
-		<br>
-		<%= link_to 'See all menus', menus_path %>
+		<a href="<%= new_item_path %>" id="item_button" data-target="#myModal" class="btn btn-inverse" 
+		   data-toggle="modal" data-keyboard="true" data-backdrop="static" onclick="onClick()">+Add Menu Item</a>
+		<a href="<%= menus_path %>" class="btn btn-inverse" >See All Menus</a>
 	</div>
 </div>
+
 
