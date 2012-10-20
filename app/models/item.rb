@@ -1,4 +1,4 @@
 class Item < ActiveRecord::Base
   belongs_to :menu
-  attr_accessible :details, :name, :price
+  attr_accessible :details, :name, :price, :menu_id
 end
