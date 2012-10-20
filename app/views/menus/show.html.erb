@@ -7,9 +7,8 @@
 
 <script>
 	function onClick()
-	{
-		$('.modal-body').html(
-			"<iframe width='100%' height='100%'' frameborder='0' scrolling='no' src='<%= new_item_path %>'></iframe>");
+	{	
+		$('.modal-body').load("<%= new_item_path %> #item_modal");
 	}
 </script>
 
