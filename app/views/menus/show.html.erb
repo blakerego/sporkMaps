@@ -74,7 +74,7 @@
 		</table>
 
 
-		<a href="<%= new_item_path %>" id="item_button" data-target="#modal_item_create" class="btn btn-inverse" 
+		<a id="item_button" data-target="#modal_item_create" class="btn btn-inverse" 
 		   data-toggle="modal" data-keyboard="true" data-backdrop="static">+Add Menu Item</a>
 		<a href="<%= menus_path %>" class="btn btn-inverse" >See All Menus</a>
 	</div>	
@@ -130,6 +130,9 @@
 			$('#modal_item_create').modal('toggle');
 			$('#menu_item_table tr:last').after('<tr><td>' + data['name'] + 
 				'</td><td>' + data['price'] + '</td><td>' + data['details'] + 
-				'</td></tr>');						
+				'</td></tr>');		
+			alert('before toggle.');
+			$('#modal_item_create').modal('toggle');	
+			alert('after toggle');
 		});
 </script>
