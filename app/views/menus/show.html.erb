@@ -124,6 +124,7 @@
 
 
 <script>
+	var count = 0; 
 	$(".new_item").bind("ajax:success", 
 		function(xhr, data, status) 
 		{
@@ -131,8 +132,8 @@
 			$('#menu_item_table tr:last').after('<tr><td>' + data['name'] + 
 				'</td><td>' + data['price'] + '</td><td>' + data['details'] + 
 				'</td></tr>');		
-			alert('before toggle.');
 			$('#modal_item_create').modal('toggle');	
-			alert('after toggle');
+			count++; 
+			alert(count);
 		});
 </script>
