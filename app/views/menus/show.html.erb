@@ -43,9 +43,6 @@
 
 </script>
 
-<div class="main_menu">
-
-
 	<div class="hero-unit">
 		<p id="notice"><%= notice %></p>
 
@@ -54,7 +51,7 @@
 		</div>
 		<!--button class="btn btn-inverse">+Add Menu Item</button-->
 
-		<table>
+		<table id='menu_item_table'>
 		<tr>
 		  <th>Name</th>
 		  <th>Price</th>
@@ -89,7 +86,7 @@
 	<h3 id="myModalLabel">Create Food Item</h3>
 	</div>
 
-	<%= form_for(@item, :remote => true, :html => {:'data-type' => 'json', :remote => true, :multipart => true}) do |f| %>
+	<%= form_for(@item, :remote => true, :html => {:'data-type' => 'json'}) do |f| %>
 		<div class="modal-body">
 		    <% if @item.errors.any? %>
 				<div id="error_explanation">
@@ -109,7 +106,7 @@
 		    </div>
 		    <div class="field">
 		      <%= f.label :price %><br />
-		      <%= f.text_field :price %>
+		      <%= f.text_field :price, :class => 'cost' %>
 		    </div>
 		    <div class="field">
 		      <%= f.label :details %><br />
@@ -125,12 +122,14 @@
 		</div>
 	<% end %>
 
-</div>
 
 <script>
 	$(".new_item").bind("ajax:success", 
 		function(xhr, data, status) 
 		{
 			$('#modal_item_create').modal('toggle');
+			$('#menu_item_table tr:last').after('<tr><td>' + data['name'] + 
+				'</td><td>' + data['price'] + '</td><td>' + data['details'] + 
+				'</td></tr>');						
 		});
 </script>

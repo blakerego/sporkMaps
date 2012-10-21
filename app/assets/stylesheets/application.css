@@ -13,20 +13,9 @@
  */
 
 
-.outerBox{
-	z-index:0;
-	background-color: #22a8e0; overflow-x: hidden;
-	position:relative;
-	width:100%;
-	height:100%;
-	/*border:solid 1px red;*/
-}
-
+/*
 .body
 {
-	/*background-color: #22a8e0;
-	background-image: url("horiz-bars.png");
-	background-repeat: repeat-x;*/
 	z-index:1;
 	background-color: #d74b20;
 	position:absolute;
@@ -34,33 +23,13 @@
 	height:30%;
 	min-height: 220px;
 	max-height: 350px;
-	/*border:solid 1px green;*/
 }
+*/
 
 @font-face {
     font-family: "ElliotSix";
     src: url("ElliotSix.ttf") format("truetype");
 }
-
-.headerBox{
-	z-index: 2;
-	position:absolute;
-	height:500px;
-	width:800px;
-	left:400px;
-	right:300px;
-	top:50px;
-	/*border:solid 1px blue;*/
-}
-
-.truck{
-	z-index: 2;
-	position:absolute;
-	height:300px;
-	width:500px;
-	left:930px;
-	top:93px;
-} 
 
 .map
 {
@@ -71,30 +40,6 @@
 	left:200px;
 	top:310px;
 	padding:19px;
-}
-
-.intro
-{
-	z-index:2;
-	position:absolute;
-	color:white;
-    font-size:30px;
-    font-family:ElliotSix;
-    top:95px;
-    left: 40px;
-    padding:10px;
-    -webkit-transform: rotate(-15deg);
-}
-
-.zipcode
-{
-	z-index:3;
-	position:absolute;
-	left:850px;
-	top:310px;
-	font-family:ElliotSix;
-	font-size:30px;
-	padding:20px;
 }
 
 .apple 
@@ -212,7 +157,7 @@ img.button:hover {
 a:link
 {
 	color: #484646;
-	text-decoration: underline;
+	text-decoration: none;
 }
 a:visited:
 {
@@ -232,4 +177,69 @@ a:visited:
 #Selected
 {
 	color:white;
+}
+
+
+
+/******************** POST RE-DESIGN **************************************************/
+
+body 
+{  
+	padding: 0 0 40 0;
+	background-color: #22a8e0;      
+}
+
+
+@font-face {
+    font-family:"Capture_it";
+    src: url("/assets/Capture_it.ttf") format("truetype");
+}
+
+
+#banner
+{
+	z-index: 10;
+	position:relative;
+	padding: 0;
+	font-size: 12px;
+	color:#333;
+
+}
+
+#banner h2
+{
+	font-family: "Capture_it";
+}
+
+.headerTruck
+{
+	background-image: url("/assets/headerspecial2.png");
+	background-repeat: repeat-x;
+	background-position: center top;
+	width: 100%;
+	height:50%;
+/*	height: 526px;*/
+	margin: 0 0 0 0;
+	text-align: center;
+	display: block;
+	padding: 80 0 0 0;
+}
+
+
+.headerTruck h1
+{
+	font-size: 100px;
+	font-family: "Capture_it";
+	padding-bottom: 20px;
+}
+
+#headerBox
+{
+	z-index: 2;
+	position: relative;
+	width: 100%;
+	height:100%;
+	/*border: solid 1px blue;*/
+	left:300px;
+	right:200px;
 }
