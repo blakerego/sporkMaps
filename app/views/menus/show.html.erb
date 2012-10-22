@@ -6,55 +6,46 @@
 
 
 <script>
-	function submitCallback(data) 
-	{
-		alert('success'); 
-		$('#modal_item_create').modal('toggle');
-	}
-
 	function initialize()
 	{
 		$('body').append($('#modal_item_create'));
 	}
-
 	window.onload = initialize;
-
 </script>
 
-	<div class="hero-unit">
-		<p id="notice"><%= notice %></p>
+<div class="hero-unit">
+	<p id="notice"><%= notice %></p>
 
-		<div class="page-header">
-			<h1><%= @menu.name %> </h1><%= link_to 'Edit', edit_menu_path(@menu) %>
-		</div>
-		<table id='menu_item_table'>
-		<tr>
-		  <th>Name</th>
-		  <th>Price</th>
-		  <th>Details</th>
-		  <th></th>
-		  <th></th>
-		  <th></th>
-		</tr>
+	<div class="page-header">
+		<h1><%= @menu.name %> </h1><%= link_to 'Edit', edit_menu_path(@menu) %>
+	</div>
+	<table id='menu_item_table'>
+	<tr>
+	  <th>Name</th>
+	  <th>Price</th>
+	  <th>Details</th>
+	  <th></th>
+	  <th></th>
+	  <th></th>
+	</tr>
 
-		<% @menuItems.each do |item| %>
-		<tr>
-		  <td><%= item.name %></td>
-		  <td><%= item.price %></td>
-		  <td><%= item.details %></td>
-		  <td><%= link_to 'Show', item %></td>
-		  <td><%= link_to 'Edit', edit_item_path(item) %></td>
-		  <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-		</tr>
-		<% end %>
-		</table>
+	<% @menuItems.each do |item| %>
+	<tr>
+	  <td><%= item.name %></td>
+	  <td><%= item.price %></td>
+	  <td><%= item.details %></td>
+	  <td><%= link_to 'Show', item %></td>
+	  <td><%= link_to 'Edit', edit_item_path(item) %></td>
+	  <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	</tr>
+	<% end %>
+	</table>
 
 
-		<a id="item_button" data-target="#modal_item_create" class="btn btn-inverse" 
-		   data-toggle="modal" data-keyboard="true" data-backdrop="static">+Add Menu Item</a>
-		<a href="<%= menus_path %>" class="btn btn-inverse" >See All Menus</a>
-	</div>	
-</div>
+	<a id="item_button" data-target="#modal_item_create" class="btn btn-inverse" 
+	   data-toggle="modal" data-keyboard="true" data-backdrop="static">+Add Menu Item</a>
+	<a href="<%= menus_path %>" class="btn btn-inverse" >See All Menus</a>
+</div>	
 
 <div class="modal" id="modal_item_create" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
 	<div class="modal-header">
