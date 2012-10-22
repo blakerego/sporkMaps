@@ -9,7 +9,17 @@
 	function initialize()
 	{
 		$('body').append($('#modal_item_create'));
+		$(".new_item").bind("ajax:success", 
+			function(xhr, data, status) 
+			{
+				$('#modal_item_create').modal('toggle');
+				$('#menu_item_table tr:last').after('<tr><td>' + data['name'] + 
+					'</td><td>' + data['price'] + '</td><td>' + data['details'] + 
+					'</td></tr>');		
+				$('#modal_item_create').modal('hide');	
+			});
 	}
+	
 	window.onload = initialize;
 </script>
 
@@ -92,18 +102,4 @@
 
 <script>
 	/**TODO: GET RID OF THIS HACK! */
-	var count = 0; 
-	$(".new_item").bind("ajax:success", 
-		function(xhr, data, status) 
-		{
-			count++; 
-			if (count%2 != 0)
-			{
-				$('#modal_item_create').modal('toggle');
-				$('#menu_item_table tr:last').after('<tr><td>' + data['name'] + 
-					'</td><td>' + data['price'] + '</td><td>' + data['details'] + 
-					'</td></tr>');		
-				$('#modal_item_create').modal('hide');	
-			}
-		});
 </script>
