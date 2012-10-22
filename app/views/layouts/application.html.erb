@@ -19,12 +19,13 @@
 		            <span class="icon-bar"></span>
 		          </a>
 		          <a class="brand" href="#">Spork</a>
+		     	  <!--%= link_to "Spork", :class => 'brand', :controller => "static", :action => "index"%-->
 		          	<div class="nav-collapse collapse"></div>
 		            <ul class="nav">
-		              <li class="active"><a href="#">Home</a></li>
-		              <li><a href="#about">Our Story</a></li>
-		              <li><a href="#contact">Contact</a></li>
-		              <li><a href="#contact">Help</a></li>
+		              <li class="active"><%= link_to "Home", :controller => "static", :action => "index" %></li>
+		              <li><%= link_to "Our Story", :controller => "static", :action => "about" %></li>
+		              <li><%= link_to "Contact", :controller => "static", :action => "contact" %></li>
+		              <li><%= link_to "Help", :controller => "static", :action => "help" %></li>
 		            </ul>
 		            <form class="navbar-form pull-right">
 		              <input class="span2" type="text" placeholder="Email">
