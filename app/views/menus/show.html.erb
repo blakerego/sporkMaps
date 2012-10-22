@@ -95,12 +95,14 @@
 	$(".new_item").bind("ajax:success", 
 		function(xhr, data, status) 
 		{
-			$('#modal_item_create').modal('toggle');
-			$('#menu_item_table tr:last').after('<tr><td>' + data['name'] + 
-				'</td><td>' + data['price'] + '</td><td>' + data['details'] + 
-				'</td></tr>');		
-			$('#modal_item_create').modal('toggle');	
 			count++; 
-			alert(count);
+			if (count%2 != 0)
+			{
+				$('#modal_item_create').modal('toggle');
+				$('#menu_item_table tr:last').after('<tr><td>' + data['name'] + 
+					'</td><td>' + data['price'] + '</td><td>' + data['details'] + 
+					'</td></tr>');		
+				$('#modal_item_create').modal('hide');	
+			}
 		});
 </script>
