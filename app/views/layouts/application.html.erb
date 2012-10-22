@@ -18,8 +18,7 @@
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
 		          </a>
-		          <a class="brand" href="#">Spork</a>
-		     	  <!--%= link_to "Spork", :class => 'brand', :controller => "static", :action => "index"%-->
+		     	  <%= link_to "Spork", {:controller => "static", :action => "index"}, :class => 'brand' %>
 		          	<div class="nav-collapse collapse"></div>
 		            <ul class="nav">
 		              <li class="active"><%= link_to "Home", :controller => "static", :action => "index" %></li>
