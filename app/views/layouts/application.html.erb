@@ -9,41 +9,43 @@
 		<%= csrf_meta_tags %>
 	</head>
 
-	<body id="html_body">
-		<div class="outerBox">
-			<div class ="body">	</div>
-			<div class="navbar navbar-fixed-top">
-				<div class="navbar-inner">
-					<div class="container">
-						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</a>		
-						<div class="nav-collapse">
-							<ul class="nav pull-left"> <li class="active"><a href="index.html">Home</a></li>
-								<li><%= link_to "Download", :controller => "static", :action => "download" %></li>
-								<li><%= link_to "Our Story", :controller => "static", :action => "about" %></li>
-								<li><%= link_to "Help", :controller => "static", :action => "help" %></li>
-								<li><%= link_to "Contact", :controller => "static", :action => "contact" %></li>
-							</li>
-							</ul>
-						</div>	
-					</div>
-				</div>
-			</div>
-			
-			<div class="headerBox">
-				<img src="/assets/header.png" width="55%" height="50%">
-			</div>	
-			<div class="truck">
-				<img src="/assets/falafelTruck.png">
-			</div>	
-			<div class="intro">
-				<p>Hungry? <br><br>Find a food truck</p>
-			</div>	
-
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+		    <div class="navbar-inner">
+		        <div class="container">
+		          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </a>
+		          <a class="brand" href="#">Spork</a>
+		          	<div class="nav-collapse collapse"></div>
+		            <ul class="nav">
+		              <li class="active"><a href="#">Home</a></li>
+		              <li><a href="#about">Our Story</a></li>
+		              <li><a href="#contact">Contact</a></li>
+		              <li><a href="#contact">Help</a></li>
+		            </ul>
+		            <form class="navbar-form pull-right">
+		              <input class="span2" type="text" placeholder="Email">
+		              <input class="span2" type="password" placeholder="Password">
+		              <button type="submit" class="btn">Sign in</button>
+		            </form>
+		        </div>
+		    </div>
+		</div>
+		<div class="headerTruck">
+    
+       	<h1>SporkTrucks</h1>
+       	<br>
+        <p><a class="btn btn-inverse btn-large">Find a Food Truck &raquo;</a>
+		</div>
+		<div class="container">
 			<%= yield %>
+			<hr>
+      <footer>
+        <p>&copy; SporkTrucks 2012</p>
+      </footer>
 		</div>
 	</body>
 </html>
