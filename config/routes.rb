@@ -1,5 +1,7 @@
 SporkWeb::Application.routes.draw do
 
+  resources :users
+
   resources :menus
 
   resources :items
