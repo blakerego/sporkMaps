@@ -208,22 +208,31 @@ body
 	font-family: "Capture_it";
 }
 
-.headerTruck
+.header
 {
-	background-image: url("/assets/headerspecial2.png");
     background-repeat: repeat-x;
     background-position: center top;
     width: 100%;
-    height:50%;
-  /*  height: 526px;*/
+    padding: 80 0 40 0;
     margin: 0 0 0 0;
     text-align: center;
     display: block;
-    padding: 80 0 0 0;
 }
 
+#header-index
+{
+	background-image: url("/assets/headerspecial2.png");
+    height:270px; /* This should be image height minus vertical padding (set in .header )*/
 
-.headerTruck h1
+}
+
+#header-regular
+{
+	background-image: url("/assets/header_regular.png");
+    height:150px; /* This should be image height minus vertical padding (set in .header)*/
+}
+
+.header h1
 {
 	font-size: 100px;
 	font-family: "Capture_it";
@@ -244,4 +253,19 @@ body
 .well-height
 {
 	margin-top: 20px;
+}
+
+.top-padding
+{
+	top-margin:20px;
+}
+
+#about_center
+{
+  text-align: center;
+}
+
+#portrait_padding
+{
+	padding: 10px;
 }
