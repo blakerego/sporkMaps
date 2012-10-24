@@ -1,20 +1,17 @@
-    <!--meta http-equiv="Refresh" content="0;url=" /-->
-
-
-    <div id="banner">
-      	<div class="row">
-        	<div class="span6">
-          		<form class="well">
-          			<h2>For Hungry People</h2>
-          			<h5> Skip the line! SporkTrucks allows you to order and pay ahead of time, so you can enjoy your food faster. 
-          			</h5>
-  					<button type="submit" class="btn btn-inverse">Learn More</button>
-				</form>
-        	</div>
-    		<div class="span6">
-    			<form class="well">
-          		<h2>For Food Trucks</h2>
-          		<h5>Expose your truck to thousands of new customers! Upload your menu and start recieving orders online.</h5>
-          		<button type="submit" class="btn btn-inverse">Learn More</button>
-       		</div>
-    	</div>
+<div id="banner">
+	<div class="row">
+  	<div class="span6">
+    		<form class="well well-height">
+    			<h2>For Hungry People</h2>
+    			<h5> Skip the line! SporkTrucks allows you to order and pay ahead of time, so you can enjoy your food faster. 
+    			</h5>
+            <button type="submit" class="btn btn-inverse">Learn More</button>
+	    </form>
+  	</div>
+	<div class="span6">
+		<form class="well well-height">
+    		<h2>For Food Trucks</h2>
+    		<h5>Expose your truck to thousands of new customers! Upload your menu and start recieving orders online.</h5>
+        <%= link_to "Learn More", menus_path, :class => "btn btn-inverse" %>       		
+  </div>
+</div>
