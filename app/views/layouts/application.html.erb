@@ -39,11 +39,13 @@
        	<br>
         <p><a class="btn btn-inverse btn-large">Find a Food Truck &raquo;</a>
 		</div>
+
 		<div class="container">
 			<%= yield %>
 			<hr>
-      <footer>
+      <footer>      	
         <p>&copy; SporkTrucks 2012</p>
+		<%= debug(params) if Rails.env.development? %>        
       </footer>
 		</div>
 	</body>
