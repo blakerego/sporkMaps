@@ -1,0 +1,41 @@
+<h1>Listing food_trucks</h1>
+
+<table>
+  <tr>
+    <th>Truck name</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Phone</th>
+    <th>Cuisine type</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zipcode</th>
+    <th>Address</th>
+    <th>Number of trucks</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @food_trucks.each do |food_truck| %>
+  <tr>
+    <td><%= food_truck.truck_name %></td>
+    <td><%= food_truck.first_name %></td>
+    <td><%= food_truck.last_name %></td>
+    <td><%= food_truck.phone %></td>
+    <td><%= food_truck.cuisine_type %></td>
+    <td><%= food_truck.city %></td>
+    <td><%= food_truck.state %></td>
+    <td><%= food_truck.zipcode %></td>
+    <td><%= food_truck.address %></td>
+    <td><%= food_truck.number_of_trucks %></td>
+    <td><%= link_to 'Show', food_truck %></td>
+    <td><%= link_to 'Edit', edit_food_truck_path(food_truck) %></td>
+    <td><%= link_to 'Destroy', food_truck, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Food truck', new_food_truck_path %>

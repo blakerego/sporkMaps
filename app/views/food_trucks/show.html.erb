@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Truck name:</b>
+  <%= @food_truck.truck_name %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @food_truck.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @food_truck.last_name %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @food_truck.phone %>
+</p>
+
+<p>
+  <b>Cuisine type:</b>
+  <%= @food_truck.cuisine_type %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @food_truck.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @food_truck.state %>
+</p>
+
+<p>
+  <b>Zipcode:</b>
+  <%= @food_truck.zipcode %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @food_truck.address %>
+</p>
+
+<p>
+  <b>Number of trucks:</b>
+  <%= @food_truck.number_of_trucks %>
+</p>
+
+
+<%= link_to 'Edit', edit_food_truck_path(@food_truck) %> |
+<%= link_to 'Back', food_trucks_path %>
