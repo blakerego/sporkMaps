@@ -1,13 +1,13 @@
 require 'digest'
 class User < ActiveRecord::Base
-  attr_accessible :email, :password, :password_confirmation, :encrypted_password
-  attr_accessor :password, :password_confirmation, :salt
+  attr_accessible :email, :password, :password_confirmation, :encrypted_password, :salt
+  attr_accessor :password, :password_confirmation
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   validates :email, :presence => true,
   					:format => { :with => email_regex },
-  					:uniqueness => { :case_sensitive => false}
+  					:uniqueness => { :case_sensitive => false }
 
   validates :password, :presence => true, 
   						:confirmation => true,
@@ -16,11 +16,24 @@ class User < ActiveRecord::Base
 
   def has_password? (submitted_password)
   	#compare encrypted_password with the encrypted version of submitted_password
-  	encrypt(submitted_password) == self.encrypted_password
+  	puts 'submitted_password: ' + submitted_password
+  	puts 'encrypt(sumbitted_pw): ' + encrypt(submitted_password)
+  	puts 'encrypted password: ' + encrypted_password
+  	encrypted_password == encrypt(submitted_password)
+  end
+
+  def self.authenticate(email, submitted_password)
+	user = find_by_email(email)
+	puts user
+  	return nil if user.nil?
+  	return user if user.has_password?(submitted_password)
   end
 
   private
   	def encrypt_password
+  		puts 'new record?: ' 
+  		puts 'true' if new_record? 
+  		puts 'false' if !new_record? 
   		self.salt = make_salt if new_record? 
   		self.encrypted_password = encrypt(password)
   	end
