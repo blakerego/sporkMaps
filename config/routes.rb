@@ -1,5 +1,9 @@
 SporkWeb::Application.routes.draw do
 
+  resources :orders
+
+  resources :order_items
+
   resources :food_trucks
 
   resources :users
