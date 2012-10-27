@@ -12,7 +12,7 @@ class FoodTruck < ActiveRecord::Base
   t.string :address
   t.integer :number_of_trucks
 """
-  has_many :menus
+  has_many :menu_items
   has_many :orders
   attr_accessible :address, :city, :cuisine_type, :first_name, :last_name, :number_of_trucks, :phone, :state, :truck_name, :zipcode
 end

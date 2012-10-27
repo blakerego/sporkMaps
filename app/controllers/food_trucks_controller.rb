@@ -35,6 +35,7 @@ class FoodTrucksController < ApplicationController
   # GET /food_trucks/1/edit
   def edit
     @food_truck = FoodTruck.find(params[:id])
+    
   end
 
   # POST /food_trucks
