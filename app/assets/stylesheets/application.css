@@ -233,7 +233,7 @@ body
 	padding-bottom: 20px;
 }
 
-h1 
+h1 h2
 {
 	font-family: "Capture_it";
 }
@@ -259,7 +259,7 @@ h1
 	top-margin:20px;
 }
 
-#about_center
+.about_center
 {
   text-align: center;
   font-family: "Capture_it";
@@ -275,3 +275,8 @@ h1
 	margin-left: -50px;
 }
 
+.home_headers
+{
+  text-align: left;
+  font-family: "Capture_it";
+}
