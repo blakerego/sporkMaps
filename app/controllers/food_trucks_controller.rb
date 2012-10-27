@@ -35,7 +35,12 @@ class FoodTrucksController < ApplicationController
   # GET /food_trucks/1/edit
   def edit
     @food_truck = FoodTruck.find(params[:id])
-    
+    @menuItems = Item.find(:all, :conditions => { :food_truck_id => @food_truck.id });
+    @item = Item.new
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @menu }  
+    end  
   end
 
   # POST /food_trucks
