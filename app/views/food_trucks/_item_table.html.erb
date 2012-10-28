@@ -1,0 +1,21 @@
+<table id='menu_item_table'>
+	<tr>
+	  <th>Name</th>
+	  <th>Price</th>
+	  <th>Details</th>
+	  <th></th>
+	  <th></th>
+	  <th></th>
+	</tr>
+
+	<% @menuItems.each do |item| %>
+	<tr>
+	  <td><%= item.name %></td>
+	  <td><%= item.price %></td>
+	  <td><%= item.details %></td>
+	  <td><%= link_to 'Show', item %></td>
+	  <td><%= link_to 'Edit', edit_item_path(item) %></td>
+	  <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	</tr>
+	<% end %>
+</table>

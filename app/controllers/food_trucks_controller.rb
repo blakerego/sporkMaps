@@ -14,6 +14,7 @@ class FoodTrucksController < ApplicationController
   # GET /food_trucks/1.json
   def show
     @food_truck = FoodTruck.find(params[:id])
+    @menuItems = Item.find(:all, :conditions => { :food_truck_id => @food_truck.id });
 
     respond_to do |format|
       format.html # show.html.erb

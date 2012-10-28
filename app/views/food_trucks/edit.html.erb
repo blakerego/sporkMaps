@@ -3,28 +3,10 @@
 <br><br>
 <h2>Menu</h2>
 
-<table id='menu_item_table'>
-	<tr>
-	  <th>Name</th>
-	  <th>Price</th>
-	  <th>Details</th>
-	  <th></th>
-	  <th></th>
-	  <th></th>
-	</tr>
-
-	<% @menuItems.each do |item| %>
-	<tr>
-	  <td><%= item.name %></td>
-	  <td><%= item.price %></td>
-	  <td><%= item.details %></td>
-	  <td><%= link_to 'Show', item %></td>
-	  <td><%= link_to 'Edit', edit_item_path(item) %></td>
-	  <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-	</tr>
-	<% end %>
-</table>
-
+<!-- **************************************************************************** -->
+<!--The item_table is located views/food_trucks/_item_table.html.erb -->
+<!-- **************************************************************************** -->
+<%= render 'item_table' %>
 
 <a id="item_button" data-target="#modal_item_create" class="btn btn-inverse" 
 	   data-toggle="modal" data-keyboard="true" data-backdrop="static">+Add Menu Item</a>

@@ -1,9 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Truck name:</b>
-  <%= @food_truck.truck_name %>
-</p>
+<h1><%= @food_truck.truck_name %></h1>
+
+<div>
+  <%= render 'item_table' %>
+</div>
+
+
+<!-- **************************************************************************** -->
+<!-- This should be in a div poisitioned on to the left of the menu. --> 
+<!-- **************************************************************************** -->
+<div>
+  
+</div>
+
 
 <!-- <p>
   <b>First name:</b>
