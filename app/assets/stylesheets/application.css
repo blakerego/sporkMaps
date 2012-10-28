@@ -192,7 +192,6 @@ body
     src: url("/assets/Capture_it.ttf") format("truetype");
 }
 
-
 #banner
 {
 	z-index: 10;
@@ -201,11 +200,6 @@ body
 	font-size: 12px;
 	color:#333;
 
-}
-
-#banner h2
-{
-	font-family: "Capture_it";
 }
 
 .header
@@ -239,6 +233,11 @@ body
 	padding-bottom: 20px;
 }
 
+h1 h2
+{
+	font-family: "Capture_it";
+}
+
 #headerBox
 {
 	z-index: 2;
@@ -260,12 +259,24 @@ body
 	top-margin:20px;
 }
 
-#about_center
+.about_center
 {
   text-align: center;
+  font-family: "Capture_it";
 }
 
-#portrait_padding
+ .about_header h1
 {
-	padding: 10px;
+    text-align: center; 
+}
+
+.push_left
+{
+	margin-left: -50px;
+}
+
+.home_headers
+{
+  text-align: left;
+  font-family: "Capture_it";
 }

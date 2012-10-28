@@ -2,15 +2,15 @@
 	<div class="row">
   	<div class="span6">
     		<form class="well well-height">
-    			<h2>For Hungry People</h2>
+    			<div class="home_headers"><h2>For Hungry People</h2></div>
     			<h5> Skip the line! SporkTrucks allows you to order and pay ahead of time, so you can enjoy your food faster. 
     			</h5>
-        <%= link_to "Learn More", users_path, :class => "btn btn-inverse" %>          
+        <%= link_to "Learn More", new_user_path, :class => "btn btn-inverse" %>          
 	    </form>
   	</div>
     <div class="span6">
   		<form class="well well-height">
-      		<h2>For Food Trucks</h2>
+      		<div class="home_headers"><h2>For Food Trucks</h2></div>
       		<h5>Expose your truck to thousands of new customers! Upload your menu and start recieving orders online.</h5>
           <%= link_to "Learn More", menus_path, :class => "btn btn-inverse" %>       		
       </form>
