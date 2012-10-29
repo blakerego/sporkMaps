@@ -48,21 +48,11 @@
 				</div>
 		    <% end %>
 
-		    <div class="field">
-		      <%= f.label :name %><br />
-		      <%= f.text_field :name %>
-		    </div>
-		    <div class="field">
-		      <%= f.label :price %><br />
-		      <%= f.text_field :price, :class => 'cost' %>
-		    </div>
-		    <div class="field">
-		      <%= f.label :details %><br />
-		      <%= f.text_area :details %>
-		    </div> 
+		    <%= render 'shared/item_fields', :f => f %>
 		    <div class="field" style="display: none">
 		    	<%= f.text_field :food_truck_id, :value => @food_truck.id %>
 		    </div>
+
 		</div>	
 		<div class="modal-footer">
 			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>

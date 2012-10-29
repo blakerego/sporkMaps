@@ -12,20 +12,6 @@
       </div>
     <% end %>
 
-    <div class="field">
-      <%= f.label :name %><br />
-      <%= f.text_field :name %>
-    </div>
-    <div class="field">
-      <%= f.label :price %><br />
-      <%= f.text_field :price %>
-    </div>
-    <div class="field">
-      <%= f.label :details %><br />
-      <%= f.text_area :details %>
-    </div>    
-    <div class="actions">
-      <%= f.submit %>
-    </div>
+    <%= render 'shared/item_fields', :f => f %>
   <% end %>
 </div>
