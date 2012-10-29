@@ -15,4 +15,9 @@ class FoodTruck < ActiveRecord::Base
   has_many :menu_items
   has_many :orders
   attr_accessible :address, :city, :cuisine_type, :first_name, :last_name, :number_of_trucks, :phone, :state, :truck_name, :zipcode
+
+  def phone=(num)
+    num.gsub!(/\D/, '') if num.is_a?(String)
+    super(num)
+  end
 end

@@ -4,7 +4,7 @@
     <div class="span8">
         <form class="well well-height">
           <div id="menu_left"><h1><%= @food_truck.truck_name %></h1></div>
-          <div id="phone_number"><%= @food_truck.phone %></div>
+          <div id="phone_number"><%= number_to_phone(@food_truck.phone) %></div>
           <br>
           <img src="/assets/truck.png" class="img-rounded">    
           <br><br>
