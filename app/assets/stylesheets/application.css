@@ -281,9 +281,9 @@ h1 h2
   font-family: "Capture_it";
 }
 
-#phone_style
+#phone_number
 {
-	text-align: center;
+	padding-bottom: 1px;
 }
 
 #menu_left
