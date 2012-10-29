@@ -280,3 +280,29 @@ h1 h2
   text-align: left;
   font-family: "Capture_it";
 }
+
+#phone_style
+{
+	text-align: center;
+}
+
+#menu_left
+{
+	text-align: left;
+  font-family: "Capture_it";
+}
+
+#align_left
+{
+	float:left;
+}
+
+#align_right
+{
+	float:right;
+}
+
+#well_pink
+{
+	background-color: #EB977D;
+}

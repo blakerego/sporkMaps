@@ -1,17 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @food_truck.truck_name %></h1>
+<div class="row">
+    <div class="span8">
+        <form class="well well-height">
+          <div id="menu_left"><h1><%= @food_truck.truck_name %></h1></div>
+          <%= @food_truck.phone %>
+          <br>
+          <img src="/assets/truck.png" class="img-rounded">    
+          <br><br>
+          <%= render 'item_table' %>   
+       </form>
+    </div>       
 
-<div>
-  <%= render 'item_table' %>
-</div>
 
-
-<!-- **************************************************************************** -->
-<!-- This should be in a div poisitioned on to the left of the menu. --> 
-<!-- **************************************************************************** -->
-<div>
-  
+    <!-- **************************************************************************** -->
+    <!-- This should be in a div poisitioned on to the right of the menu. --> 
+    <!-- **************************************************************************** -->    
+    <div class="span4">
+        <form class="well well-height" id="well_pink">
+          <h4>Order Summary</h4> <br>
+            <div id="align_left"> Chicken Taco </div> <div id="align_right"> $4.00 </div><br>
+            <div id="align_left"> Chicken Taco </div> <div id="align_right"> $4.00 </div><br>
+            <div id="align_left"> Chicken Taco </div> <div id="align_right"> $4.00 </div>
+            <br>
+            <a href="">Edit</a>
+            <br><br>
+            <button class="btn btn-inverse">Place Order</button>    
+        </form> 
+    </div>
 </div>
 
 
