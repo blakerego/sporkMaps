@@ -1,4 +1,4 @@
-<table class="table table-condensed">
+<table id="item_table" class="table table-condensed">
 
 	<% counter = 0; %>
 	<% @menuItems.each do |item| %>
@@ -6,7 +6,7 @@
 	<tr>
 	  <td><%= counter %> </td>
 	  <td><a id="item_button" data-target="#modal_item_create" class="btn btn-inverse" 
-	   data-toggle="modal" data-keyboard="true" data-backdrop="static"><%= item.name %>
+	   data-toggle="modal" data-keyboard="true" data-backdrop="static"><%= item.name %></a>
 	  <td>$ <%= number_with_precision(item.price, :precision => 2) %></td>
 	</tr>
 	<% end %>

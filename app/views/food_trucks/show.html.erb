@@ -13,18 +13,22 @@
     </div> 
 
     <!-- **************************************************************************** -->
-    <!-- This should be in a div poisitioned on to the right of the menu. --> 
+    <!-- This is the order summary table. --> 
     <!-- **************************************************************************** -->    
     <div class="span4">
         <form class="well well-height" id="well_pink">
           <h4>Order Summary</h4> <br>
+          <table id="order_table" class="table table-condensed">
+<!-- 
             <div id="align_left"> Chicken Taco </div> <div id="align_right"> $4.00 </div><br>
             <div id="align_left"> Chicken Taco </div> <div id="align_right"> $4.00 </div><br>
             <div id="align_left"> Chicken Taco </div> <div id="align_right"> $4.00 </div>
             <br>
             <a href="">Edit</a>
             <br><br>
-            <button class="btn btn-inverse">Place Order</button>    
+ -->
+          </table>
+          <button class="btn btn-inverse">Place Order</button>    
         </form> 
     </div>
 </div>
@@ -32,6 +36,11 @@
 <%= link_to 'Edit', edit_food_truck_path(@food_truck) %> |
 <%= link_to 'Back', food_trucks_path %>
 
+
+
+<!-- **************************************************************************** -->
+<!-- Modal dialog div. --> 
+<!-- **************************************************************************** -->    
 
 <div class="modal" id="modal_item_create" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
   <div class="modal-header">
@@ -67,11 +76,11 @@
   function initialize()
   {
     $('body').append($('#modal_item_create'));
-    $(".new_item").bind("ajax:success", 
+    $(".new_order_item").bind("ajax:success", 
       function(xhr, data, status) 
       {
         $('#modal_item_create').modal('toggle');
-        $('#menu_item_table tr:last').after('<tr><td>' + data['name'] + 
+        $('#order_table tr:last').after('<tr id="align_left">' + data['name'] + 
           '</td><td>' + data['price'] + '</td><td>' + data['details'] + 
           '</td></tr>');    
         $('#modal_item_create').modal('hide');  
