@@ -4,78 +4,89 @@
     <div class="span8">
         <form class="well well-height">
           <div id="menu_left"><h1><%= @food_truck.truck_name %></h1></div>
-          <div id="phone_number"><%= @food_truck.phone %></div>
+          <div id="phone_number"><%= number_to_phone(@food_truck.phone) %></div>
           <br>
           <img src="/assets/truck.png" class="img-rounded">    
           <br><br>
           <%= render 'item_table' %>   
        </form>
-    </div>       
-
+    </div> 
 
     <!-- **************************************************************************** -->
-    <!-- This should be in a div poisitioned on to the right of the menu. --> 
+    <!-- This is the order summary table. --> 
     <!-- **************************************************************************** -->    
     <div class="span4">
         <form class="well well-height" id="well_blue">
           <h4>Order Summary</h4> <br>
+          <table id="order_table" class="table table-condensed">
+<!-- 
             <div id="align_left"> Chicken Taco </div> <div id="align_right"> $4.00 </div><br>
             <div id="align_left"> Chicken Taco </div> <div id="align_right"> $4.00 </div><br>
             <div id="align_left"> Chicken Taco </div> <div id="align_right"> $4.00 </div>
             <br>
             <a href="">Edit</a>
             <br><br>
-            <button class="btn btn-inverse">Place Order</button>    
+ -->
+          </table>
+          <button class="btn btn-inverse">Place Order</button>    
         </form> 
     </div>
 </div>
 
-
-<!-- <p>
-  <b>First name:</b>
-  <%= @food_truck.first_name %>
-</p>
-
-<p>
-  <b>Last name:</b>
-  <%= @food_truck.last_name %>
-</p>
-
-<p>
-  <b>Phone:</b>
-  <%= @food_truck.phone %>
-</p>
-
-<p>
-  <b>Cuisine type:</b>
-  <%= @food_truck.cuisine_type %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @food_truck.city %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%= @food_truck.state %>
-</p>
-
-<p>
-  <b>Zipcode:</b>
-  <%= @food_truck.zipcode %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @food_truck.address %>
-</p>
-
-<p>
-  <b>Number of trucks:</b>
-  <%= @food_truck.number_of_trucks %>
-</p>
- -->
-
 <%= link_to 'Edit', edit_food_truck_path(@food_truck) %> |
 <%= link_to 'Back', food_trucks_path %>
+
+
+
+<!-- **************************************************************************** -->
+<!-- Modal dialog div. --> 
+<!-- **************************************************************************** -->    
+
+<div class="modal" id="modal_item_create" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Create Food Item</h3>
+  </div>
+
+  <%= form_for(@order_item, :remote => true, :html => {:'data-type' => 'json'}) do |f| %>
+    <div class="modal-body">
+        <% if @order_item.errors.any? %>
+        <div id="error_explanation">
+        <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+        <ul>
+        <% @order.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+        </div>
+        <% end %>
+        <%= render 'shared/order_item_fields', :f => f %>
+
+    </div>  
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      <button class="btn btn-primary" id="save_btn">Save changes</button>
+    </div>
+  <% end %>
+</div>
+
+
+<script>
+  function initialize()
+  {
+    $('body').append($('#modal_item_create'));
+    $(".new_order_item").bind("ajax:success", 
+      function(xhr, data, status) 
+      {
+        $('#modal_item_create').modal('toggle');
+        $('#order_table tr:last').after('<tr id="align_left">' + data['name'] + 
+          '</td><td>' + data['price'] + '</td><td>' + data['details'] + 
+          '</td></tr>');    
+        $('#modal_item_create').modal('hide');  
+      });
+  }
+
+  window.onload = initialize;
+</script>
+

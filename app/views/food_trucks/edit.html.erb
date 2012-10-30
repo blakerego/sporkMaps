@@ -112,21 +112,11 @@
 				</div>
 		    <% end %>
 
-		    <div class="field">
-		      <%= f.label :name %><br />
-		      <%= f.text_field :name %>
-		    </div>
-		    <div class="field">
-		      <%= f.label :price %><br />
-		      <%= f.text_field :price, :class => 'cost' %>
-		    </div>
-		    <div class="field">
-		      <%= f.label :details %><br />
-		      <%= f.text_area :details %>
-		    </div> 
+		    <%= render 'shared/item_fields', :f => f %>
 		    <div class="field" style="display: none">
 		    	<%= f.text_field :food_truck_id, :value => @food_truck.id %>
 		    </div>
+
 		</div>	
 		<div class="modal-footer">
 			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
@@ -144,9 +134,8 @@
 			function(xhr, data, status) 
 			{
 				$('#modal_item_create').modal('toggle');
-				$('#menu_item_table tr:last').after('<tr><td>' + data['name'] + 
-					'</td><td>' + data['price'] + '</td><td>' + data['details'] + 
-					'</td></tr>');		
+				$('#item_table tr:last').after('<tr><td>-</td><td><a id="item_button" data-target="#modal_item_create" class="btn btn-inverse" data-toggle="modal" data-keyboard="true" data-backdrop="static">' + data['name'] + 
+					'</a></td><td>$' + (Math.round(data['price'])).toFixed(2) + '</td>' );		
 				$('#modal_item_create').modal('hide');	
 			});
 	}

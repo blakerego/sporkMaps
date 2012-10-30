@@ -16,6 +16,8 @@ class FoodTrucksController < ApplicationController
     @food_truck = FoodTruck.find(params[:id])
     @menuItems = Item.find(:all, :conditions => { :food_truck_id => @food_truck.id });
 
+    @order = Order.new
+    @order_item = OrderItem.new
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @food_truck }
