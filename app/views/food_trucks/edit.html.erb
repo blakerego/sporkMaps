@@ -1,27 +1,91 @@
-<h1><%= @food_truck.truck_name %></h1>
+<div id="menu_center"><h1><br><%= @food_truck.truck_name %></h1>Control Panel</div>
+      	
 
-<br><br>
-<h2>Menu</h2>
-
+<div class="row">
+  <div class="span12">
+    <form class="well well-height">
+				<h3>Active Menu Items</h3>
 <!-- **************************************************************************** -->
 <!--The item_table is located views/food_trucks/_item_table.html.erb -->
 <!-- **************************************************************************** -->
-<%= render 'item_table' %>
+				<%= render 'item_table' %>
+				<a id="item_button" data-target="#modal_item_create" class="btn btn-inverse" 
+	   		data-toggle="modal" data-keyboard="true" data-backdrop="static">+Add Menu Item</a>
+    </form>
+  </div>      
+</div>
 
-<a id="item_button" data-target="#modal_item_create" class="btn btn-inverse" 
-	   data-toggle="modal" data-keyboard="true" data-backdrop="static">+Add Menu Item</a>
+<div class="row">
+	<div class="span12">
+		<form class="well" id="well_light_gray">
+			<h3>Inactive Menu Items</h3>
+				<table class="table table-condensed">
+					<tr>
+						<td>1</td>
+						<td>quesadilla</td>
+						<td>$4.00</td>
+						<td><button class="btn btn-mini">Make Active</button></td>
+					</tr>
+				</table>	
+		</form>
+	</div>
+</div>						
 
 
-<br><br><br>
-
-
-<h2>Truck Details</h2>
-
-<%= render 'form' %>
-
-
+<div class="row">
+	<div class="span12">
+		<form class="well" id="well">
+			<h3>Truck Account Details</h3>
+				<table class="table table-condensed">
+					<tr>
+						<td><div id="bold">Food Truck Name:</div></td>
+						<td><%= @food_truck.truck_name %></td>
+					</tr>
+					<tr>
+						<td><div id="bold">First Name:</div></td>
+						<td><%= @food_truck.first_name %></td>
+					</tr>	
+					<tr>
+						<td><div id="bold">Last Name:</div></td>
+						<td><%= @food_truck.last_name %></td>
+					</tr>	
+					<tr>
+						<td><div id="bold">Phone Number:</div></td>
+						<td><%= @food_truck.phone %></td>
+					</tr>	
+					<tr>
+						<td><div id="bold">Cuisine Type:</div></td>
+						<td><%= @food_truck.cuisine_type %></td>	
+					</tr>	
+					<tr>
+						<td><div id="bold">Address:</div></td>
+						<td><%= @food_truck.address %></td>
+					</tr>	
+					<tr>
+						<td><div id="bold">City:</div></td>
+						<td><%= @food_truck.city %></td>
+					</tr>	
+					<tr>
+						<td><div id="bold">State:</div></td>
+						<td><%= @food_truck.state %></td>
+					</tr>	
+					<tr>
+						<td><div id="bold">Zip Code:</div></td>
+						<td><%= @food_truck.zipcode %></td>
+					</tr>	
+					<tr>
+						<td><div id="bold">Number of Trucks:</div></td>
+						<td><%= @food_truck.number_of_trucks %></td>
+					</tr>
+				</table>
+			<button class="btn btn-inverse">Edit</button>	
+		</form>
+	</div>
+</div>				
+<!--%= render 'form' %-->
 <%= link_to 'Show', @food_truck %> |
 <%= link_to 'Back', food_trucks_path %>
+
 
 
 <!-- **************************************************************************** -->

@@ -192,6 +192,11 @@ body
     src: url("/assets/Capture_it.ttf") format("truetype");
 }
 
+@font-face {
+    font-family:"Capture_it_2";
+    src: url("/assets/Capture_it_2.ttf") format("truetype");
+}
+
 #banner
 {
 	z-index: 10;
@@ -292,6 +297,12 @@ h1 h2
   font-family: "Capture_it";
 }
 
+#menu_center
+{
+	text-align: center;
+  font-family: "Capture_it";
+}
+
 #align_left
 {
 	float:left;
@@ -302,7 +313,22 @@ h1 h2
 	float:right;
 }
 
-#well_pink
+#well_blue
 {
 	background-color: #D1E1EB;
+}
+
+#well_light_gray
+{
+	background-color: #C8CACC;
+}
+
+#well_dark_gray
+{
+	background-color: #979899;
+}
+
+#bold
+{
+	font-weight: bold;
 }
