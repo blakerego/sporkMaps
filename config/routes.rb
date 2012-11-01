@@ -1,5 +1,7 @@
 SporkWeb::Application.routes.draw do
 
+  get "sessions/new"
+
   resources :orders
 
   resources :order_items
