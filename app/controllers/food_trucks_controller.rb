@@ -18,6 +18,7 @@ class FoodTrucksController < ApplicationController
 
     @order = Order.new
     @order_item = OrderItem.new
+    @order_item.order = @order
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @food_truck }

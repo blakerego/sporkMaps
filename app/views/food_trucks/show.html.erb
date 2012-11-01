@@ -1,3 +1,11 @@
+
+<script type="text/javascript">
+  function testFn()
+  {
+    alert('onyong');
+  }
+</script>
+
 <p id="notice"><%= notice %></p>
 
 <div class="row">
@@ -16,7 +24,7 @@
     <!-- This is the order summary table. --> 
     <!-- **************************************************************************** -->    
     <div class="span4">
-        <form class="well well-height" id="well_blue">
+        <form class="well well-height" id="well_pink">
           <h4>Order Summary</h4> <br>
           <table id="order_table" class="table table-condensed">
 <!-- 
@@ -85,6 +93,11 @@
           '</td></tr>');    
         $('#modal_item_create').modal('hide');  
       });
+  }
+
+  function testFn()
+  {
+    alert('onyong');
   }
 
   window.onload = initialize;
