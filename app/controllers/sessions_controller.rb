@@ -1,10 +1,12 @@
 class SessionsController < ApplicationController
+  require 'sessions_helper'
   def new
   	@title = "Sign in"
   end
 
   def create
   	user = User.authenticate(params[:session][:email], params[:session][:password])
+    sign_in user
   	if user.nil? 
 
   		puts "***************************************************"
@@ -19,7 +21,14 @@ class SessionsController < ApplicationController
   		@title = "Invalid email / password combination"
   		render 'new'
   	else
-  		#Sign the user in and redirect.
+      puts "***************************************************"
+      puts "***************************************************"
+      puts "***************************************************"
+      puts '*********   AUTHENTICATE SUCCESSFUL !   ***********'  
+      puts "***************************************************"
+      puts "***************************************************"
+      puts "***************************************************"
+
   		redirect_to user
   	end
   end
