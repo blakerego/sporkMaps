@@ -45,9 +45,16 @@
         <p><a class="btn btn-inverse btn-large">Find a Food Truck &raquo;</a>
 		</div>
 
+
 		<div class="container">
-			<%= yield %>
-			<hr>
+			<section class="round">
+				<% flash.each do |key, value| %> 
+					<%= content_tag(:div, value, :class => "flash #{key}") %>
+				<% end %>
+				<%= yield %>
+				<hr>
+			</section>
+
       <footer>      	
         <p>&copy; SporkTrucks 2012</p>
 		<%= debug(params) if Rails.env.development? %>        

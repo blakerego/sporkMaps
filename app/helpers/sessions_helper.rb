@@ -1,7 +1,15 @@
 module SessionsHelper
 	def sign_in(user)
+  		puts "***************************************************"
+  		puts "***************************************************"
+  		puts "***************************************************"
+  		puts '*********   CREATING COOKIE ***********************'	
+  		puts "***************************************************"
+  		puts "***************************************************"
+  		puts "***************************************************"		
 		cookies.permanent.signed[:remember_token] = [user.id, user.salt]
 		self.current_user = user
+		puts self.current_user
 	end
 
 	def current_user=(user)

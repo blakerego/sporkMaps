@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  require 'sessions_helper'
   # GET /users
   # GET /users.json
   def index
@@ -41,16 +42,29 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(params[:user])
-
-    respond_to do |format|
-      if @user.save
-        sign_in @user
-        flash[:success] = "Welcome!"
-        redirect_to @user
-      else
-        @title = "Sign up"
-        render 'new'
-      end
+    if @user.save
+      puts "***************************************************"
+      puts "***************************************************"
+      puts "***************************************************"
+      puts '*********   SUCCESS. CREATED USER *****************'  
+      puts "***************************************************"
+      puts "***************************************************"
+      puts "***************************************************"        
+      sign_in @user
+      puts 'user is : ' 
+      puts @user
+      flash[:success] = "Welcome!"
+      redirect_to @user
+    else
+      puts "***************************************************"
+      puts "***************************************************"
+      puts "***************************************************"
+      puts '*********   FAILED TO CREATE USER ***********'  
+      puts "***************************************************"
+      puts "***************************************************"
+      puts "***************************************************"        
+      @title = "Sign up"
+      redirect_to new_user_path
     end
   end
 
