@@ -95,7 +95,7 @@
 <div class="modal" id="modal_item_create" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
 	<div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-		<h3 id="myModalLabel">Create Food Item</h3>
+		<div id="menu_left"><h3 id="myModalLabel">Create Food Item</h3></div>
 	</div>
 
 	<%= form_for(@item, :remote => true, :html => {:'data-type' => 'json'}) do |f| %>
