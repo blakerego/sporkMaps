@@ -12,6 +12,10 @@ module SessionsHelper
 		puts self.current_user
 	end
 
+	def current_order=(order)
+		@current_order = order
+	end
+
 	def current_user=(user)
 		@current_user = user
 	end
@@ -27,6 +31,10 @@ module SessionsHelper
 
 	def signed_in? 
 		!current_user.nil?
+	end
+
+	def has_order?
+		!current_order.nil?
 	end
 
 	private 
