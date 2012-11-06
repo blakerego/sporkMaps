@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121027214044) do
+ActiveRecord::Schema.define(:version => 20121105155032) do
 
   create_table "food_trucks", :force => true do |t|
     t.string   "truck_name"
@@ -69,8 +69,10 @@ ActiveRecord::Schema.define(:version => 20121027214044) do
     t.datetime "updated_at",         :null => false
     t.string   "encrypted_password"
     t.string   "salt"
+    t.string   "remember_token"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
 end

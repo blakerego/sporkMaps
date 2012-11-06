@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   						:confirmation => true,
   						:length => { :within => 6..40 }
   before_save :encrypt_password
+  before_save :create_remember_token
 
   def has_password? (submitted_password)
   	#compare encrypted_password with the encrypted version of submitted_password
@@ -34,10 +35,13 @@ class User < ActiveRecord::Base
   end
 
   private
+    def create_remember_token
+      self.remember_token = SecureRandom.urlsafe_base64
+      puts self.remember_token
+    end
+
+
   	def encrypt_password
-  		puts 'new record?: ' 
-  		puts 'true' if new_record? 
-  		puts 'false' if !new_record? 
   		self.salt = make_salt if new_record? 
   		self.encrypted_password = encrypt(password)
   	end
