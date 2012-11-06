@@ -51,8 +51,6 @@ class UsersController < ApplicationController
       puts "***************************************************"
       puts "***************************************************"        
       sign_in @user
-      puts 'user is : ' 
-      puts @user
       flash[:success] = "Welcome!"
       redirect_to @user
     else

@@ -22,6 +22,7 @@ SporkWeb::Application.routes.draw do
   match '/signin' => 'sessions#new'
   match '/login' => 'sessions#new'
   match '/signout' => 'sessions#destroy'
+  match '/logout' => 'sessions#destroy'
   match ':action' => 'static#:action'
   root :to => 'static#index'
   

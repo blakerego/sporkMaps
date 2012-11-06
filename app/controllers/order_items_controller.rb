@@ -1,4 +1,5 @@
 class OrderItemsController < ApplicationController
+  require 'sessions_helper'
   # GET /order_items
   # GET /order_items.json
   def index
@@ -25,6 +26,8 @@ class OrderItemsController < ApplicationController
   # GET /order_items/new.json
   def new
     @order_item = OrderItem.new
+
+
 
     respond_to do |format|
       format.html # new.html.erb
