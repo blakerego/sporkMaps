@@ -28,7 +28,7 @@
 		            <form class="navbar-form pull-right">
 		            	<% if signed_in? %>
 		            		Welcome!
-		            		<button class="btn">Sign out</button>
+		            		<%= link_to "Sign out", :controller => 'sessions', :action => 'destroy', :class =>'btn' %>
 			            <% else %> 
 			              <input class="span2" type="text" placeholder="Email">
 			              <input class="span2" type="password" placeholder="Password">
