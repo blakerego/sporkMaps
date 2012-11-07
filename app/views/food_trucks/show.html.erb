@@ -64,6 +64,10 @@
         <% end %>
 
         <div class="field">
+          <%= f.hidden_field :item_id %>
+        </div>
+
+        <div class="field">
           <%= f.label :price %><br />
           <%= f.text_field :price,:readonly => true %>
         </div>
@@ -103,7 +107,7 @@
   function addItemToOrder(price, id) 
   {    
     $('#order_item_price').val(price.html().replace("$",""));
-    alert(id.val());
+    $('#order_item_item_id').val(id.val());
   }
 
   window.onload = initialize;
