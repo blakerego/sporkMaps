@@ -100,9 +100,10 @@
       });
   }
 
-  function addItemToOrder(element) 
+  function addItemToOrder(price, id) 
   {    
-    $('#order_item_price').val(element.html().replace("$",""));
+    $('#order_item_price').val(price.html().replace("$",""));
+    alert(id.val());
   }
 
   window.onload = initialize;
