@@ -96,7 +96,7 @@
     $(".new_order_item").bind("ajax:success", 
       function(xhr, data, status) 
       {
-        $('#modal_item_create').modal('toggle');        
+        $('#modal_item_create').modal('toggle');
         $('#order_table tr:last').after('<tr id="align_left">' + data['name'] + 
           '</td><td>' + data['price'] + '</td><td>' + data['details'] + 
           '</td></tr>');    

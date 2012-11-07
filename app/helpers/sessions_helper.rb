@@ -3,13 +3,16 @@ module SessionsHelper
   		puts "***************************************************"
   		puts "***************************************************"
   		puts "***************************************************"
-  		puts '*********   CREATING COOKIE ***********************'	
+  		puts '*********   CREATING SIGN IN COOKIE ***************'	
   		puts "***************************************************"
   		puts "***************************************************"
   		puts "***************************************************"		
 		cookies.permanent.signed[:remember_token] = [user.id, user.salt]
 		self.current_user = user
 		puts self.current_user
+	end
+
+	def create_order(order)
 	end
 
 	def current_order=(order)
