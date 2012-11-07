@@ -313,6 +313,11 @@ h1 h2
 	float:right;
 }
 
+#align_center
+{
+	text-align: center;
+}
+
 #well_blue
 {
 	background-color: #D1E1EB;
