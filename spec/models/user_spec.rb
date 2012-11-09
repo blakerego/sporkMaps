@@ -30,6 +30,18 @@ describe User do
 		end
 	end
 
+
+	describe "remember token" do 
+		before(:each) do
+			@user = User.create(@attr)
+		end
+
+		it "should have a remember_token" do 
+			@user.remember_token.should_not be_blank
+		end
+	end
+
+
 	describe "password validations" do 
 		it "should require a password" do 
 			User.new(@attr.merge(:password => "", :password_confirmation => "")).should_not be_valid			

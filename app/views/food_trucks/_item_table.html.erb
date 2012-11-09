@@ -3,11 +3,19 @@
 	<% counter = 0; %>
 	<% @menuItems.each do |item| %>
 	<% counter+=1; %>
-	<tr>
+	<tr id="item_button_<%= counter %>" class="item_button_row">
 	  <td><%= counter %> </td>
-	  <td><a id="item_button" data-target="#modal_item_create"  
-	   data-toggle="modal" data-keyboard="true" data-backdrop="static" onClick="testFn"><%= item.name %></a>
-	  <td>$ <%= number_with_precision(item.price, :precision => 2) %></td>
+	  
+	  <input id="item_id_reference_<%=counter%>" type="hidden" value="<%= item.id %>"/>
+	  
+	  <td><a 
+	  		id="item_button" data-target="#modal_item_create" 
+	   		data-toggle="modal" data-keyboard="true" data-backdrop="static" 
+	   		onclick="addItemToOrder($('#item_price_<%= counter %>'), $('#item_id_reference_<%=counter%>'))">
+	   		<%= item.name %></a>
+	  
+
+	  <td class="item_price" id="item_price_<%=counter%>">$ <%= number_with_precision(item.price, :precision => 2) %></td>
 	</tr>
 	<% end %>
 </table>

@@ -1,11 +1,4 @@
 
-<script type="text/javascript">
-  function testFn()
-  {
-    alert('onyong');
-  }
-</script>
-
 <p id="notice"><%= notice %></p>
 
 <div class="row">
@@ -69,7 +62,23 @@
         </ul>
         </div>
         <% end %>
-        <%= render 'shared/order_item_fields', :f => f %>
+
+        <div class="field">
+          <%= f.hidden_field :item_id %>
+        </div>
+
+        <div class="field">
+          <%= f.label :price %><br />
+          <%= f.text_field :price,:readonly => true %>
+        </div>
+        <div class="field">
+          Qty: 
+          <%= f.number_field :quantity, :value => 1%>
+        </div>
+        <div class="field">
+          Notes or special instructions: <br />
+          <%= f.text_area :note %>
+        </div>
 
     </div>  
     <div class="modal-footer">
@@ -95,9 +104,10 @@
       });
   }
 
-  function testFn()
-  {
-    alert('onyong');
+  function addItemToOrder(price, id) 
+  {    
+    $('#order_item_price').val(price.html().replace("$",""));
+    $('#order_item_item_id').val(id.val());
   }
 
   window.onload = initialize;

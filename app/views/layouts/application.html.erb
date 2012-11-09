@@ -28,9 +28,14 @@
 		              <li><%= link_to "Help", :controller => "static", :action => "help" %></li>
 		            </ul>
 		            <form class="navbar-form pull-right">
-		              <input class="span2" type="text" placeholder="Email">
-		              <input class="span2" type="password" placeholder="Password">
-		              <button type="submit" class="btn">Sign in</button>
+		            	<% if signed_in? %>
+		            		Welcome!
+		            		<%= link_to "Sign out", :controller => 'sessions', :action => 'destroy', :class =>'btn' %>
+			            <% else %> 
+			              <input class="span2" type="text" placeholder="Email">
+			              <input class="span2" type="password" placeholder="Password">
+			              <button type="submit" class="btn">Sign in</button>
+		              <% end %>
 		            </form>
 		        </div>
 		    </div>
@@ -39,12 +44,19 @@
     
        	<h1>SporkTrucks</h1>
        	<br>
-        <p><a class="btn btn-inverse btn-large">Find a Food Truck &raquo;</a>
+        <p><a href="<%=food_trucks_path%>" class="btn btn-inverse btn-large">Find a Food Truck &raquo;</a>
 		</div>
 
+
 		<div class="container">
-			<%= yield %>
-			<hr>
+			<section class="round">
+				<% flash.each do |key, value| %> 
+					<%= content_tag(:div, value, :class => "flash #{key}") %>
+				<% end %>
+				<%= yield %>
+				<hr>
+			</section>
+
       <footer>      	
         <p>&copy; SporkTrucks 2012</p>
 		<%= debug(params) if Rails.env.development? %>        
