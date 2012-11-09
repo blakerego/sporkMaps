@@ -45,6 +45,16 @@ class OrderItemsController < ApplicationController
   def create
     @order_item = OrderItem.new(params[:order_item])
 
+    if has_order?
+      puts 'has order'
+      puts current_order.id
+    else
+      puts 'no order, creating'
+      cache_new_order Order.create()
+    end
+
+    @order_item.order_id = current_order.id
+
     respond_to do |format|
       if @order_item.save
         format.html { redirect_to @order_item, notice: 'Order item was successfully created.' }
@@ -60,7 +70,6 @@ class OrderItemsController < ApplicationController
   # PUT /order_items/1.json
   def update
     @order_item = OrderItem.find(params[:id])
-
     respond_to do |format|
       if @order_item.update_attributes(params[:order_item])
         format.html { redirect_to @order_item, notice: 'Order item was successfully updated.' }

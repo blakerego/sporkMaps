@@ -12,17 +12,35 @@ module SessionsHelper
 		puts self.current_user
 	end
 
-	def create_order(order)
+	def cache_new_order(order)
+  		puts "***************************************************"
+  		puts "***************************************************"
+  		puts "***************************************************"
+  		puts '*********   CREATING ORDER COOKIE ***************'	
+  		puts "***************************************************"
+  		puts "***************************************************"
+  		puts "***************************************************"		
+		cookies.permanent.signed[:order_token] = [user.id, user.salt]
+		self.current_order = user
+		puts self.current_order		
 	end
 
+	#Setter
 	def current_order=(order)
 		@current_order = order
 	end
 
+	#getter
+	def current_order
+		@current_order
+	end
+
+	#setter
 	def current_user=(user)
 		@current_user = user
 	end
 
+	#getter
 	def current_user
 		puts User.find_by_remember_token(cookies[:remember_token])
 		@current_user ||= user_from_remember_token
@@ -31,6 +49,8 @@ module SessionsHelper
 	def sign_out
 		cookies.delete(:remember_token)
 		self.current_user = nil
+		cookies.delete(:order_token)
+		self.current_order = nil
 	end
 
 	def signed_in? 
@@ -38,6 +58,8 @@ module SessionsHelper
 	end
 
 	def has_order?
+		puts 'here i am'
+		puts !current_order.nil?
 		!current_order.nil?
 	end
 
@@ -48,5 +70,9 @@ module SessionsHelper
 
 		def remember_token
 			cookies.signed[:remember_token] || [nil, nil]
+		end
+
+		def order_token
+			cookies.signed[:order_token] || [nil, nil]
 		end
 end
