@@ -20,9 +20,8 @@ module SessionsHelper
   		puts "***************************************************"
   		puts "***************************************************"
   		puts "***************************************************"		
-		cookies.permanent.signed[:order_token] = [user.id, user.salt]
-		self.current_order = user
-		puts self.current_order		
+		cookies.permanent.signed[:order_token] = order.id
+		self.current_order = order
 	end
 
 	#Setter
@@ -32,7 +31,7 @@ module SessionsHelper
 
 	#getter
 	def current_order
-		@current_order
+		@current_order ||= Order.find_by_id(order_token)
 	end
 
 	#setter
@@ -59,7 +58,6 @@ module SessionsHelper
 
 	def has_order?
 		puts 'here i am'
-		puts !current_order.nil?
 		!current_order.nil?
 	end
 
@@ -73,6 +71,6 @@ module SessionsHelper
 		end
 
 		def order_token
-			cookies.signed[:order_token] || [nil, nil]
+			cookies.signed[:order_token] || nil
 		end
 end

@@ -47,10 +47,11 @@ class OrderItemsController < ApplicationController
 
     if has_order?
       puts 'has order'
-      puts current_order.id
+      puts current_order
     else
       puts 'no order, creating'
-      cache_new_order Order.create()
+      cache_new_order Order.create(:food_truck_id => params['food_truck_id'], :status => 'incomplete', :total => @order_item.price)
+      puts 'order cached'
     end
 
     @order_item.order_id = current_order.id
