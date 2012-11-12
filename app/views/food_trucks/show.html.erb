@@ -20,14 +20,11 @@
         <form class="well well-height" id="well_pink">
           <h4>Order Summary</h4> <br>
           <table id="order_table" class="table table-condensed">
-<!-- 
-            <div id="align_left"> Chicken Taco </div> <div id="align_right"> $4.00 </div><br>
-            <div id="align_left"> Chicken Taco </div> <div id="align_right"> $4.00 </div><br>
-            <div id="align_left"> Chicken Taco </div> <div id="align_right"> $4.00 </div>
-            <br>
-            <a href="">Edit</a>
-            <br><br>
- -->
+            <tr>
+              <th>Item</th>
+              <th>Price</th>
+              <th>Quantity</th>
+            </tr>
           </table>
           <button class="btn btn-inverse">Place Order</button>    
         </form> 
@@ -98,10 +95,10 @@
     $(".new_order_item").bind("ajax:success", 
       function(xhr, data, status) 
       {
-        $('#modal_item_create').modal('toggle');
-        $('#order_table tr:last').after('<tr id="align_left">' + data['name'] + 
-          '</td><td>' + data['price'] + '</td><td>' + data['details'] + 
+        $('#order_table tr:last').after('<tr><td>' + data['item']['name']  + 
+          '</td><td>$' + data['price'] + '</td><td>' + data['quantity'] + 
           '</td></tr>');    
+
         $('#modal_item_create').modal('hide');  
       });
   }
