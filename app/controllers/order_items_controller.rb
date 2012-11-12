@@ -59,7 +59,7 @@ class OrderItemsController < ApplicationController
     respond_to do |format|
       if @order_item.save
         format.html { redirect_to @order_item, notice: 'Order item was successfully created.' }
-        format.json { render json: @order_item, status: :created, location: @order_item }
+        format.json { render json: @order_item.to_json(:include => [:item]), status: :created, location: @order_item }
       else
         format.html { render action: "new" }
         format.json { render json: @order_item.errors, status: :unprocessable_entity }
