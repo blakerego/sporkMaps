@@ -25,6 +25,17 @@
               <th>Price</th>
               <th>Quantity</th>
             </tr>
+
+            <% if has_order? %>
+<!--               <tr><td>hello <%= current_order.order_items %></td></tr>-->
+                <% current_order.order_items.each do |order_item| %>
+                <tr>
+                  <td><%= order_item.item.name %></td>
+                  <td><%= order_item.price %></td>
+                  <td><%= order_item.quantity %></td>
+                </tr>
+              <% end %>
+            <% end %>
           </table>
           <button class="btn btn-inverse">Place Order</button>    
         </form> 
