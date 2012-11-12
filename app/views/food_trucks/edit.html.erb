@@ -133,7 +133,6 @@
 		$(".new_item").bind("ajax:success", 
 			function(xhr, data, status) 
 			{
-				$('#modal_item_create').modal('toggle');
 				$('#item_table tr:last').after('<tr><td>-</td><td><a id="item_button" data-target="#modal_item_create" data-toggle="modal" data-keyboard="true" data-backdrop="static">' + data['name'] + 
 					'</a></td><td>$' + (Math.round(data['price'])).toFixed(2) + '</td>' );		
 				$('#modal_item_create').modal('hide');	
