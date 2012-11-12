@@ -64,7 +64,7 @@
         <% end %>
 
         <div class="field">
-          <%= f.hidden_field :item_id %>
+          <%= f.hidden_field :item_id%>
         </div>
 
         <div class="field">
@@ -79,6 +79,8 @@
           Notes or special instructions: <br />
           <%= f.text_area :note %>
         </div>
+
+        <%= hidden_field_tag :food_truck_id%>
 
     </div>  
     <div class="modal-footer">
@@ -108,6 +110,8 @@
   {    
     $('#order_item_price').val(price.html().replace("$",""));
     $('#order_item_item_id').val(id.val());
+    $('#food_truck_id').val(<%= params['id'] %>); 
+    alert(<%= params['id'] %> ); 
   }
 
   window.onload = initialize;
