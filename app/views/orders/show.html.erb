@@ -2,8 +2,25 @@
 
 <p>
   <b>Food truck:</b>
-  <%= @order.food_truck_id %>
+  <%= @order.food_truck.truck_name %>
 </p>
+
+<table>
+	<tr>
+		<th>Item Name</th>
+		<th>Price</th>
+		<th>Quantity</th>
+	</tr>
+	<% @order.order_items.each do |order_item| %> 
+	  <tr>
+	    <td><%= order_item.item.name %></td>
+	    <td><%= order_item.price %></td>
+	    <td><%= order_item.quantity %></td>
+	  </tr>
+	<% end %> 
+</table>
+
+<br> 
 
 <p>
   <b>Total:</b>

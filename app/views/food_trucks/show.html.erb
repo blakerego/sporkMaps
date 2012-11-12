@@ -27,7 +27,6 @@
             </tr>
 
             <% if has_order? %>
-<!--               <tr><td>hello <%= current_order.order_items %></td></tr>-->
                 <% current_order.order_items.each do |order_item| %>
                 <tr>
                   <td><%= order_item.item.name %></td>
