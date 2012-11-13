@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(:version => 20121027214044) do
+=======
 ActiveRecord::Schema.define(:version => 20121105155032) do
+>>>>>>> afb0f9fca817e8e98b1ba89b64df6108edb34552
 
   create_table "food_trucks", :force => true do |t|
     t.string   "truck_name"
