@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
 	<head>
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -36,12 +37,10 @@
 				              <%= s.text_field :email, :placeholder => "Email", :class => "span2" %>
 				              <%= s.password_field :password, :placeholder => "Password", :class => "span2" %> 
  			              	<button type="submit" class="btn">Sign in</button> 
-						   				<!-- <a href="<%= sessions_path %>" class="btn">Sign In</a> -->
 											<%= link_to "Sign Up", new_user_path, :class =>'btn btn-info' %> 
 										</fieldset>
-		              	<% end %>
 		              <% end %>
-		            </form>
+		             <% end %>
 		        </div>
 		    </div>
 		</div>

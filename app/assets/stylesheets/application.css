@@ -221,8 +221,8 @@ body
 #header-index
 {
 	background-image: url("/assets/headerspecial2.png");
-    height:270px; /* This should be image height minus vertical padding (set in .header )*/
-
+    /*height:270px;*/ /* This should be image height minus vertical padding (set in .header )*/
+    height:350px;
 }
 
 #header-regular
@@ -236,6 +236,7 @@ body
 	font-size: 100px;
 	font-family: "Capture_it";
 	padding-bottom: 20px;
+	padding-top: 80px;
 }
 
 h1 h2
