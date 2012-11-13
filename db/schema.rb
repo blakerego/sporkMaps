@@ -11,21 +11,56 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121025020826) do
+ActiveRecord::Schema.define(:version => 20121027214044) do
+
+  create_table "food_trucks", :force => true do |t|
+    t.string   "truck_name"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "phone"
+    t.string   "cuisine_type"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zipcode"
+    t.string   "address"
+    t.integer  "number_of_trucks"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "items", :force => true do |t|
     t.string   "name"
     t.decimal  "price"
     t.text     "details"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.integer  "menu_id"
+    t.integer  "food_truck_id"
   end
 
   create_table "menus", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "food_truck_id"
+  end
+
+  create_table "order_items", :force => true do |t|
+    t.integer  "order_id"
+    t.integer  "item_id"
+    t.decimal  "price"
+    t.integer  "quantity"
+    t.text     "note"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "orders", :force => true do |t|
+    t.integer  "food_truck_id"
+    t.decimal  "total"
+    t.string   "status"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "users", :force => true do |t|
