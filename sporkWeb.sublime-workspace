@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"btn",
+				"btn-inverse"
+			],
+			[
 				"access",
 				"access_token_uri"
 			],
@@ -80,54 +84,33 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/layouts/application.html.erb",
+			"contents": "<!DOCTYPE HTML>\n<html lang=\"en-US\">\n<head>\n	<meta charset=\"UTF-8\">\n	<title>NYU - chat</title>\n</head>\n<body>\n	<h1>Express 3.0 + Socket.IO</h1>\n	<input id=\"message\"></input>\n	<input id=\"button\" type=\"button\" value=\"Ping server\"/>\n\n	<hr>\n	<div id=\"msgbox\"></div>\n\n\n	<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js\"></script>\n	<script src=\"/socket.io/socket.io.js\"></script>\n\n	<script>\n		var socket = io.connect('http://localhost:3001'); \n		socket.on('connect', function(){\n			console.log('im connected');\n		});  \n\n		socket.on('pong', function(data)\n			{\n				$('#msgbox').append(data.txt + \"<br>\"); \n			});\n\n		$('#button').click(function(){\n			$('#msgbox').append('Sending message<br>');\n			var text = $('#message').val();\n			console.log(text);\n			socket.emit('ping', {txt: text}); \n			socket.emit('ping', {txt: 'this is a message from client'});\n		});\n	</script>\n</body>\n</html>",
+			"file": "/C/Users/brego/Desktop/directory/index.html",
+			"file_size": 944,
+			"file_write_time": 129957642206704288,
 			"settings":
 			{
-				"buffer_size": 1367,
-				"line_ending": "Unix"
+				"buffer_size": 906,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/assets/stylesheets/application.css",
+			"file": "/C/Users/brego/Desktop/directory/chat.js",
 			"settings":
 			{
-				"buffer_size": 3074,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/authenticate/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 402,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/index.html",
-			"settings":
-			{
-				"buffer_size": 340,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/authenticate_controller.rb",
-			"settings":
-			{
-				"buffer_size": 1018,
-				"line_ending": "Unix"
+				"buffer_size": 521,
+				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 35.0,
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 512.0
 	},
 	"console":
 	{
@@ -144,6 +127,30 @@
 	},
 	"file_history":
 	[
+		"/C/Users/brego/Desktop/index.html",
+		"/C/Users/brego/Desktop/chat.js",
+		"/C/Users/brego/personal/sporkMaps/config/environments/development.rb",
+		"/C/Users/brego/personal/sporkMaps/sporkDesign/about.html",
+		"/C/Users/brego/personal/sporkMaps/app/views/static/contact.html.erb",
+		"/C/Users/brego/personal/sporkMaps/config/routes.rb",
+		"/C/Users/brego/personal/sporkMaps/app/models/menu.rb",
+		"/C/Users/brego/personal/sporkMaps/app/models/food_truck.rb",
+		"/C/Users/brego/personal/sporkMaps/app/models/order.rb",
+		"/C/Users/brego/personal/sporkMaps/app/models/order_item.rb",
+		"/C/Users/brego/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/brego/personal/sporkMaps/app/views/static/index.html.erb",
+		"/C/Users/brego/personal/sporkMaps/app/assets/stylesheets/bootstrap.css",
+		"/C/Users/brego/personal/sporkMaps/app/views/menus/show.html.erb",
+		"/C/Users/brego/personal/sporkMaps/db/migrate/20121025151213_create_food_trucks.rb",
+		"/C/Users/brego/personal/sporkMaps/sporkDesign/contact.html",
+		"/C/Users/brego/personal/sporkMaps/app/controllers/authenticate_controller.rb",
+		"/C/Users/brego/personal/sporkMaps/config/database.yml",
+		"/C/Users/brego/personal/sporkMaps/app/views/layouts/application.html.erb",
+		"/C/Users/brego/personal/sporkMaps/app/assets/stylesheets/application.css",
+		"/C/Users/brego/personal/sporkMaps/app/assets/javascripts/application.js",
+		"/C/Users/brego/personal/sporkMaps/Gemfile",
+		"/C/Users/brego/personal/sporkMaps/app/views/authenticate/index.html.erb",
+		"/C/Users/brego/personal/sporkMaps/public/index.html",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/static/download.html.erb",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkDesign/download.html",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/static/contact.html.erb",
@@ -201,9 +208,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
+			"C:\\Users\\blakerego\\personal\\sporkmaps"
 		]
 	},
 	"find_state":
@@ -211,6 +219,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"submitCallback",
+			".modal",
 			"text",
 			";\n",
 			"img",
@@ -239,101 +249,23 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/layouts/application.html.erb",
+					"file": "/C/Users/brego/Desktop/directory/index.html",
 					"settings":
 					{
-						"buffer_size": 1367,
+						"buffer_size": 906,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								408,
-								408
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/assets/stylesheets/application.css",
-					"settings":
-					{
-						"buffer_size": 3074,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1393,
-								1393
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 394.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/views/authenticate/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 402,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								402,
-								402
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "public/index.html",
-					"settings":
-					{
-						"buffer_size": 340,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								270,
-								270
+								163,
+								163
 							]
 						],
 						"settings":
@@ -341,31 +273,30 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 42.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/controllers/authenticate_controller.rb",
+					"buffer": 1,
+					"file": "/C/Users/brego/Desktop/directory/chat.js",
 					"settings":
 					{
-						"buffer_size": 1018,
+						"buffer_size": 521,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1018,
-								1018
+								521,
+								521
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -418,8 +349,44 @@
 		"selected_items":
 		[
 			[
+				"food_tru",
+				"sporkMaps/app/models/food_truck.rb"
+			],
+			[
+				"order_ite",
+				"sporkMaps/app/models/order_item.rb"
+			],
+			[
+				"order.",
+				"sporkMaps/app/models/order.rb"
+			],
+			[
+				"food",
+				"sporkMaps/app/models/food_truck.rb"
+			],
+			[
+				"menu.rb",
+				"sporkMaps/app/models/menu.rb"
+			],
+			[
 				"routes",
-				"config/routes.rb"
+				"sporkMaps/config/routes.rb"
+			],
+			[
+				"contact",
+				"sporkMaps/app/views/static/contact.html.erb"
+			],
+			[
+				"abo",
+				"sporkMaps/sporkDesign/about.html"
+			],
+			[
+				"development.rb",
+				"sporkMaps/config/environments/development.rb"
+			],
+			[
+				"application.js",
+				"sporkMaps/app/assets/javascripts/application.js"
 			],
 			[
 				"rou",
@@ -440,10 +407,6 @@
 			[
 				"",
 				"spec/controllers/sessions_controller_spec.rb"
-			],
-			[
-				"contact",
-				"app/models/contact.rb"
 			],
 			[
 				"contact.rb",

@@ -1,0 +1,125 @@
+
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+    <div class="span8">
+        <form class="well well-height">
+          <div id="menu_left"><h1><%= @food_truck.truck_name %></h1></div>
+          <div id="phone_number"><%= number_to_phone(@food_truck.phone) %></div>
+          <br>
+          <img src="/assets/truck.png" class="img-rounded">    
+          <br><br>
+          <%= render 'item_table' %>   
+       </form>
+    </div> 
+
+    <!-- **************************************************************************** -->
+    <!-- This is the order summary table. --> 
+    <!-- **************************************************************************** -->    
+    <div class="span4">
+        <form class="well well-height" id="well_pink">
+          <h4>Order Summary</h4> <br>
+          <table id="order_table" class="table table-condensed">
+            <tr>
+              <th>Item</th>
+              <th>Price</th>
+              <th>Quantity</th>
+            </tr>
+
+            <% if has_order? %>
+                <% current_order.order_items.each do |order_item| %>
+                <tr>
+                  <td><%= order_item.item.name %></td>
+                  <td><%= order_item.price %></td>
+                  <td><%= order_item.quantity %></td>
+                </tr>
+              <% end %>
+            <% end %>
+          </table>
+          <button class="btn btn-inverse">Place Order</button>    
+        </form> 
+    </div>
+</div>
+
+<%= link_to 'Edit', edit_food_truck_path(@food_truck) %> |
+<%= link_to 'Back', food_trucks_path %>
+
+
+
+<!-- **************************************************************************** -->
+<!-- Modal dialog div. --> 
+<!-- **************************************************************************** -->    
+
+<div class="modal" id="modal_item_create" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Create Food Item</h3>
+  </div>
+
+  <%= form_for(@order_item, :remote => true, :html => {:'data-type' => 'json'}) do |f| %>
+    <div class="modal-body">
+        <% if @order_item.errors.any? %>
+        <div id="error_explanation">
+        <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+        <ul>
+        <% @order.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+        </div>
+        <% end %>
+
+        <div class="field">
+          <%= f.hidden_field :item_id%>
+        </div>
+
+        <div class="field">
+          <%= f.label :price %><br />
+          <%= f.text_field :price,:readonly => true %>
+        </div>
+        <div class="field">
+          Qty: 
+          <%= f.number_field :quantity, :value => 1%>
+        </div>
+        <div class="field">
+          Notes or special instructions: <br />
+          <%= f.text_area :note %>
+        </div>
+
+        <%= hidden_field_tag :food_truck_id%>
+
+    </div>  
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      <button class="btn btn-primary" id="save_btn">Save changes</button>
+    </div>
+  <% end %>
+</div>
+
+
+<script>
+  function initialize()
+  {
+    $('body').append($('#modal_item_create'));
+    $(".new_order_item").bind("ajax:success", 
+      function(xhr, data, status) 
+      {
+        $('#order_table tr:last').after('<tr><td>' + data['item']['name']  + 
+          '</td><td>$' + data['price'] + '</td><td>' + data['quantity'] + 
+          '</td></tr>');    
+
+        $('#modal_item_create').modal('hide');  
+      });
+  }
+
+  function addItemToOrder(price, id) 
+  {    
+    $('#order_item_price').val(price.html().replace("$",""));
+    $('#order_item_item_id').val(id.val());
+    $('#food_truck_id').val(<%= params['id'] %>); 
+  }
+
+  window.onload = initialize;
+</script>
+

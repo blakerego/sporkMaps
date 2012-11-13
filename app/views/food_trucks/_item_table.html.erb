@@ -1,0 +1,32 @@
+<table id="item_table" class="table table-condensed">
+
+	<tr>
+		<th>#</th>
+		<th>Food Item</th>
+		<th>Price</th>
+		<th>Status</th>
+	</tr>
+
+	<% counter = 0; %>
+	<% if @menuItems.empty? %> 
+		<tr></tr> <!--Empty row necessary for javascript to find & update table.--> 
+	<% else %>
+		<% @menuItems.each do |item| %>
+			<% counter+=1; %>
+			<tr id="item_button_<%= counter %>" class="item_button_row">
+			  <td><%= counter %> </td>
+			  
+			  <input id="item_id_reference_<%=counter%>" type="hidden" value="<%= item.id %>"/>
+			  
+			  <td><a 
+			  		id="item_button" data-target="#modal_item_create" 
+			   		data-toggle="modal" data-keyboard="true" data-backdrop="static" 
+			   		onclick="addItemToOrder($('#item_price_<%= counter %>'), $('#item_id_reference_<%=counter%>'))">
+			   		<%= item.name %></a>
+			  
+
+			  <td class="item_price" id="item_price_<%=counter%>">$ <%= number_with_precision(item.price, :precision => 2) %></td>
+			</tr>
+		<% end %>
+	<% end %>
+</table>

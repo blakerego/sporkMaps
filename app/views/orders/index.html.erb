@@ -1,0 +1,27 @@
+<h1>Listing orders</h1>
+
+<table>
+  <tr>
+    <th>Food truck</th>
+    <th>Total</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @orders.each do |order| %>
+  <tr>
+    <td><%= order.food_truck_id %></td>
+    <td><%= order.total %></td>
+    <td><%= order.status %></td>
+    <td><%= link_to 'Show', order %></td>
+    <td><%= link_to 'Edit', edit_order_path(order) %></td>
+    <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Order', new_order_path %>

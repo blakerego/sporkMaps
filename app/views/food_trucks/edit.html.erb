@@ -1,0 +1,144 @@
+<div id="menu_center"><h1><br><%= @food_truck.truck_name %></h1>Control Panel</div>
+      	
+
+<div class="row">
+  <div class="span12">
+    <form class="well well-height">
+				<h3>Active Menu Items</h3>
+<!-- **************************************************************************** -->
+<!--The item_table is located views/food_trucks/_item_table.html.erb -->
+<!-- **************************************************************************** -->
+				<%= render 'item_table' %>
+				<a id="item_button" data-target="#modal_item_create" class="btn btn-inverse" 
+	   		data-toggle="modal" data-keyboard="true" data-backdrop="static">+Add Menu Item</a>
+    </form>
+  </div>      
+</div>
+
+<div class="row">
+	<div class="span12">
+		<form class="well" id="well_light_gray">
+			<h3>Inactive Menu Items</h3>
+				<table class="table table-condensed">
+					<tr>
+						<td>1</td>
+						<td>quesadilla</td>
+						<td>$4.00</td>
+						<td><button class="btn btn-mini">Make Active</button></td>
+					</tr>
+				</table>	
+		</form>
+	</div>
+</div>						
+
+
+<div class="row">
+	<div class="span12">
+		<form class="well" id="well">
+			<h3>Truck Account Details</h3>
+				<table class="table table-condensed">
+					<tr>
+						<td><div id="bold">Food Truck Name:</div></td>
+						<td><%= @food_truck.truck_name %></td>
+					</tr>
+					<tr>
+						<td><div id="bold">First Name:</div></td>
+						<td><%= @food_truck.first_name %></td>
+					</tr>	
+					<tr>
+						<td><div id="bold">Last Name:</div></td>
+						<td><%= @food_truck.last_name %></td>
+					</tr>	
+					<tr>
+						<td><div id="bold">Phone Number:</div></td>
+						<td><%= @food_truck.phone %></td>
+					</tr>	
+					<tr>
+						<td><div id="bold">Cuisine Type:</div></td>
+						<td><%= @food_truck.cuisine_type %></td>	
+					</tr>	
+					<tr>
+						<td><div id="bold">Address:</div></td>
+						<td><%= @food_truck.address %></td>
+					</tr>	
+					<tr>
+						<td><div id="bold">City:</div></td>
+						<td><%= @food_truck.city %></td>
+					</tr>	
+					<tr>
+						<td><div id="bold">State:</div></td>
+						<td><%= @food_truck.state %></td>
+					</tr>	
+					<tr>
+						<td><div id="bold">Zip Code:</div></td>
+						<td><%= @food_truck.zipcode %></td>
+					</tr>	
+					<tr>
+						<td><div id="bold">Number of Trucks:</div></td>
+						<td><%= @food_truck.number_of_trucks %></td>
+					</tr>
+				</table>
+			<button class="btn btn-inverse">Edit</button>	
+		</form>
+	</div>
+</div>				
+<!--%= render 'form' %-->
+<%= link_to 'Show', @food_truck %> |
+<%= link_to 'Back', food_trucks_path %>
+
+
+
+<!-- **************************************************************************** -->
+<!--The Code Below is the Pop-up that comes up with 'add menu item' is Selected. -->
+<!-- **************************************************************************** -->
+
+<div class="modal" id="modal_item_create" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<div id="menu_left"><h3 id="myModalLabel">Create Food Item</h3></div>
+	</div>
+
+	<%= form_for(@item, :remote => true, :html => {:'data-type' => 'json'}) do |f| %>
+		<div class="modal-body">
+		    <% if @item.errors.any? %>
+				<div id="error_explanation">
+				<h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+				<ul>
+				<% @item.errors.full_messages.each do |msg| %>
+				  <li><%= msg %></li>
+				<% end %>
+				</ul>
+				</div>
+		    <% end %>
+
+		    <%= render 'shared/item_fields', :f => f %>
+		    <div class="field" style="display: none">
+		    	<%= f.text_field :food_truck_id, :value => @food_truck.id %>
+		    </div>
+
+		</div>	
+		<div class="modal-footer">
+			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			<button class="btn btn-primary" id="save_btn">Save changes</button>
+		</div>
+	<% end %>
+</div>
+
+
+<script>
+	function initialize()
+	{
+		$('body').append($('#modal_item_create'));
+		$(".new_item").bind("ajax:success", 
+			function(xhr, data, status) 
+			{
+				$('#item_table tr:last').after('<tr><td>-</td><td><a id="item_button" data-target="#modal_item_create" data-toggle="modal" data-keyboard="true" data-backdrop="static">' + data['name'] + 
+					'</a></td><td>$' + (Math.round(data['price'])).toFixed(2) + '</td>' );		
+				$('#modal_item_create').modal('hide');	
+			});
+	}
+
+	window.onload = initialize;
+</script>
+
