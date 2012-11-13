@@ -46,7 +46,6 @@
 <%= link_to 'Back', food_trucks_path %>
 
 
-
 <!-- **************************************************************************** -->
 <!-- Modal dialog div. --> 
 <!-- **************************************************************************** -->    
@@ -90,7 +89,7 @@
 
         <%= hidden_field_tag :food_truck_id%>
 
-    </div>  
+    </div>
     <div class="modal-footer">
       <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
       <button class="btn btn-primary" id="save_btn">Save changes</button>
@@ -112,6 +111,7 @@
 
         $('#modal_item_create').modal('hide');  
       });
+
   }
 
   function addRow(elements)

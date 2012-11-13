@@ -32,9 +32,11 @@
 		            		Welcome!
 		            		<%= link_to "Sign out", :controller => 'sessions', :action => 'destroy', :class =>'btn' %>
 			            <% else %> 
-			              <input class="span2" type="text" placeholder="Email">
-			              <input class="span2" type="password" placeholder="Password">
-			              <button type="submit" class="btn">Sign in</button>
+			              <input id="email_input" class="span2" type="text" placeholder="Email">
+			              <input id="password_input" class="span2" type="password" placeholder="Password">
+<!-- 			              <button type="submit" class="btn">Sign in</button> -->
+							<a href="<%= sessions_path %>" class="btn">Sign In</a>
+							<%= link_to "Sign Up", new_user_path, :class =>'btn btn-info' %> 
 		              <% end %>
 		            </form>
 		        </div>
