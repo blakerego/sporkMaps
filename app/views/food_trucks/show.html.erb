@@ -30,8 +30,9 @@
                 <% current_order.order_items.each do |order_item| %>
                 <tr>
                   <td><%= order_item.item.name %></td>
-                  <td><%= order_item.price %></td>
+                  <td>$<%= number_with_precision(order_item.price, :precision => 2) %></td>
                   <td><%= order_item.quantity %></td>
+                  <td><%= link_to 'x', order_item, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true %></td>
                 </tr>
               <% end %>
             <% end %>
@@ -111,6 +112,11 @@
 
         $('#modal_item_create').modal('hide');  
       });
+  }
+
+  function addRow(elements)
+  {
+
   }
 
   function addItemToOrder(price, id) 
