@@ -50,7 +50,7 @@ class OrderItemsController < ApplicationController
       puts current_order
     else
       puts 'no order, creating'
-      cache_new_order Order.create(:food_truck_id => params['food_truck_id'], :status => 'incomplete', :total => @order_item.price)
+      cache_new_order Order.create(:food_truck_id => params['food_truck_id'], :status => 'incomplete')
       puts 'order cached'
     end
 
@@ -58,6 +58,7 @@ class OrderItemsController < ApplicationController
 
     respond_to do |format|
       if @order_item.save
+        current_order.calculateOrderTotal
         format.html { redirect_to @order_item, notice: 'Order item was successfully created.' }
         format.json { render json: @order_item.to_json(:include => [:item]), status: :created, location: @order_item }
       else
@@ -85,12 +86,14 @@ class OrderItemsController < ApplicationController
   # DELETE /order_items/1
   # DELETE /order_items/1.json
   def destroy
+    puts 'in destroy method'
     @order_item = OrderItem.find(params[:id])
     @order_item.destroy
 
     respond_to do |format|
       format.html { redirect_to order_items_url }
       format.json { head :no_content }
+      format.js { render :layout=>false }
     end
   end
 end

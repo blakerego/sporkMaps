@@ -57,7 +57,6 @@ module SessionsHelper
 	end
 
 	def has_order?
-		puts 'here i am'
 		!current_order.nil?
 	end
 
