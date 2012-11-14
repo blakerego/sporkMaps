@@ -53,7 +53,7 @@
 <div class="modal" id="modal_item_create" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Create Food Item</h3>
+    <h3 id="myModalLabel">Add to Order</h3>
   </div>
 
   <%= form_for(@order_item, :remote => true, :html => {:'data-type' => 'json'}) do |f| %>
@@ -74,17 +74,21 @@
           <%= f.hidden_field :item_id%>
         </div>
 
+
+        <h4 id="food_name_placeholder"></h4>
+        <div id="description_placeholder"></div>
+
         <div class="field">
-          <%= f.label :price %><br />
-          <%= f.text_field :price,:readonly => true %>
+          <label class="order_label">Price:</label>
+          <%= f.text_field :price,:readonly => true, :class =>"input-mini" %>
         </div>
         <div class="field">
-          Qty: 
-          <%= f.number_field :quantity, :value => 1%>
+          <label class="order_label">Qty:</label> 
+          <%= f.number_field :quantity, :value => 1, :class => "input-mini" %>
         </div>
         <div class="field">
           Notes or special instructions: <br />
-          <%= f.text_area :note %>
+          <%= f.text_area :note, :cols => "50", :class => "form_text_area"  %>
         </div>
 
         <%= hidden_field_tag :food_truck_id%>
@@ -114,11 +118,13 @@
 
   }
 
-  function addItemToOrder(price, id) 
+  function addItemToOrder(price, id, description, name) 
   {    
     $('#order_item_price').val(price.html().replace("$",""));
     $('#order_item_item_id').val(id.val());
     $('#food_truck_id').val(<%= params['id'] %>); 
+    $('#description_placeholder').html(description.html());
+    $('#food_name_placeholder').html(name.html());
   }
 
   window.onload = initialize;

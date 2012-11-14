@@ -20,12 +20,19 @@
 			  <td><a 
 			  		id="item_button" data-target="#modal_item_create" 
 			   		data-toggle="modal" data-keyboard="true" data-backdrop="static" 
-			   		onclick="addItemToOrder($('#item_price_<%= counter %>'), $('#item_id_reference_<%=counter%>'))">
-			   		<%= item.name %></a>
+			   		onclick="addItemToOrder(
+			   			$('#item_price_<%= counter %>'), 
+			   			$('#item_id_reference_<%=counter%>'), 
+			   			$('#item_description_<%=counter%>'), 
+			   			$('#item_name_<%=counter%>'))">
+			   			<%= item.name %>
+			   		</a>
 			  
 
 			  <td class="item_price" id="item_price_<%=counter%>">$ <%= number_with_precision(item.price, :precision => 2) %></td>
 			  
+			  <td style="display: none;" id="item_description_<%=counter%>"><%= item.details %></td>
+			  <td style="display: none;" id="item_name_<%=counter%>"><%= item.name %></td>
 			</tr>
 		<% end %>
 	<% end %>

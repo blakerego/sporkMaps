@@ -338,3 +338,18 @@ h1 h2
 {
 	font-weight: bold;
 }
+
+.order_label
+{
+  width: 4em;
+  float: left;
+  text-align: right;
+  margin-right: 0.5em;
+  display: block
+}
+
+.form_text_area
+{
+	width: 400px;
+	height: 200px;
+}
