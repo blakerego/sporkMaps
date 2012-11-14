@@ -31,7 +31,7 @@
 
 			  <td class="item_price" id="item_price_<%=counter%>">$ <%= number_with_precision(item.price, :precision => 2) %></td>
 			  
-			  <td style="display: none;" id="item_description_<%=counter%>"><%= item.details %></td>
+			  <td style="display: none;" id="item_description_<%=counter%>"><i><%= item.details.blank? ? 'No Description' : item.details %></i></td>
 			  <td style="display: none;" id="item_name_<%=counter%>"><%= item.name %></td>
 			</tr>
 		<% end %>
