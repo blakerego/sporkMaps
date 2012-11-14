@@ -1,57 +1,52 @@
 <!doctype html>
 <html>
-	<head>
-		<link rel="icon" href="/favicon.ico" type="image/x-icon">
-		<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"> 
-		<title>
-			Spork | Food Truck Tracker
-		</title>
-		<%= stylesheet_link_tag    "application", :media => "all" %>
-		<%= javascript_include_tag "application" %>
-		<%= csrf_meta_tags %>
-	</head>
+<head>
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"> 
+<title>Spork | Food Truck Tracker</title>
+<%= stylesheet_link_tag    "application", :media => "all" %>
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
+</head>
 
 	<body>
 		<div class="navbar navbar-inverse navbar-fixed-top">
-		    <div class="navbar-inner">
-		        <div class="container">
-		          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		          </a>
-		     	  <%= link_to "Spork", {:controller => "static", :action => "index"}, :class => 'brand' %>
-		          	<div class="nav-collapse collapse"></div>
-		            <ul class="nav">
-		              <li class="active"><%= link_to "Home", :controller => "static", :action => "index" %></li>
-		              <li><%= link_to "Our Story", :controller => "static", :action => "about" %></li>
-		              <li><%= link_to "Contact", :controller => "static", :action => "contact" %></li>
-		              <li><%= link_to "Help", :controller => "static", :action => "help" %></li>
-		            </ul>
-		            <%= form_for(:session, :url => sessions_path, :html => {:class => "navbar-form pull-right"}) do |s| %>
-		            	<% if signed_in? %>
-		            		Welcome!
-		            		<%= link_to "Sign out", signout_path, :class =>'btn' %>
-			            <% else %> 
-		            		<fieldset>
-				              <%= s.text_field :email, :placeholder => "Email", :class => "span2" %>
-				              <%= s.password_field :password, :placeholder => "Password", :class => "span2" %> 
- 			              	<button type="submit" class="btn">Sign in</button> 
-											<%= link_to "Sign Up", new_user_path, :class =>'btn btn-info' %> 
-										</fieldset>
-		              <% end %>
-		             <% end %>
-		        </div>
+			<div class="navbar-inner">
+		    <div class="container">
+		      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </a>
+		 	  	<%= link_to "Spork", {:controller => "static", :action => "index"}, :class => 'brand' %>
+	      	<div class="nav-collapse collapse"></div>
+	        <ul class="nav">
+	          <li class="active"><%= link_to "Home", :controller => "static", :action => "index" %></li>
+	          <li><%= link_to "Our Story", :controller => "static", :action => "about" %></li>
+	          <li><%= link_to "Contact", :controller => "static", :action => "contact" %></li>
+	          <li><%= link_to "Help", :controller => "static", :action => "help" %></li>
+	        </ul>
+	        <%= form_for(:session, :url => sessions_path, :html => {:class => "navbar-form pull-right"}) do |s| %>
+	        	<% if signed_in? %>
+	        		Welcome!
+	        		<%= link_to "Sign out", signout_path, :class =>'btn' %>
+	          <% else %> 
+	        		<fieldset>
+	              <%= s.text_field :email, :placeholder => "Email", :class => "span2" %>
+	              <%= s.password_field :password, :placeholder => "Password", :class => "span2" %> 
+	              	<button type="submit" class="btn">Sign in</button> 
+								<%= link_to "Sign Up", new_user_path, :class =>'btn btn-info' %> 
+							</fieldset>
+	          <% end %>
+	         <% end %>
+		    	</div>
 		    </div>
 		</div>
-		<div class="header" id="header-index">
-    
-       	<h1>SporkTrucks</h1>
-       	<br>
-        <p><a href="<%=food_trucks_path%>" class="btn btn-inverse btn-large">Find a Food Truck &raquo;</a>
-		</div>
-
-
+		<% if current_page?(root_url) %>
+			<%= render 'shared/header_main_page' %>
+		<% else %>
+			<%= render 'shared/header' %>
+		<% end %>
 		<div class="container">
 			<section class="round">
 				<% flash.each do |key, value| %> 
@@ -63,7 +58,7 @@
 
       <footer>      	
         <p>&copy; SporkTrucks 2012</p>
-		<%= debug(params) if Rails.env.development? %>        
+				<%= debug(params) if Rails.env.development? %>        
       </footer>
 		</div>
 	</body>
