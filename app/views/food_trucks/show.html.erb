@@ -29,7 +29,7 @@
             <% if has_order? %>
                 <% current_order.order_items.each do |order_item| %>
                 <tr>
-                  <td><%= order_item.item.name %></td>
+                  <td><%= order_item.item.name if !order_item.item.nil? %></td>
                   <td>$<%= number_with_precision(order_item.price, :precision => 2) %></td>
                   <td><%= order_item.quantity %></td>
                   <td><%= link_to 'x', order_item, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true %></td>
@@ -98,6 +98,11 @@
 </div>
 
 
+<h1> Backbone Testing </h1>
+
+<div id="notice"></div>
+<div id="app"></div>
+
 <script>
   function initialize()
   {
@@ -122,6 +127,129 @@
     $('#food_name_placeholder').html(name.html());
   }
 
-  window.onload = initialize;
+  (function($){
+    initialize(); 
+
+    /************************************
+    Overrides persistence storage with dummy function. This enables use of Model.destroy() without raising an error.
+    *****************************************/ 
+    Backbone.sync = function(method, model, success, error)
+    {
+      success(); 
+    }
+
+    /**********************************
+    MODEL 
+    **********************************/
+    var Item = Backbone.Model.extend({
+      defaults: {
+        part1: 'hello', 
+        part2: 'world'
+      }
+    });
+
+    /**********************************
+    Collection
+    **********************************/
+    var List = Backbone.Collection.extend({
+      model: Item
+    });
+
+
+    /**********************************
+    Item View 
+    **********************************/
+    var ItemView = Backbone.View.extend({
+      tagName: 'li', // name of (orphan) root tag in this.el. 
+      initialize: function() 
+      {
+        _.bindAll(this, 'render', 'unrender', 'swap', 'remove'); 
+        this.model.bind('change', this.render); 
+        this.model.bind('remove', this.unrender); 
+      },
+
+      events: {
+        'click span.swap': 'swap',
+        'click span.delete': 'remove'
+      },
+
+      render: function() 
+      {
+        $(this.el).html('<span style="color:black">' + this.model.get('part1')+ ' ' + this.model.get('part2') + '</span> &nbsp; &nbsp; <span class="swap" style="font-family:sans-serif; color:blue; cursor:pointer;">[swap]</span> <span class="delete" style="cursor:pointer; color:red; font-family:sans-serif;">[delete]</span>');
+        return this; // for chainable calls, like .render().el
+      },
+
+      unrender: function() 
+      {
+        $(this.el).remove();
+      },
+
+      swap: function() 
+      {
+        var swapped = 
+        {
+          part1: this.model.get('part2'),
+          part2: this.model.get('part1') 
+        }; 
+        this.model.set(swapped); 
+      }, 
+
+      remove: function() 
+      {
+        this.model.destroy(); 
+      }
+    });
+
+    /**********************************
+    List View
+    **********************************/
+    var ListView = Backbone.View.extend({    
+      el: $('#app'), // attaches `this.el` to an existing element.
+
+
+      events: {
+        'click button#add': 'addItem'
+      },
+
+      // `initialize()`: Automatically called upon instantiation. Where you make all types of bindings, _excluding_ UI events, such as clicks, etc.
+      initialize: function(){
+        _.bindAll(this, 'render', 'addItem', 'appendItem'); 
+         
+        this.collection = new List();
+        this.collection.bind('add', this.appendItem); //whenever add is called on the list, append is called to update view. 
+
+         this.counter = 0; 
+         this.render(); // not all views are self-rendering. This one is.
+      },
+      // `render()`: Function in charge of rendering the entire view in `this.el`. Needs to be manually called by the user.
+      render: function(){
+        $(this.el).append("<button id='add'>Add list item</button>");
+        $(this.el).append("<ul></ul>");
+        _(this.collection.models).each(function(item){
+          self.appendItem(item);
+        }, this);
+      },
+
+      addItem: function() {
+        this.counter++; 
+        var item = new Item(); 
+        item.set({
+          part2: item.get('part2') + this.counter //overriding default
+        });
+        this.collection.add(item); // add item to collection. view is updated because of the binding of 'add' in initialize.
+        },
+
+      appendItem: function(item) {
+        var itemView = new ItemView({
+          model: item
+        });
+        $('ul', this.el).append(itemView.render().el);
+        }
+      });
+
+    // **listView instance**: Instantiate main app view.
+    var listView = new ListView();      
+  })(jQuery);
+
 </script>
 

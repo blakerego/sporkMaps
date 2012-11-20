@@ -13,9 +13,25 @@
 //= require jquery
 //= require jquery_ujs
 
+//= require bootstrap
+
 //= require underscore
 //= require backbone
 
-//= require bootstrap
+
 //= require application
 
+
+//= require_tree .//models
+//= require_tree .//controllers
+//= require_tree .//views
+
+
+var App = {
+	Views: {},
+	Routers: {}, 
+	init: function() {
+		new App.Routers.OrderItems(); 
+		Backbone.history.start(); 
+	}
+}

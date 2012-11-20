@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"order",
+				"order_items"
+			],
+			[
+				"update",
+				"update_attributes"
+			],
+			[
+				"redirec",
+				"redirect_to"
+			],
+			[
 				"btn",
 				"btn-inverse"
 			],
@@ -84,22 +96,91 @@
 	"buffers":
 	[
 		{
-			"contents": "<!DOCTYPE HTML>\n<html lang=\"en-US\">\n<head>\n	<meta charset=\"UTF-8\">\n	<title>NYU - chat</title>\n</head>\n<body>\n	<h1>Express 3.0 + Socket.IO</h1>\n	<input id=\"message\"></input>\n	<input id=\"button\" type=\"button\" value=\"Ping server\"/>\n\n	<hr>\n	<div id=\"msgbox\"></div>\n\n\n	<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js\"></script>\n	<script src=\"/socket.io/socket.io.js\"></script>\n\n	<script>\n		var socket = io.connect('http://localhost:3001'); \n		socket.on('connect', function(){\n			console.log('im connected');\n		});  \n\n		socket.on('pong', function(data)\n			{\n				$('#msgbox').append(data.txt + \"<br>\"); \n			});\n\n		$('#button').click(function(){\n			$('#msgbox').append('Sending message<br>');\n			var text = $('#message').val();\n			console.log(text);\n			socket.emit('ping', {txt: text}); \n			socket.emit('ping', {txt: 'this is a message from client'});\n		});\n	</script>\n</body>\n</html>",
-			"file": "/C/Users/brego/Desktop/directory/index.html",
-			"file_size": 944,
-			"file_write_time": 129957642206704288,
+			"file": "app/helpers/sessions_helper.rb",
 			"settings":
 			{
-				"buffer_size": 906,
+				"buffer_size": 1987,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/user.rb",
+			"settings":
+			{
+				"buffer_size": 1661,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/users_controller.rb",
+			"settings":
+			{
+				"buffer_size": 2618,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/food_trucks/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 4383,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/application.js",
+			"settings":
+			{
+				"buffer_size": 935,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/models/order_item.js",
+			"settings":
+			{
+				"buffer_size": 204,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/Users/brego/Desktop/directory/chat.js",
+			"file": "app/assets/javascripts/controllers/order_items.js",
 			"settings":
 			{
-				"buffer_size": 521,
+				"buffer_size": 825,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/order_items/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 903,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/views/index.js",
+			"settings":
+			{
+				"buffer_size": 565,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/views/edit.js",
+			"settings":
+			{
+				"buffer_size": 1495,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/order_items_controller.rb",
+			"settings":
+			{
+				"buffer_size": 2577,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -127,16 +208,37 @@
 	},
 	"file_history":
 	[
+		"/C/Users/brego/personal/sporkMaps/app/views/layouts/application.html.erb",
+		"/C/Users/brego/personal/sporkMaps/app/controllers/users_controller.rb",
+		"/C/Users/brego/personal/sporkMaps/app/views/food_trucks/_item_table.html.erb",
+		"/C/Users/brego/personal/sporkMaps/app/controllers/orders_controller.rb",
+		"/C/Users/brego/personal/sporkMaps/app/controllers/order_items_controller.rb",
+		"/C/Users/brego/personal/sporkMaps/app/models/order.rb",
+		"/C/Users/brego/personal/sporkMaps/app/views/orders/show.html.erb",
+		"/C/Users/brego/personal/sporkMaps/app/views/order_items/destroy.js.erb",
+		"/C/Users/brego/personal/sporkMaps/Gemfile",
+		"/C/Users/brego/personal/sporkMaps/app/views/orders/destroy.js.erb",
+		"/C/Users/brego/personal/sporkMaps/app/controllers/sessions_controller.rb",
+		"/C/Users/brego/personal/sporkMaps/config/routes.rb",
+		"/C/Users/brego/personal/sporkMaps/app/models/user.rb",
+		"/C/Users/brego/personal/sporkMaps/app/views/sessions/new.html.erb",
+		"/C/Users/brego/personal/sporkMaps/app/models/order_item.rb",
+		"/C/Users/brego/personal/sporkMaps/app/controllers/application_controller.rb",
+		"/C/Users/brego/personal/sporkMaps/app/helpers/sessions_helper.rb",
+		"/C/Users/brego/personal/sporkMaps/spec/controllers/sessions_controller_spec.rb",
+		"/C/Users/brego/personal/sporkMaps/app/views/food_trucks/show.html.erb",
+		"/C/Users/brego/personal/sporkMaps/spec/controllers/static_controller_spec.rb",
+		"/C/Users/brego/personal/sporkMaps/app/views/food_trucks/edit.html.erb",
+		"/C/Users/brego/Desktop/directory/index.html",
+		"/C/Users/brego/Desktop/directory/chat.js",
+		"/C/Users/brego/personal/sporkMaps/sporkWeb.sublime-workspace",
 		"/C/Users/brego/Desktop/index.html",
 		"/C/Users/brego/Desktop/chat.js",
 		"/C/Users/brego/personal/sporkMaps/config/environments/development.rb",
 		"/C/Users/brego/personal/sporkMaps/sporkDesign/about.html",
 		"/C/Users/brego/personal/sporkMaps/app/views/static/contact.html.erb",
-		"/C/Users/brego/personal/sporkMaps/config/routes.rb",
 		"/C/Users/brego/personal/sporkMaps/app/models/menu.rb",
 		"/C/Users/brego/personal/sporkMaps/app/models/food_truck.rb",
-		"/C/Users/brego/personal/sporkMaps/app/models/order.rb",
-		"/C/Users/brego/personal/sporkMaps/app/models/order_item.rb",
 		"/C/Users/brego/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/C/Users/brego/personal/sporkMaps/app/views/static/index.html.erb",
 		"/C/Users/brego/personal/sporkMaps/app/assets/stylesheets/bootstrap.css",
@@ -145,10 +247,8 @@
 		"/C/Users/brego/personal/sporkMaps/sporkDesign/contact.html",
 		"/C/Users/brego/personal/sporkMaps/app/controllers/authenticate_controller.rb",
 		"/C/Users/brego/personal/sporkMaps/config/database.yml",
-		"/C/Users/brego/personal/sporkMaps/app/views/layouts/application.html.erb",
 		"/C/Users/brego/personal/sporkMaps/app/assets/stylesheets/application.css",
 		"/C/Users/brego/personal/sporkMaps/app/assets/javascripts/application.js",
-		"/C/Users/brego/personal/sporkMaps/Gemfile",
 		"/C/Users/brego/personal/sporkMaps/app/views/authenticate/index.html.erb",
 		"/C/Users/brego/personal/sporkMaps/public/index.html",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/static/download.html.erb",
@@ -208,7 +308,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"C:\\Users\\blakerego\\personal\\sporkmaps"
@@ -219,6 +319,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"order_item",
+			"puts",
 			"submitCallback",
 			".modal",
 			"text",
@@ -249,49 +351,134 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/Users/brego/Desktop/directory/index.html",
+					"file": "app/helpers/sessions_helper.rb",
 					"settings":
 					{
-						"buffer_size": 906,
+						"buffer_size": 1987,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								163,
-								163
+								1719,
+								1719
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 42.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/C/Users/brego/Desktop/directory/chat.js",
+					"file": "app/models/user.rb",
 					"settings":
 					{
-						"buffer_size": 521,
+						"buffer_size": 1661,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								521,
-								521
+								1082,
+								1082
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/controllers/users_controller.rb",
+					"settings":
+					{
+						"buffer_size": 2618,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								409,
+								409
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/food_trucks/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 4383,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3580,
+								3580
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1288.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/assets/javascripts/application.js",
+					"settings":
+					{
+						"buffer_size": 935,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								749,
+								749
 							]
 						],
 						"settings":
@@ -300,6 +487,170 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/assets/javascripts/models/order_item.js",
+					"settings":
+					{
+						"buffer_size": 204,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								204,
+								204
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/assets/javascripts/controllers/order_items.js",
+					"settings":
+					{
+						"buffer_size": 825,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								633,
+								633
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/views/order_items/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 903,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								885,
+								885
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/assets/javascripts/views/index.js",
+					"settings":
+					{
+						"buffer_size": 565,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								565,
+								565
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/assets/javascripts/views/edit.js",
+					"settings":
+					{
+						"buffer_size": 1495,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								707,
+								707
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/controllers/order_items_controller.rb",
+					"settings":
+					{
+						"buffer_size": 2577,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								842,
+								842
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -349,6 +700,90 @@
 		"selected_items":
 		[
 			[
+				"order_itemcontro",
+				"app/controllers/order_items_controller.rb"
+			],
+			[
+				"application.h",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"orderitems/index",
+				"app/views/order_items/index.html.erb"
+			],
+			[
+				"application.js",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"application.html",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"orders/show",
+				"app/views/orders/show.html.erb"
+			],
+			[
+				"user.rb",
+				"app/models/user.rb"
+			],
+			[
+				"order.rb",
+				"app/models/order.rb"
+			],
+			[
+				"orderitemcontr",
+				"app/controllers/order_items_controller.rb"
+			],
+			[
+				"order_itemscont",
+				"app/controllers/order_items_controller.rb"
+			],
+			[
+				"orders",
+				"app/controllers/orders_controller.rb"
+			],
+			[
+				"_itemta",
+				"app/views/food_trucks/_item_table.html.erb"
+			],
+			[
+				"food_trucks/show",
+				"app/views/food_trucks/show.html.erb"
+			],
+			[
+				"usercontro",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"user.",
+				"app/models/user.rb"
+			],
+			[
+				"orderitemcontroller",
+				"app/controllers/order_items_controller.rb"
+			],
+			[
+				"order_item",
+				"app/models/order_item.rb"
+			],
+			[
+				"userscontr",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"routes.rb",
+				"config/routes.rb"
+			],
+			[
 				"food_tru",
 				"sporkMaps/app/models/food_truck.rb"
 			],
@@ -383,10 +818,6 @@
 			[
 				"development.rb",
 				"sporkMaps/config/environments/development.rb"
-			],
-			[
-				"application.js",
-				"sporkMaps/app/assets/javascripts/application.js"
 			],
 			[
 				"rou",
@@ -425,10 +856,6 @@
 				"spec/controllers/sessions_controller_spec.rb"
 			],
 			[
-				"routes.rb",
-				"config/routes.rb"
-			],
-			[
 				"index.h",
 				"app/views/contacts/index.html.erb"
 			],
@@ -455,10 +882,6 @@
 			[
 				"mode",
 				"app/models/contact.rb"
-			],
-			[
-				"gem",
-				"Gemfile"
 			]
 		],
 		"width": 0.0
