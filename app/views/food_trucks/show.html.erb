@@ -142,8 +142,17 @@
     MODEL 
     **********************************/
     var Item = Backbone.Model.extend({
-      urlRoot : "/order_items",
-
+      urlRoot : function()
+      {
+        if (this.isNew())
+        {
+          return "/order_items";
+        } 
+        else 
+        {
+          return "/order_items" + this.id;
+        }
+      }
       defaults: {
         part1: 'hello', 
         part2: 'world'
