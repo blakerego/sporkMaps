@@ -133,10 +133,12 @@
     /************************************
     Overrides persistence storage with dummy function. This enables use of Model.destroy() without raising an error.
     *****************************************/ 
+    /*
     Backbone.sync = function(method, model, success, error)
     {
       success(); 
     }
+    */
 
     /**********************************
     MODEL 
@@ -152,10 +154,12 @@
         {
           return "/order_items" + this.id;
         }
-      }
+      },
       defaults: {
-        part1: 'hello', 
-        part2: 'world'
+        item_id: '81',
+        price: '3',
+        quantity: '1',
+        note: 'testing backbone'
       }
     });
 
@@ -186,7 +190,7 @@
 
       render: function() 
       {
-        $(this.el).html('<span style="color:black">' + this.model.get('part1')+ ' ' + this.model.get('part2') + '</span> &nbsp; &nbsp; <span class="swap" style="font-family:sans-serif; color:blue; cursor:pointer;">[swap]</span> <span class="delete" style="cursor:pointer; color:red; font-family:sans-serif;">[delete]</span>');
+        $(this.el).html('<span style="color:black">' + this.model.get('price')+ ' ' + this.model.get('quantity') + '</span> &nbsp; &nbsp; <span class="swap" style="font-family:sans-serif; color:blue; cursor:pointer;">[swap]</span> <span class="delete" style="cursor:pointer; color:red; font-family:sans-serif;">[delete]</span>');
         return this; // for chainable calls, like .render().el
       },
 
@@ -199,8 +203,8 @@
       {
         var swapped = 
         {
-          part1: this.model.get('part2'),
-          part2: this.model.get('part1') 
+          price: this.model.get('quantity'),
+          quantity: this.model.get('price') 
         }; 
         this.model.set(swapped); 
       }, 
@@ -209,6 +213,7 @@
       {
         this.model.destroy(); 
       }
+
     });
 
     /**********************************
@@ -244,9 +249,7 @@
       addItem: function() {
         this.counter++; 
         var item = new Item(); 
-        item.set({
-          part2: item.get('part2') + this.counter //overriding default
-        });
+        item.save(); 
         this.collection.add(item); // add item to collection. view is updated because of the binding of 'add' in initialize.
         },
 

@@ -96,90 +96,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/helpers/sessions_helper.rb",
-			"settings":
-			{
-				"buffer_size": 1987,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/user.rb",
-			"settings":
-			{
-				"buffer_size": 1661,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/users_controller.rb",
-			"settings":
-			{
-				"buffer_size": 2618,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/views/food_trucks/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 4383,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/application.js",
-			"settings":
-			{
-				"buffer_size": 935,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/models/order_item.js",
-			"settings":
-			{
-				"buffer_size": 204,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/controllers/order_items.js",
-			"settings":
-			{
-				"buffer_size": 825,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/order_items/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 903,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/views/index.js",
-			"settings":
-			{
-				"buffer_size": 565,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/views/edit.js",
-			"settings":
-			{
-				"buffer_size": 1495,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/order_items_controller.rb",
-			"settings":
-			{
-				"buffer_size": 2577,
+				"buffer_size": 8471,
 				"line_ending": "Unix"
 			}
 		}
@@ -208,6 +128,16 @@
 	},
 	"file_history":
 	[
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/helpers/sessions_helper.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/models/user.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/controllers/users_controller.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/javascripts/application.js",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/javascripts/models/order_item.js",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/javascripts/controllers/order_items.js",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/order_items/index.html.erb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/javascripts/views/index.js",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/javascripts/views/edit.js",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/controllers/order_items_controller.rb",
 		"/C/Users/brego/personal/sporkMaps/app/views/layouts/application.html.erb",
 		"/C/Users/brego/personal/sporkMaps/app/controllers/users_controller.rb",
 		"/C/Users/brego/personal/sporkMaps/app/views/food_trucks/_item_table.html.erb",
@@ -351,106 +281,23 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/helpers/sessions_helper.rb",
-					"settings":
-					{
-						"buffer_size": 1987,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1719,
-								1719
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/models/user.rb",
-					"settings":
-					{
-						"buffer_size": 1661,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1082,
-								1082
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 90.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/controllers/users_controller.rb",
-					"settings":
-					{
-						"buffer_size": 2618,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								409,
-								409
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 90.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "app/views/food_trucks/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 4383,
+						"buffer_size": 8471,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3580,
-								3580
+								5132,
+								5137
 							]
 						],
 						"settings":
@@ -460,197 +307,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1288.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/assets/javascripts/application.js",
-					"settings":
-					{
-						"buffer_size": 935,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								749,
-								749
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/assets/javascripts/models/order_item.js",
-					"settings":
-					{
-						"buffer_size": 204,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								204,
-								204
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/assets/javascripts/controllers/order_items.js",
-					"settings":
-					{
-						"buffer_size": 825,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								633,
-								633
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/views/order_items/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 903,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								885,
-								885
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/assets/javascripts/views/index.js",
-					"settings":
-					{
-						"buffer_size": 565,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								565,
-								565
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app/assets/javascripts/views/edit.js",
-					"settings":
-					{
-						"buffer_size": 1495,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								707,
-								707
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "app/controllers/order_items_controller.rb",
-					"settings":
-					{
-						"buffer_size": 2577,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								842,
-								842
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 360.0,
+						"translation.y": 2087.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -699,6 +356,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"food_trucks/show",
+				"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/food_trucks/show.html.erb"
+			],
 			[
 				"order_itemcontro",
 				"app/controllers/order_items_controller.rb"
@@ -750,10 +411,6 @@
 			[
 				"_itemta",
 				"app/views/food_trucks/_item_table.html.erb"
-			],
-			[
-				"food_trucks/show",
-				"app/views/food_trucks/show.html.erb"
 			],
 			[
 				"usercontro",
