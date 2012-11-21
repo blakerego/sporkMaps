@@ -130,31 +130,11 @@
   (function($){
     initialize(); 
 
-    /************************************
-    Overrides persistence storage with dummy function. This enables use of Model.destroy() without raising an error.
-    *****************************************/ 
-    /*
-    Backbone.sync = function(method, model, success, error)
-    {
-      success(); 
-    }
-    */
-
     /**********************************
     MODEL 
     **********************************/
     var Item = Backbone.Model.extend({
-      urlRoot : function()
-      {
-        if (this.isNew())
-        {
-          return "/order_items";
-        } 
-        else 
-        {
-          return "/order_items" + this.id;
-        }
-      },
+      urlRoot : "/order_items",
       defaults: {
         item_id: '81',
         price: '3',
