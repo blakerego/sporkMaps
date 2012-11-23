@@ -13,6 +13,8 @@ var OrderItem = Backbone.Model.extend({
 /**********************************
 Collection
 **********************************/
-var List = Backbone.Collection.extend({
-  model: OrderItem
+var OrderItemList = Backbone.Collection.extend({
+  model: OrderItem,
+  url: '/currentOrderItems'
 });
+

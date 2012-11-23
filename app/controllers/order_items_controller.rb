@@ -11,6 +11,14 @@ class OrderItemsController < ApplicationController
     end
   end
 
+  def currentOrderItems
+    puts '************************ in currentOrderItems' + current_order.order_items.size.to_s
+
+    respond_to do |format|
+      format.json { render json: current_order.order_items.to_json(:include => [:item]) }
+    end
+  end
+
   # GET /order_items/1
   # GET /order_items/1.json
   def show

@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  require 'sessions_helper'
+
   # GET /orders
   # GET /orders.json
   def index
@@ -18,6 +20,13 @@ class OrdersController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @order }
+    end
+  end
+
+  def currentOrder
+    puts '************************ in currentOrder'
+    respond_to do |format|
+      format.json { render json: current_order.to_json(:include => [:order_items]) }
     end
   end
 

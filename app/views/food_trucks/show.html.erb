@@ -117,6 +117,8 @@
   {
     var orderItemListView = new OrderItemListView(); 
 
+    //orderItemListView.reset(<%= @current_order.order_items.to_json %>);
+
     $('body').append($('#modal_item_create'));
     $(".new_order_item").bind("ajax:success", 
       function(xhr, data, status) 
