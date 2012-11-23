@@ -1,8 +1,18 @@
-
+/**********************************
+MODEL 
+**********************************/
 var OrderItem = Backbone.Model.extend({
-	url : function() {
-		var base = 'order_items'; 
-		if (this.isNew()) return base;
-		return base + (base.charAt(base.length-1) == '/' ? '' : '/') + this.id; 
+  urlRoot : "/order_items", 
+
+  initialize: function() {
+    this.set({ 'item' : new Item(this.get('item')) })
 	}
+});
+
+
+/**********************************
+Collection
+**********************************/
+var List = Backbone.Collection.extend({
+  model: OrderItem
 });
