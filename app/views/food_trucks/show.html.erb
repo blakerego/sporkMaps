@@ -140,7 +140,7 @@
     Item View 
     **********************************/
     var OrderItemView = Backbone.View.extend({
-      tagName: 'li', // name of (orphan) root tag in this.el. 
+      tagName: 'tr', // name of (orphan) root tag in this.el. 
       initialize: function() 
       {
         _.bindAll(this, 'render', 'unrender', 'remove'); 
@@ -149,12 +149,13 @@
       },
 
       events: {
-        'click span.delete': 'remove'
+        'click td.delete': 'remove'
       },
 
       render: function() 
       {
-        $(this.el).html('<span style="color:black">' + this.model.get('name') + ' '  + this.model.get('price')+ ' ' + this.model.get('quantity') + '</span> &nbsp; &nbsp; <span class="delete" style="cursor:pointer; color:red; font-family:sans-serif;">[delete]</span>');
+        $(this.el).html('<td>' + this.model.get('name') + '</td><td> '  + this.model.get('price')+ '</td><td>' + this.model.get('quantity') + '</td><td class="delete"> [x]</td>');
+
         return this; // for chainable calls, like .render().el
       },
 
@@ -200,7 +201,9 @@
       // `render()`: Function in charge of rendering the entire view in `this.el`. Needs to be manually called by the user.
       render: function(){
         $(this.el).append("<button id='add'>Add list order item</button>");
-        $(this.el).append("<ul></ul>");
+        $(this.el).append("<table><tbody>");
+        $(this.el).append("<td></td>");
+        $(this.el).append("</tbody></table>");
         _(this.collection.models).each(function(item){
           self.appendItem(item);
         }, this);
@@ -216,7 +219,7 @@
         var orderItemView = new OrderItemView({
           model: orderItem
         });
-        $('ul', this.el).append(orderItemView.render().el);
+        $('tbody', this.el).append(orderItemView.render().el);
         }
       });
 
@@ -229,9 +232,6 @@
       $(".new_order_item").bind("ajax:success", 
         function(xhr, data, status) 
         {
-          $('#order_table tr:last').after('<tr><td>' + data['item']['name']  + 
-            '</td><td>$' + data['price'] + '</td><td>' + data['quantity'] + 
-            '</td></tr>');    
 
           var oi = new OrderItem( data['item'] );
 
