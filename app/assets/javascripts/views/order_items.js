@@ -67,15 +67,14 @@ var OrderItemListView = Backbone.View.extend({
 
   },
 
-  addCurrentOrder: function(data)
+  addCurrentOrder: function(model, response)
   {
-    alert(_.size(data));
-    
-    /*_(data).each((function(d)
+    _(response).each(function(d)
     {
       var oi = new OrderItem(d); 
       this.appendOrderItem(oi);
-    });*/
+    }, this);
+
   },
 
   render: function()
