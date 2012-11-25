@@ -1,12 +1,14 @@
 
 <h1>Order Checkout</h1>
-<div id="orderItemTable"></div>
 
+<div id="order_area"></div>
+
+<br>
+<%= link_to "Place Order", {:controller => 'static', :action => 'completed'}, :class => 'btn' %>
 
 <script>
 (function($) 
 {
-  var orderItemListView = new OrderItemListView(); 
-
+  var currentOrderView = new CurrentOrderView(); 
 })(jQuery);
 </script>
