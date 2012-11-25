@@ -39,32 +39,16 @@ List View
 **********************************/
 var OrderItemListView = Backbone.View.extend({    
 
-  el: $('#app'), // attaches `this.el` to an existing element.
+  el: $('#orderItemTable'), // attaches `this.el` to an existing element.
 
   initialize: function()
   {
-    this.el = $('#app'); //this shouldn't be
-
-    //_.bindAll(this, 'render', 'appendOrderItem', 'addCurrentOrder'); 
-    
-     _.bindAll(this); //this should bind all methods to this context.
-    
-
+    this.el = $('#orderItemTable'); //this shouldn't be necessary.
+     _.bindAll(this); 
     this.collection = new OrderItemList();  
-    //this.OrderItems = new Backbone.Collection;
     this.collection.url =  '/currentOrderItems';
     this.collection.fetch( { success: this.addCurrentOrder } ); 
-
-    //this.collection.bind('add', this.appendOrderItem); //whenever add is called on the list, append is called to update view. 
     this.render(); // not all views are self-rendering. This one is.
-
-
-    //alert(_(this.))
-
-    //this.collection.bind('add', this.appendOrderItem); //whenever add is called on the list, append is called to update view. 
-
-    //$.ajax( { type: 'Get', url: '/currentOrder', dataType: 'json', success: this.loadCurrentOrder });
-
   },
 
   addCurrentOrder: function(model, response)
@@ -79,7 +63,6 @@ var OrderItemListView = Backbone.View.extend({
 
   render: function()
   {
-    //$(this.el).append("<button id='add'>Add list order item</button>");
     $(this.el).append("<table id='order_table' class='table table-condensed'><tr><th>Item</th><th>Price</th><th>Quantity</th></tr><tbody id='orderItemTable'>");
     $(this.el).append("</tbody></table>");
     _(this.collection.models).each(function(item){
@@ -94,6 +77,5 @@ var OrderItemListView = Backbone.View.extend({
     });
     $('#orderItemTable', this.el).append(orderItemView.render().el);
   }
-
 
 });

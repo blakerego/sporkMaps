@@ -19,25 +19,8 @@
     <div class="span4">
         <form class="well well-height" id="well_pink">
           <h4>Order Summary</h4> <br>
-          <table id="order_table" class="table table-condensed">
-            <tr>
-              <th>Item</th>
-              <th>Price</th>
-              <th>Quantity</th>
-            </tr>
-
-            <% if has_order? %>
-                <% current_order.order_items.each do |order_item| %>
-                <tr>
-                  <td><%= order_item.item.name if !order_item.item.nil? %></td>
-                  <td>$<%= number_with_precision(order_item.price, :precision => 2) %></td>
-                  <td><%= order_item.quantity %></td>
-                  <td><%= link_to 'x', order_item, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true %></td>
-                </tr>
-              <% end %>
-            <% end %>
-          </table>
-          <button class="btn btn-inverse">Place Order</button>    
+          <div id="orderItemTable"></div>
+          <%= link_to "Place Order", {:controller => 'static', :action => 'checkout'}, :class => "btn btn-inverse" %>
         </form> 
     </div>
 </div>
@@ -98,10 +81,7 @@
 </div>
 
 
-<h1> Backbone Testing </h1>
-
 <div id="notice"></div>
-<div id="app"></div>
 
 <script>
   function addItemToOrder(price, id, description, name) 
@@ -116,26 +96,16 @@
   function initialize()
   {
     var orderItemListView = new OrderItemListView(); 
-
-    //orderItemListView.reset(<%= @current_order.order_items.to_json %>);
-
     $('body').append($('#modal_item_create'));
     $(".new_order_item").bind("ajax:success", 
       function(xhr, data, status) 
       {
-
         var oi = new OrderItem( data );
-
         orderItemListView.appendOrderItem(oi);
-
-
         $('#modal_item_create').modal('hide');  
       });
-
   }
 
-
   $(document).ready(initialize());
-
 </script>
 

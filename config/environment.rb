@@ -8,3 +8,5 @@ SporkWeb::Application.initialize!
 puts Rails.root.join('config' + '/config.yml')
 
 APP_CONFIG = YAML.load_file(Rails.root.join('config' + '/config.yml'))[Rails.env]
+
+ActiveRecord::Base.include_root_in_json = false
