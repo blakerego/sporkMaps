@@ -4,8 +4,24 @@
 		"selected_items":
 		[
 			[
+				"Curr",
+				"CurrentOrderView"
+			],
+			[
 				"order",
 				"order_items"
+			],
+			[
+				"bind",
+				"bindAll"
+			],
+			[
+				"add",
+				"addCurrentOrder"
+			],
+			[
+				"append",
+				"appendOrderItem"
 			],
 			[
 				"update",
@@ -96,10 +112,58 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/food_trucks/show.html.erb",
+			"file": "app/views/layouts/application.html.erb",
 			"settings":
 			{
-				"buffer_size": 8471,
+				"buffer_size": 2844,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/static/checkout.html.erb",
+			"settings":
+			{
+				"buffer_size": 255,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/models/order_item.js",
+			"settings":
+			{
+				"buffer_size": 424,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/views/order_items.js",
+			"settings":
+			{
+				"buffer_size": 2196,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/models/order.js",
+			"settings":
+			{
+				"buffer_size": 436,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/views/orders.js",
+			"settings":
+			{
+				"buffer_size": 1803,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/order.rb",
+			"settings":
+			{
+				"buffer_size": 390,
 				"line_ending": "Unix"
 			}
 		}
@@ -128,16 +192,26 @@
 	},
 	"file_history":
 	[
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/food_trucks/show.html.erb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/config/routes.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/config/environment.rb",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/helpers/sessions_helper.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/controllers/sessions_controller.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/controllers/orders_controller.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/controllers/order_items_controller.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/javascripts/models/order_item.js",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/javascripts/views/order_items.js",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/javascripts/application.js",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/controllers/items_controller.rb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/javascripts/models/order.js",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/order_items/show.html.erb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/order_items/index.html.erb",
+		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/javascripts/models/item.js",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/models/user.rb",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/controllers/users_controller.rb",
-		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/javascripts/application.js",
-		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/javascripts/models/order_item.js",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/javascripts/controllers/order_items.js",
-		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/order_items/index.html.erb",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/javascripts/views/index.js",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/javascripts/views/edit.js",
-		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/controllers/order_items_controller.rb",
 		"/C/Users/brego/personal/sporkMaps/app/views/layouts/application.html.erb",
 		"/C/Users/brego/personal/sporkMaps/app/controllers/users_controller.rb",
 		"/C/Users/brego/personal/sporkMaps/app/views/food_trucks/_item_table.html.erb",
@@ -191,7 +265,6 @@
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkDesign/index.html",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/sporkDesign/about.html",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/static/about.html.erb",
-		"/Users/blakerego/myDropBox/Dropbox/git/spork/config/routes.rb",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/download/index.html.erb",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/assets/stylesheets/bootstrap-responsive.css",
 		"/Users/blakerego/myDropBox/Dropbox/git/spork/app/controllers/download_controller.rb",
@@ -249,6 +322,37 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"render(",
+			"model",
+			"},\n",
+			"active",
+			"link_to",
+			"this.collection",
+			"bindall",
+			"loadcurrentorder",
+			"list",
+			"addorderitem",
+			"tbody",
+			"List",
+			"ListView",
+			"id",
+			"delete",
+			"ul",
+			"swap",
+			"addItemToOrder",
+			"addorderitem",
+			"dd",
+			"save_btn",
+			"item.save",
+			"item",
+			"Item",
+			"ul",
+			"itemview",
+			"model.save(",
+			"ItemView",
+			"ItemView(",
+			"additem",
+			"part",
 			"order_item",
 			"puts",
 			"submitCallback",
@@ -281,23 +385,51 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/food_trucks/show.html.erb",
+					"file": "app/views/layouts/application.html.erb",
 					"settings":
 					{
-						"buffer_size": 8471,
+						"buffer_size": 2844,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5132,
-								5137
+								2175,
+								2175
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 165.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/static/checkout.html.erb",
+					"settings":
+					{
+						"buffer_size": 255,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								59,
+								59
 							]
 						],
 						"settings":
@@ -307,7 +439,150 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2087.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/assets/javascripts/models/order_item.js",
+					"settings":
+					{
+						"buffer_size": 424,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								237,
+								237
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/assets/javascripts/views/order_items.js",
+					"settings":
+					{
+						"buffer_size": 2196,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1494,
+								1494
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 402.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "app/assets/javascripts/models/order.js",
+					"settings":
+					{
+						"buffer_size": 436,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								325,
+								325
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/assets/javascripts/views/orders.js",
+					"settings":
+					{
+						"buffer_size": 1803,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1075,
+								1383
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 222.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/models/order.rb",
+					"settings":
+					{
+						"buffer_size": 390,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -332,11 +607,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -357,6 +639,78 @@
 		"selected_items":
 		[
 			[
+				"order.rb",
+				"app/models/order.rb"
+			],
+			[
+				"environ",
+				"config/environment.rb"
+			],
+			[
+				"routes.r",
+				"config/routes.rb"
+			],
+			[
+				"order.js",
+				"app/assets/javascripts/models/order.js"
+			],
+			[
+				"orderitem.j",
+				"app/assets/javascripts/models/order_item.js"
+			],
+			[
+				"application.html.er",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"orderitemscontroll",
+				"app/controllers/order_items_controller.rb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"orderitemscontr",
+				"app/controllers/order_items_controller.rb"
+			],
+			[
+				"routes.rb",
+				"config/routes.rb"
+			],
+			[
+				"sessionshelper",
+				"app/helpers/sessions_helper.rb"
+			],
+			[
+				"sessionscon",
+				"app/controllers/sessions_controller.rb"
+			],
+			[
+				"orderscontr",
+				"app/controllers/orders_controller.rb"
+			],
+			[
+				"controller",
+				"app/controllers/items_controller.rb"
+			],
+			[
+				"orderitemscontroller",
+				"app/controllers/order_items_controller.rb"
+			],
+			[
+				"application.js",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"orderitems/index",
+				"app/views/order_items/index.html.erb"
+			],
+			[
+				"orderitems/show",
+				"app/views/order_items/show.html.erb"
+			],
+			[
 				"food_trucks/show",
 				"/Users/blakerego/myDropBox/Dropbox/git/spork/app/views/food_trucks/show.html.erb"
 			],
@@ -367,14 +721,6 @@
 			[
 				"application.h",
 				"app/views/layouts/application.html.erb"
-			],
-			[
-				"orderitems/index",
-				"app/views/order_items/index.html.erb"
-			],
-			[
-				"application.js",
-				"app/assets/javascripts/application.js"
 			],
 			[
 				"gem",
@@ -391,10 +737,6 @@
 			[
 				"user.rb",
 				"app/models/user.rb"
-			],
-			[
-				"order.rb",
-				"app/models/order.rb"
 			],
 			[
 				"orderitemcontr",
@@ -437,10 +779,6 @@
 				"Gemfile"
 			],
 			[
-				"routes.rb",
-				"config/routes.rb"
-			],
-			[
 				"food_tru",
 				"sporkMaps/app/models/food_truck.rb"
 			],
@@ -459,10 +797,6 @@
 			[
 				"menu.rb",
 				"sporkMaps/app/models/menu.rb"
-			],
-			[
-				"routes",
-				"sporkMaps/config/routes.rb"
 			],
 			[
 				"contact",
@@ -554,7 +888,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 226.0,
 	"status_bar_visible": true
 }

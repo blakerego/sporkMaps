@@ -151,9 +151,14 @@ img.button:hover {
 	color:black;
 	line-height:.5;
 }
+
+.btn:a
+{
+	color:white;
+}
+
 a:link
 {
-	color: #484646;
 	text-decoration: none;
 }
 a:visited:
