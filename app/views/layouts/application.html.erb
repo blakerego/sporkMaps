@@ -26,8 +26,6 @@
 	          	<%= link_to "Our Story", :controller => "static", :action => "about" %></li>
 	          <li <%= 'class=active' if params[:controller] == 'static' && params[:action] == 'contact' %>>
 	          	<%= link_to "Contact", :controller => "static", :action => "contact" %></li>
-	          <li <%= 'class=active' if params[:controller] == 'static' && params[:action] == 'help' %>>
-	          	<%= link_to "Help", :controller => "static", :action => "help" %></li>
 	        </ul>
 	        <%= form_for(:session, :url => sessions_path, :html => {:class => "navbar-form pull-right"}) do |s| %>
 	        	<% if signed_in? %>
